@@ -537,11 +537,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="#developing-functions" id="toc-developing-functions" class="nav-link active" data-scroll-target="#developing-functions">Developing functions</a>
   <ul class="collapse">
 <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a></li>
   <li>
-<a href="#exercises-function-development" id="toc-exercises-function-development" class="nav-link" data-scroll-target="#exercises-function-development">Exercises: function development</a>
+<a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">Approach</a>
   <ul class="collapse">
-<li><a href="#prepare_csv" id="toc-prepare_csv" class="nav-link" data-scroll-target="#prepare_csv"><code>prepare_csv()</code></a></li>
+<li><a href="#exercise-function-development" id="toc-exercise-function-development" class="nav-link" data-scroll-target="#exercise-function-development">Exercise: function development</a></li>
+  <li><a href="#prepare_csv" id="toc-prepare_csv" class="nav-link" data-scroll-target="#prepare_csv"><code>prepare_csv()</code></a></li>
   </ul>
 </li>
   </ul>
@@ -580,8 +580,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Check the test output, tweak the function, repeat!</p>
 <p>This process of editing two files might seem like extra work, but we recommend separating the function’s definition from the bits of code we use to test it. Think of the test script as your isolated playground to test and develop the function and your function script as the sheltered environment where you carefully tweak the function. You can also use this test script as a place to develop the function using the same inputs and arguments as the function. Keeping these parts separate can help to avoid mysterious errors and general chaos!</p>
-</section><section id="exercises-function-development" class="level2"><h2 class="anchored" data-anchor-id="exercises-function-development">Exercises: function development</h2>
-<section id="prepare_csv" class="level3"><h3 class="anchored" data-anchor-id="prepare_csv"><code>prepare_csv()</code></h3>
+<section id="exercise-function-development" class="level3"><h3 class="anchored" data-anchor-id="exercise-function-development">Exercise: function development</h3>
+</section><section id="prepare_csv" class="level3"><h3 class="anchored" data-anchor-id="prepare_csv"><code>prepare_csv()</code></h3>
 <p>Instruction: setup your function script and test script for your new function <code>prepare_csv()</code>.</p>
 <p>Use whichever function you prefer for reading CSVs (eg. <code>data.table::fread()</code>, or <code>readr::read_csv()</code>). For cleaning column names, we’ll use the function <code>clean_names()</code> from the {janitor} package.</p>
 <p>Note: since we are writing a function to read the data in, we’ll test the function with the data’s path instead. We’ll use the example dataset for adult and chick counts described in the README. For example:</p>

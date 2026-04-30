@@ -26,9 +26,10 @@ To build logical statements, you may find following list of functions useful:
     - `basename`, `dirname`
 
 
-## Exercises: function checks
 
-### Logical statements
+## Logical statements
+
+## Exercise: function checks
 
 Instruction: write a series of logical statements for the following objects then consult the solution to check your work. Focus only on the logical statement for now, we'll use `stopifnot` in the following exercises. 
 
@@ -82,7 +83,9 @@ is.numeric(DF$numbers)
 </details>
 
 
-### `plot_xy()`
+## Plotting 
+
+### Exercise: `plot_xy()`
 
 First, write a function to plot a data.frame, providing columns names for the data to be plotted on the x and y axes. Use the example data that we prepared with our `prepare_csv` function. 
 
@@ -137,7 +140,9 @@ details here: <https://ggplot2.tidyverse.org/articles/ggplot2-in-packages.html#u
 </details>
 
 
-### Writing checks for `plot_xy()`
+## Writing Checks 
+
+### Exercise: writing checks for `plot_xy()`
 
 Instruction: add the following checks to your `plot_xy()` function and
 test them in your test script (`tests/test_plot_xy.R`). 
@@ -163,6 +168,7 @@ of metaprogramming. The Advanced R book has a detailed section on this concept.
 
 <hr>
 </details>
+
 
 ### Bonus
 

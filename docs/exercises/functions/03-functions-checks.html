@@ -536,12 +536,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <a href="#checks" id="toc-checks" class="nav-link active" data-scroll-target="#checks">Checks</a>
   <ul class="collapse">
-<li>
-<a href="#exercises-function-checks" id="toc-exercises-function-checks" class="nav-link" data-scroll-target="#exercises-function-checks">Exercises: function checks</a>
-  <ul class="collapse">
 <li><a href="#logical-statements" id="toc-logical-statements" class="nav-link" data-scroll-target="#logical-statements">Logical statements</a></li>
-  <li><a href="#plot_xy" id="toc-plot_xy" class="nav-link" data-scroll-target="#plot_xy"><code>plot_xy()</code></a></li>
-  <li><a href="#writing-checks-for-plot_xy" id="toc-writing-checks-for-plot_xy" class="nav-link" data-scroll-target="#writing-checks-for-plot_xy">Writing checks for <code>plot_xy()</code></a></li>
+  <li><a href="#exercise-function-checks" id="toc-exercise-function-checks" class="nav-link" data-scroll-target="#exercise-function-checks">Exercise: function checks</a></li>
+  <li>
+<a href="#plotting" id="toc-plotting" class="nav-link" data-scroll-target="#plotting">Plotting</a>
+  <ul class="collapse">
+<li><a href="#exercise-plot_xy" id="toc-exercise-plot_xy" class="nav-link" data-scroll-target="#exercise-plot_xy">Exercise: <code>plot_xy()</code></a></li>
+  </ul>
+</li>
+  <li>
+<a href="#writing-checks" id="toc-writing-checks" class="nav-link" data-scroll-target="#writing-checks">Writing Checks</a>
+  <ul class="collapse">
+<li><a href="#exercise-writing-checks-for-plot_xy" id="toc-exercise-writing-checks-for-plot_xy" class="nav-link" data-scroll-target="#exercise-writing-checks-for-plot_xy">Exercise: writing checks for <code>plot_xy()</code></a></li>
   <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">Bonus</a></li>
   </ul>
 </li>
@@ -600,8 +606,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </li>
 </ul>
-<section id="exercises-function-checks" class="level2"><h2 class="anchored" data-anchor-id="exercises-function-checks">Exercises: function checks</h2>
-<section id="logical-statements" class="level3"><h3 class="anchored" data-anchor-id="logical-statements">Logical statements</h3>
+<section id="logical-statements" class="level2"><h2 class="anchored" data-anchor-id="logical-statements">Logical statements</h2>
+</section><section id="exercise-function-checks" class="level2"><h2 class="anchored" data-anchor-id="exercise-function-checks">Exercise: function checks</h2>
 <p>Instruction: write a series of logical statements for the following objects then consult the solution to check your work. Focus only on the logical statement for now, we’ll use <code>stopifnot</code> in the following exercises.</p>
 <p>Number</p>
 <ul>
@@ -681,7 +687,9 @@ Show solution
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-</details></section><section id="plot_xy" class="level3"><h3 class="anchored" data-anchor-id="plot_xy"><code>plot_xy()</code></h3>
+</details></section><section id="plotting" class="level2"><h2 class="anchored" data-anchor-id="plotting">Plotting</h2>
+<section id="exercise-plot_xy" class="level3"><h3 class="anchored" data-anchor-id="exercise-plot_xy">Exercise: <code>plot_xy()</code>
+</h3>
 <p>First, write a function to plot a data.frame, providing columns names for the data to be plotted on the x and y axes. Use the example data that we prepared with our <code>prepare_csv</code> function.</p>
 <p>Follow the steps from our approach to developing functions:</p>
 <ol type="1">
@@ -723,7 +731,8 @@ Hints: <code>ggplot2</code>
 <li><p>Pass the data.frame’s to ggplot’s data argument then use the <code><a href="https://rdrr.io/r/base/Paren.html">{ }</a></code> “embrace operator” to wrap the x_col and y_col arguments (unquoted* column names) within <code>aes</code>.</p></li>
 </ul>
 <p>See the <code>?aes</code> help page and the example with the “embrace operator”, and more details here: <a href="https://ggplot2.tidyverse.org/articles/ggplot2-in-packages.html#using-aes-and-vars-in-a-package-function" class="uri">https://ggplot2.tidyverse.org/articles/ggplot2-in-packages.html#using-aes-and-vars-in-a-package-function</a></p>
-<hr></details></section><section id="writing-checks-for-plot_xy" class="level3"><h3 class="anchored" data-anchor-id="writing-checks-for-plot_xy">Writing checks for <code>plot_xy()</code>
+<hr></details></section></section><section id="writing-checks" class="level2"><h2 class="anchored" data-anchor-id="writing-checks">Writing Checks</h2>
+<section id="exercise-writing-checks-for-plot_xy" class="level3"><h3 class="anchored" data-anchor-id="exercise-writing-checks-for-plot_xy">Exercise: writing checks for <code>plot_xy()</code>
 </h3>
 <p>Instruction: add the following checks to your <code>plot_xy()</code> function and test them in your test script (<code>tests/test_plot_xy.R</code>).</p>
 <ul>

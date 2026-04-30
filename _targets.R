@@ -10,10 +10,6 @@ tar_source('R')
 
 
 # Variables ---------------------------------------------------------------
-# File paths
-path_counts <- file.path('raw-data', 'adelie-adult-chick-counts.csv')
-path_ice <- file.path('raw-data', 'ice-area.txt')
-path_weather <- file.path('raw-data', 'weather-timeseries.csv')
 
 # Column names
 x_col <- 'date_gmt'
@@ -35,15 +31,21 @@ filter_year <- 1995
 # Targets -----------------------------------------------------------------
 c(
     # Files
-    tar_target(
-        file_counts,
-        path_counts,
-        format = 'file'
+    tar_file_read(
+      file_counts,
+      'raw-data/adelie-adult-chick-counts.csv',
+      read.csv(!!.x)
     ),
+
+    tar_file_read(
+      file_weather,
+      'raw-data/weather-timeseries.csv',
+      read.csv(!!.x)
+    ),
+
     tar_target(
-        file_weather,
-        path_weather,
-        format = 'file'
+      penguin_data,
+      penguins_raw # directly from palmerpenguins package
     ),
 
 
@@ -119,8 +121,8 @@ c(
         save_tables,
         fwrite(sums, file.path(dir_output, 'sums.csv')),
         format = 'file'
-    ), 
-    
+    ),
+
     # Manuscript
     tar_quarto(
         render,

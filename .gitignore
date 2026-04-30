@@ -7,4 +7,6 @@ _targets/
 renv/*
 !renv/activate.R
 /.quarto/
-docs/
+#docs/
+
+**/*.quarto_ipynb

@@ -559,7 +559,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#penguins" id="toc-penguins" class="nav-link" data-scroll-target="#penguins">Penguins</a></li>
   <li><a href="#weather-timeseries" id="toc-weather-timeseries" class="nav-link" data-scroll-target="#weather-timeseries">Weather timeseries</a></li>
-  <li><a href="#monthly-sea-ice-area" id="toc-monthly-sea-ice-area" class="nav-link" data-scroll-target="#monthly-sea-ice-area">Monthly sea ice area</a></li>
   <li><a href="#adelie-penguin-adult-and-chick-counts" id="toc-adelie-penguin-adult-and-chick-counts" class="nav-link" data-scroll-target="#adelie-penguin-adult-and-chick-counts">Adelie penguin adult and chick counts</a></li>
   </ul></li>
   <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">LICENSE</a></li>
@@ -676,7 +675,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(pkgs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>To download the workshop materials for a participant, use this command:</p>
+<p>******BROKEN*************** To download the workshop materials for a participant, use this command:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># (Set your own destination directory)</span></span>
@@ -684,6 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/participant.zip'</span>, </span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">destdir =</span> <span class="st">'~/Documents'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Or by downloading and unziping the ZIP file at this link: <a href="https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/participant.zip" class="uri">https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/participant.zip</a>.</p>
+<hr>
 <p>Then open up the RStudio project.</p>
 </section>
 <section id="data" class="level2">
@@ -712,49 +712,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="weather-timeseries" class="level3">
 <h3 class="anchored" data-anchor-id="weather-timeseries">Weather timeseries</h3>
-<p>The following datasets are available directly from the <a href="https://pallter.marine.rutgers.edu/catalog/edi/">Palmer LTER Data Catalog</a>. To download the data to the <code>raw-data/</code> directory, run the function <code>download_example_data()</code> (<code>R/download_example_data.R</code>).</p>
+<p>The following datasets are archived in the <a href="https://pallter.marine.rutgers.edu/catalog/edi/">Palmer LTER Data Catalog</a>. To download the data to the <code>raw-data/</code> directory, run the function <code>download_example_data()</code> (<code>R/download_example_data.R</code>).</p>
 <p>This second dataset contains monthly averaged weather timeseries from Palmer Station, Antarctica, with the following variables:</p>
 <ul>
-<li>Date<br>
-</li>
-<li>Year<br>
-</li>
-<li>Month<br>
-</li>
-<li>Average Temperature<br>
-</li>
-<li>Temperature Count<br>
-</li>
-<li>Average Pressure<br>
-</li>
-<li>Pressure Count<br>
-</li>
-<li>Average Melted Precipitation<br>
-</li>
+<li>Date</li>
+<li>Mean Temperature (C)</li>
+<li>Temperature Count</li>
+<li>Mean Pressure (mbar)</li>
+<li>Pressure Count</li>
+<li>Mean Precipitation (mm)</li>
+<li>Sum Precipitation (mm)</li>
 <li>Precipitation Count</li>
+<li>Mean Sea Surface Temperature (C)</li>
+<li>Sea Surface Temperature Count</li>
+<li>Mean Windspeed (knots)</li>
+<li>Windspeed Count</li>
 </ul>
-<p><a href="https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-pal.189.8">Data package summary</a></p>
-<p><a href="https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-pal.189.8">Data package metadata</a></p>
-<p>Link to data (CSV):</p>
-<p><a href="https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.189.8&amp;entityid=ab357b4c92531a07d98ff1c4f4809a1e">https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.189.8&amp;entityid=ab357b4c92531a07d98ff1c4f4809a1e</a></p>
-</section>
-<section id="monthly-sea-ice-area" class="level3">
-<h3 class="anchored" data-anchor-id="monthly-sea-ice-area">Monthly sea ice area</h3>
-<p>The third dataset contains monthly sea ice area from the region around the Palmer Station, Antarctica, with the following variables:</p>
-<ul>
-<li>Year</li>
-<li>Month</li>
-<li>Area</li>
-</ul>
-<p>Note: this data is formatted with months as columns, years as rows, and cells filled with the corresponding area.</p>
-<p><a href="https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-pal.34.7">Data package summary</a></p>
-<p><a href="https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-pal.34.7">Data package metadata</a></p>
-<p>Link to data (TXT):</p>
-<p><a href="https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.34.7&amp;entityid=0fccb4e99aaa0c0cc85c23284288ec81">https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.34.7&amp;entityid=0fccb4e99aaa0c0cc85c23284288ec81</a></p>
+<p><a href="https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-pal.189.10">Data package metadata</a></p>
+<p><a href="https://github.com/PAL-LTER/pal-weather/blob/main/data_v10/PalmerStation_Monthly_Weather.csv">Data download link (CSV)</a></p>
 </section>
 <section id="adelie-penguin-adult-and-chick-counts" class="level3">
 <h3 class="anchored" data-anchor-id="adelie-penguin-adult-and-chick-counts">Adelie penguin adult and chick counts</h3>
-<p>The fourth dataset contains Adelie penguin adult and chick counts</p>
+<p>The third dataset contains Adelie penguin adult and chick counts</p>
 <ul>
 <li>studyName<br>
 </li>
@@ -770,15 +749,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
 <li>Chicks</li>
 </ul>
-<p><a href="https://portal.edirepository.org/nis/mapbrowse?packageid=knb-lter-pal.88.8">Data package summary</a></p>
 <p><a href="https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-pal.88.8">Data package metadata</a></p>
-<p>Link to data (CSV):</p>
-<p><a href="https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.88.8&amp;entityid=b4062890db09a72628786650dacfbf1f">https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.88.8&amp;entityid=b4062890db09a72628786650dacfbf1f</a></p>
+<p><a href="https://github.com/PAL-LTER/pal-seabirds/blob/main/formatted/Adelie_Chick_Production/Adelie_Chick_Production_1992_2020.csv">Data download link (CSV)</a></p>
 </section>
 </section>
 <section id="license" class="level2">
 <h2 class="anchored" data-anchor-id="license">LICENSE</h2>
-<p>This project is released under the GNU General Public License v3.0. Read it <a href="https://github.com/robitalec/reproducible-workflows-workshop/blob/quarto/devel/LICENSE">here</a>.</p>
+<p>This project is released under the GNU General Public License v3.0. Read it <a href="https://github.com/robitalec/reproducible-workflows-workshop/blob/main/LICENSE">here</a>.</p>
 
 
 </section>

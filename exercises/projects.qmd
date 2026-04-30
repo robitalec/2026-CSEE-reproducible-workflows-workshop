@@ -27,7 +27,7 @@ We are going to practice setting up an RStudio Project to get oriented with the 
         -   scripts
 
         -   R
-7.  Download the data from this [link](https://portal.edirepository.org/nis/dataviewer?packageid=knb-lter-pal.34.7&entityid=0fccb4e99aaa0c0cc85c23284288ec81) and move it into the `raw-data/` folder
+7.  Download the data from this [link](https://github.com/PAL-LTER/pal-seabirds/blob/main/formatted/Adelie_Chick_Production/Adelie_Chick_Production_1992_2020.csv) and move it into the `raw-data/` folder
 8.  Open your project in RStudio
 9.  Open an empty file and save it as "README.md"
 10. Fill in your README file using one of the templates found under the "Templates" sidebar

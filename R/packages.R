@@ -18,3 +18,4 @@ library(parameters)
 
 conflicts_prefer(dplyr::filter)
 conflicts_prefer(dplyr::first)
+conflicts_prefer(palmerpenguins::penguins_raw)

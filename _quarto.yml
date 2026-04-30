@@ -28,12 +28,12 @@ website:
           - section: Functions
             contents:
             - auto: "exercises/functions/*"
-          - section: "{targets}"
+          - section: "`{targets}`"
             contents:
             - auto: "exercises/targets/*"
-          - text: "{renv}"
+          - text: "`{renv}`"
             file: "exercises/renv.qmd"
-          - text: "{conflicted}"
+          - text: "`{conflicted}`"
             file: "exercises/conflicted.qmd"
       - section: Resources
         contents:

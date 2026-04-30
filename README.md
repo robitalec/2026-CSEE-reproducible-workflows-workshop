@@ -138,9 +138,8 @@ pkgs <- c(
 install.packages(pkgs)
 ```
 
-
-******BROKEN***************
-To download the workshop materials for a participant, use this command:
+\*\*\*\*\*\*BROKEN\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* To download the
+workshop materials for a participant, use this command:
 
 ``` r
 library(usethis)
@@ -154,9 +153,7 @@ use_course(
 Or by downloading and unziping the ZIP file at this link:
 <https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/participant.zip>.
 
-
-****************************
-
+------------------------------------------------------------------------
 
 Then open up the RStudio project.
 
@@ -246,7 +243,8 @@ The third dataset contains Adelie penguin adult and chick counts
 [Data package
 metadata](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-pal.88.8)
 
-[Data download link (CSV)](https://github.com/PAL-LTER/pal-seabirds/blob/main/formatted/Adelie_Chick_Production/Adelie_Chick_Production_1992_2020.csv)
+[Data download link
+(CSV)](https://github.com/PAL-LTER/pal-seabirds/blob/main/formatted/Adelie_Chick_Production/Adelie_Chick_Production_1992_2020.csv)
 
 ## LICENSE
 

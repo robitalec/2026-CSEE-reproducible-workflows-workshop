@@ -249,7 +249,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/01-projects.html">Resources</a></li><li class="breadcrumb-item"><a href="../resources/03-targets.html"><code>{targets}</code></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/01-projects.html">Resources</a></li><li class="breadcrumb-item"><a href="../resources/03-targets.html">targets</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -343,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text"><code>{targets}</code></span></a>
+ <span class="menu-text">targets</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -372,13 +372,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercises/renv.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>{renv}</code></span></a>
+ <span class="menu-text">renv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exercises/conflicted.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>{conflicted}</code></span></a>
+ <span class="menu-text">conflicted</span></a>
   </div>
 </li>
       </ul>
@@ -407,19 +407,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources/03-targets.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><code>{targets}</code></span></a>
+ <span class="menu-text">targets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources/04-renv.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>{renv}</code></span></a>
+ <span class="menu-text">renv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../resources/05-conflicted.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>{conflicted}</code></span></a>
+ <span class="menu-text">conflicted</span></a>
   </div>
 </li>
       </ul>
@@ -514,8 +514,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#targets" id="toc-targets" class="nav-link active" data-scroll-target="#targets"><code>{targets}</code></a>
-  <ul class="collapse">
+  <li><a href="#targets" id="toc-targets" class="nav-link active" data-scroll-target="#targets">targets</a>
+  <ul>
   <li><a href="#help" id="toc-help" class="nav-link" data-scroll-target="#help">Help</a>
   <ul class="collapse">
   <li><a href="#github-discussion-group" id="toc-github-discussion-group" class="nav-link" data-scroll-target="#github-discussion-group">GitHub Discussion Group</a></li>
@@ -536,7 +536,13 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#extensions" id="toc-extensions" class="nav-link" data-scroll-target="#extensions">Extensions</a>
   <ul class="collapse">
-  <li><a href="#targetopia" id="toc-targetopia" class="nav-link" data-scroll-target="#targetopia">Targetopia</a></li>
+  <li><a href="#targetopia" id="toc-targetopia" class="nav-link" data-scroll-target="#targetopia">Targetopia</a>
+  <ul class="collapse">
+  <li><a href="#tarchetypes" id="toc-tarchetypes" class="nav-link" data-scroll-target="#tarchetypes">{tarchetypes}</a></li>
+  <li><a href="#stantargets" id="toc-stantargets" class="nav-link" data-scroll-target="#stantargets">{stantargets}</a></li>
+  <li><a href="#jagstargets" id="toc-jagstargets" class="nav-link" data-scroll-target="#jagstargets">{jagstargets}</a></li>
+  <li><a href="#gittargets" id="toc-gittargets" class="nav-link" data-scroll-target="#gittargets">{gittargets}</a></li>
+  </ul></li>
   <li><a href="#target-factories" id="toc-target-factories" class="nav-link" data-scroll-target="#target-factories">Target factories</a></li>
   </ul></li>
   <li><a href="#tflow" id="toc-tflow" class="nav-link" data-scroll-target="#tflow">{tflow}</a></li>
@@ -545,14 +551,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/01-projects.html">Resources</a></li><li class="breadcrumb-item"><a href="../resources/03-targets.html"><code>{targets}</code></a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../resources/01-projects.html">Resources</a></li><li class="breadcrumb-item"><a href="../resources/03-targets.html">targets</a></li></ol></nav></header>
 
 
 
 
 
 <section id="targets" class="level1">
-<h1><code>{targets}</code></h1>
+<h1>targets</h1>
 <p>The {targets} <a href="https://docs.ropensci.org/targets/">documentation</a> and <a href="https://books.ropensci.org/targets">help manual</a> should be the first places to look for details on {targets}. We’ll highlight some pages and links below relevant to the workshop, but be sure to spend time looking through these resources. This is a great example of an R package that has been very thoroughly and thoughtfully documented covering everything from beginner examples to the minutiae of how the package is designed and orchestrates workflows.</p>
 <section id="help" class="level2">
 <h2 class="anchored" data-anchor-id="help"><a href="https://books.ropensci.org/targets/help.html">Help</a></h2>

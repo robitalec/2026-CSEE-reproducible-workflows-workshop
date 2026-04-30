@@ -4,7 +4,7 @@
 
 Originally developed for a
 [workshop](https://github.com/robitalec/2023-CSEE-reproducible-workflows-workshop)
-at [CSEE 2023](https://www.beepeg2023.ca/) by:
+at CSEE 2023 by:
 
 - Alec L. Robitaille (Memorial University of Newfoundland and Labrador)
 - Isabella C. Richmond (Concordia University)

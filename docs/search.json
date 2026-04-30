@@ -46,111 +46,111 @@
   {
     "objectID": "resources/05-conflicted.html",
     "href": "resources/05-conflicted.html",
-    "title": "{conflicted}",
+    "title": "conflicted",
     "section": "",
-    "text": "{conflicted}\nThe {conflicted} package is a substantially simpler package than {targets} and {renv}. The {conflicted} documentation has everything we need, but also check out this {conflicted} blog post for some details about why {conflicted} was developed.",
+    "text": "conflicted\nThe {conflicted} package is a substantially simpler package than {targets} and {renv}. The {conflicted} documentation has everything we need, but also check out this {conflicted} blog post for some details about why {conflicted} was developed.",
     "crumbs": [
       "Resources",
-      "`{conflicted}`"
+      "conflicted"
     ]
   },
   {
     "objectID": "resources/03-targets.html",
     "href": "resources/03-targets.html",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "The {targets} documentation and help manual should be the first places to look for details on {targets}. We’ll highlight some pages and links below relevant to the workshop, but be sure to spend time looking through these resources. This is a great example of an R package that has been very thoroughly and thoughtfully documented covering everything from beginner examples to the minutiae of how the package is designed and orchestrates workflows.\n\n\nThis help page is a great place to start when you are looking for help using {targets}. It details things to do before posting, and when you have decided to post a question, where to post it. The {targets} developer prefers using GitHub Discussion Groups for troubleshooting and discussions instead of GitHub Issues.\n\n\n{targets} has a very active discussion group with plenty of past solutions and discussions to search through when you are looking for help.\n\n\n\n\nThe debugging page is helpful for debugging {targets} workflows, especially when they get bigger and more complicated. Debugging in {targets} is different is a good place to start.\n\n\n\nSome select documentation pages from the {targets} documentation:\n\ntar_target(): targets!\ntar_make(): run the workflow\ntar_meta(): metadata on the workflow including errors, warnings, run times\ntar_read(): read a target\ntar_load(): load a target\ntar_visnetwork(): visualize the dependency graph between targets, functions, and objects\ntar_option_set(): sets options for when the {targets} workflow is run\n\nBonus:\n\nuse_targets(): setups a project to use {targets}\ntar_github_actions(): writes a GitHub Actions workflow to run the {targets} workflow on every push to GitHub\n\n\n\nThis vignette is an high-level summary of the features of {targets}.\n\n\n\n\nThe {targets} R package user manual\nThis is the most complete guide to using {targets}. It has info on most of the questions that you will have (although can be complicated - be patient with yourself!). It explains what a target is, best practices for functions, and why error messages can be less intuitive in your {targets} workflow among many other things.\n\n\n\n\n\nThis is an official half-day interactive tutorial on {targets}. It is accompanied by:\n\nCode repository: https://github.com/wlandau/targets-tutorial\nPosit Cloud workspace to try it out without any required downloads or installation: https://posit.cloud/content/1699460\nIntroductory slides: https://wlandau.github.io/targets-tutorial/#1\n\n\n\n\n\n\n\nThis 4 minute video walkthrough gives a short example of how {targets} can be used. It is accompanied by:\n\nUser Manual: A walkthrough to get started\nCode repository: https://github.com/wlandau/targets-four-minutes\nPosit Cloud workspace to try it out without any required downloads or installation: https://posit.cloud/content/3946303\n\n\n\n\n\n\n\n\n\n{tarchetypes} extends {targets} by providing functions to do complex tasks with shortcuts and simpler syntax, making your life easier. For example:\n\ntar_group_by: define groups in a data.frame to split subsequent targets by\ntar_render, tar_quarto: literate programming with {rmarkdown} or {quarto}\ntar_file_read(): tracks a local file and reads the contents\n\nSimilar to {targets}, {tarchetypes} has a very active Discussion Group with plenty of discussions to search through for solutions, tips and tricks.\n\nDocumentation: https://docs.ropensci.org/tarchetypes/\nDiscussion Group: https://github.com/ropensci/tarchetypes/discussions\n\n\n\n\n{stantargets} is a package extending {targets} for Bayesian data analysis with Stan through {cmdstanr}.\n\nDocumentation: https://docs.ropensci.org/stantargets/\nDiscussion Group: https://github.com/ropensci/stantargets/discussions\n\n\n\n\n{jagstargets} is a package extending {targets} for Bayesian data analysis with JAGS through {R2jags}.\n\nDocumentation: https://wlandau.github.io/jagstargets\nDiscussion Group: https://github.com/wlandau/jagstargets/discussions\n\n\n\n\n{gittargets} is a package extending {targets} for data version control.\n\nDocumentation: https://github.com/ropensci/gittargets\nDiscussion Group: https://github.com/ropensci/gittargets/discussions\n\n\n\n\n\nTarget factories are an advanced approach to making pipeline construction easier. Instead of writing many tar_target() calls, a user can replace them with a call to a “target factory”. tar_file_read() from {tarchetypes} is a simple example of this - one call to tar_file_read() creates targets tracking the local file for changes and another to read the local file in with the provided command.\n\n\n\n\n{tflow} is Miles McBain’s opinionated template for {targets} workflows.\n\nCode repository: An opinionated lightweight template for smooth targets flows.",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#help",
     "href": "resources/03-targets.html#help",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "This help page is a great place to start when you are looking for help using {targets}. It details things to do before posting, and when you have decided to post a question, where to post it. The {targets} developer prefers using GitHub Discussion Groups for troubleshooting and discussions instead of GitHub Issues.\n\n\n{targets} has a very active discussion group with plenty of past solutions and discussions to search through when you are looking for help.",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#debugging",
     "href": "resources/03-targets.html#debugging",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "The debugging page is helpful for debugging {targets} workflows, especially when they get bigger and more complicated. Debugging in {targets} is different is a good place to start.",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#documentation",
     "href": "resources/03-targets.html#documentation",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "Some select documentation pages from the {targets} documentation:\n\ntar_target(): targets!\ntar_make(): run the workflow\ntar_meta(): metadata on the workflow including errors, warnings, run times\ntar_read(): read a target\ntar_load(): load a target\ntar_visnetwork(): visualize the dependency graph between targets, functions, and objects\ntar_option_set(): sets options for when the {targets} workflow is run\n\nBonus:\n\nuse_targets(): setups a project to use {targets}\ntar_github_actions(): writes a GitHub Actions workflow to run the {targets} workflow on every push to GitHub\n\n\n\nThis vignette is an high-level summary of the features of {targets}.",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#user-manual",
     "href": "resources/03-targets.html#user-manual",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "The {targets} R package user manual\nThis is the most complete guide to using {targets}. It has info on most of the questions that you will have (although can be complicated - be patient with yourself!). It explains what a target is, best practices for functions, and why error messages can be less intuitive in your {targets} workflow among many other things.",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#courses",
     "href": "resources/03-targets.html#courses",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "This is an official half-day interactive tutorial on {targets}. It is accompanied by:\n\nCode repository: https://github.com/wlandau/targets-tutorial\nPosit Cloud workspace to try it out without any required downloads or installation: https://posit.cloud/content/1699460\nIntroductory slides: https://wlandau.github.io/targets-tutorial/#1",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#videos",
     "href": "resources/03-targets.html#videos",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "This 4 minute video walkthrough gives a short example of how {targets} can be used. It is accompanied by:\n\nUser Manual: A walkthrough to get started\nCode repository: https://github.com/wlandau/targets-four-minutes\nPosit Cloud workspace to try it out without any required downloads or installation: https://posit.cloud/content/3946303",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#extensions",
     "href": "resources/03-targets.html#extensions",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "{tarchetypes} extends {targets} by providing functions to do complex tasks with shortcuts and simpler syntax, making your life easier. For example:\n\ntar_group_by: define groups in a data.frame to split subsequent targets by\ntar_render, tar_quarto: literate programming with {rmarkdown} or {quarto}\ntar_file_read(): tracks a local file and reads the contents\n\nSimilar to {targets}, {tarchetypes} has a very active Discussion Group with plenty of discussions to search through for solutions, tips and tricks.\n\nDocumentation: https://docs.ropensci.org/tarchetypes/\nDiscussion Group: https://github.com/ropensci/tarchetypes/discussions\n\n\n\n\n{stantargets} is a package extending {targets} for Bayesian data analysis with Stan through {cmdstanr}.\n\nDocumentation: https://docs.ropensci.org/stantargets/\nDiscussion Group: https://github.com/ropensci/stantargets/discussions\n\n\n\n\n{jagstargets} is a package extending {targets} for Bayesian data analysis with JAGS through {R2jags}.\n\nDocumentation: https://wlandau.github.io/jagstargets\nDiscussion Group: https://github.com/wlandau/jagstargets/discussions\n\n\n\n\n{gittargets} is a package extending {targets} for data version control.\n\nDocumentation: https://github.com/ropensci/gittargets\nDiscussion Group: https://github.com/ropensci/gittargets/discussions\n\n\n\n\n\nTarget factories are an advanced approach to making pipeline construction easier. Instead of writing many tar_target() calls, a user can replace them with a call to a “target factory”. tar_file_read() from {tarchetypes} is a simple example of this - one call to tar_file_read() creates targets tracking the local file for changes and another to read the local file in with the provided command.",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
     "objectID": "resources/03-targets.html#tflow",
     "href": "resources/03-targets.html#tflow",
-    "title": "{targets}",
+    "title": "targets",
     "section": "",
     "text": "{tflow} is Miles McBain’s opinionated template for {targets} workflows.\n\nCode repository: An opinionated lightweight template for smooth targets flows.",
     "crumbs": [
       "Resources",
-      "`{targets}`"
+      "targets"
     ]
   },
   {
@@ -205,7 +205,7 @@
     "text": "Let’s look at a {targets} pipeline that more closely resembles what a full project would be including figures, model, output, tables and a manuscript object. We’ll start with a demo, so we can show off some of the power and extended features of {targets}, then we can work through it piece by piece to explain the details.\nLater, check out some examples of full {targets} pipelines that we’ve developed to get a sense for the various applications and approaches that can be used.\n\ndata cleaning and preparation pipeline: https://github.com/robitalec/prepare-locs/blob/main/_targets.R\nmovement ecology method: https://github.com/robitalec/targets-issa/blob/main/_targets.R\nremote sensing / spatial application: https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R\nBayesian models with {brms} - https://github.com/robitalec/statistical-rethinking-colearning-2023/blob/main/_targets.R\n\n\n\nWith our extended {targets} pipeline, we’ll go through the following steps:\n\nVisualize the pipeline’s steps and interdependencies.\n\ntar_visnetwork()\n\nRun the workflow\n\ntar_make()\n\nExplore the results\n\nlibrary(fs)\ndir_tree('figures')\nfigures\n├── CHR.png\n├── COR.png\n├── HUM.png\n├── LIT.png\n└── TOR.png\ndir_tree('output')\noutput\n├── sums.csv\n\nLook at the rendered manuscript document\n\nOpen the rendered document in the paper/ directory.\n\nNow to make some changes\n\nEdit the raw-data file, for example by adding new rows to mimic more data being collected. Note: please do not edit raw data, this is just to illustrate how {targets} tracks external files for changes. Rerun tar_make().\nDelete an output figure. Rerun tar_make().\nAdd a filter step before the group counts target. Rerun tar_make().\n\n\n\n\n\nObviously, this is an overwhelming amount of new {targets} functions and extensions combined with other packages and Quarto to render an example manuscript and output figures and tables. We’ll walk through each of the pieces and how they relate to each other, and we hope this is a useful resource for when you bring {targets} to your next project.\n\n\nLike we mentioned in the functions resources, there are plenty of options in R for iterating including:\n\nthe apply family\n{purrr}\n{dplyr} with group_by and mutate\n{data.table}’s by\n\n{targets} offers a new approach that integrates into our pipeline seamlessly and extends our functions to run over groups of rows in a data.frame. There are two steps:\n\nUse the {tarchetypes} function tar_group_by() to define the variables to group the data.frame on.\nUse “dynamic branching” with the tar_target() argument pattern.\n\nFor example:\n_targets.R\n#...\nc(\n    # Group the mtcars data.frame by the values in the column \"cyl\"\n    tar_group_by(\n        group_counts,\n        mtcars,\n        cyl\n    ),\n\n    # Averages by group\n    tar_target(\n        mean_mpg,\n        mean(mtcars$mpg),\n        pattern = map(mtcars)\n    ),\n\n    # Summarize all the cars\n    tar_target(\n        summarize_cars,\n        summarize(group_counts)\n    )\n)\nWe pass the data.frame to the command argument, and the following arguments are the column names to group on (in this case cyl). Then downstream targets that want to iterate over the groups of rows use the argument pattern with the function map(). The target corresponding to the grouped data.frame is passed to map().\nIf you want to use the full dataset, ungrouped, again downstream simply refer to the target without the pattern argument and {targets} will automatically combine the data.frame again.\nAnother approach that Alec likes to use with {data.table} is:\n_targets.R\n# ...\n\n# Variables\n# Split by: within which column or set of columns (eg. c(id, yr))\n#  do we want to split our analysis?\nsplit_by &lt;- c('id', 'species')\n\n# Targets\nc(\n    tar_target(\n        split_data,\n        data[, tar_group := .GRP, by = split_by],\n        iteration = 'group'\n    ),\n    tar_target(\n        split_key,\n        unique(locs_prep[, .SD, .SDcols = c(split_by, 'tar_group')])\n    )\n\n)\nRead more:\n\ntar_group_by(): https://docs.ropensci.org/tarchetypes/reference/tar_group_by.html\ntar_group_count(): https://docs.ropensci.org/tarchetypes/reference/tar_group_count.html\ntar_group(): https://docs.ropensci.org/targets/reference/tar_group.html\n\nThese are example of “dynamic branching”, but also see “static branching” functions:\n\ntar_map: https://docs.ropensci.org/tarchetypes/reference/tar_map.html\ntar_rep: https://docs.ropensci.org/tarchetypes/reference/tar_rep.html\n\n\n\nThe iteration argument for tar_target() is used to change how {targets} splits and combines branches. This is is required when you want to return objects like plots, models or matrices that aren’t obviously combined.\nFor example:\n_targets.R\n#...\nc(\n    # Group the mtcars data.frame by the values in the column \"cyl\"\n    tar_group_by(\n        group_counts,\n        mtcars,\n        cyl\n    ),\n\n    # Averages by group\n    tar_target(\n        plot_cars,\n        ggplot(mtcars) + geom_histogram(mpg),\n        pattern = map(mtcars),\n        iteration = 'list'\n    ),\n\n    # Matrix of correlations between vars\n    tar_target(\n        correlation_metrics,\n        cor(mtcars),\n        pattern = map(mtcars),\n        iteration = 'list'\n    )\n)\nSee more details for argument iteration in ?tar_target: https://docs.ropensci.org/targets/reference/tar_target.html\n\n\n\n\n{targets} can be used to track external files for changes. This includes input data files but also outputs like saved plots or tables. To signal to {targets} that these target represents an external file to track, use the argument ‘format’ set to ‘file’.\n_targets.R\n# ...\n\nc(\n    tar_target(\n        file_counts,\n        path_counts,\n        format = 'file'\n    ),\n# ...\n)\n\n\n\n\nStart your next project with {targets} because it is easier to start from a simple project then to try and restructure an old, large project.\nIf you use Git, you will likely want to ignore the _targets/ directory.\n\n\n\nLook into the arguments provided by tar_option_set(). This is link to the full reference page: https://docs.ropensci.org/targets/reference/tar_option_set.html\n\nformat argument\n\nfor data.table objects you can use {qs} and format qs to retain data.table clas\n\nerror argument to define what {targets} should do when it hits an error\nworkspace_on_error argument to optionally save a workspace file for each target that throws an error\ncue argument\n\nIf you are already done all the previous exercises and have extra time, or on your own after the workshop, try this bonus exercise:\n\nwrite a function that processes the ice data\nlook at the relationship between adult and chick counts, and the ice data and weather data. How might these two be influencing adult and chick counts?",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Extensions"
     ]
   },
@@ -217,7 +217,7 @@
     "text": "With our extended {targets} pipeline, we’ll go through the following steps:\n\nVisualize the pipeline’s steps and interdependencies.\n\ntar_visnetwork()\n\nRun the workflow\n\ntar_make()\n\nExplore the results\n\nlibrary(fs)\ndir_tree('figures')\nfigures\n├── CHR.png\n├── COR.png\n├── HUM.png\n├── LIT.png\n└── TOR.png\ndir_tree('output')\noutput\n├── sums.csv\n\nLook at the rendered manuscript document\n\nOpen the rendered document in the paper/ directory.\n\nNow to make some changes\n\nEdit the raw-data file, for example by adding new rows to mimic more data being collected. Note: please do not edit raw data, this is just to illustrate how {targets} tracks external files for changes. Rerun tar_make().\nDelete an output figure. Rerun tar_make().\nAdd a filter step before the group counts target. Rerun tar_make().",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Extensions"
     ]
   },
@@ -229,7 +229,7 @@
     "text": "Obviously, this is an overwhelming amount of new {targets} functions and extensions combined with other packages and Quarto to render an example manuscript and output figures and tables. We’ll walk through each of the pieces and how they relate to each other, and we hope this is a useful resource for when you bring {targets} to your next project.\n\n\nLike we mentioned in the functions resources, there are plenty of options in R for iterating including:\n\nthe apply family\n{purrr}\n{dplyr} with group_by and mutate\n{data.table}’s by\n\n{targets} offers a new approach that integrates into our pipeline seamlessly and extends our functions to run over groups of rows in a data.frame. There are two steps:\n\nUse the {tarchetypes} function tar_group_by() to define the variables to group the data.frame on.\nUse “dynamic branching” with the tar_target() argument pattern.\n\nFor example:\n_targets.R\n#...\nc(\n    # Group the mtcars data.frame by the values in the column \"cyl\"\n    tar_group_by(\n        group_counts,\n        mtcars,\n        cyl\n    ),\n\n    # Averages by group\n    tar_target(\n        mean_mpg,\n        mean(mtcars$mpg),\n        pattern = map(mtcars)\n    ),\n\n    # Summarize all the cars\n    tar_target(\n        summarize_cars,\n        summarize(group_counts)\n    )\n)\nWe pass the data.frame to the command argument, and the following arguments are the column names to group on (in this case cyl). Then downstream targets that want to iterate over the groups of rows use the argument pattern with the function map(). The target corresponding to the grouped data.frame is passed to map().\nIf you want to use the full dataset, ungrouped, again downstream simply refer to the target without the pattern argument and {targets} will automatically combine the data.frame again.\nAnother approach that Alec likes to use with {data.table} is:\n_targets.R\n# ...\n\n# Variables\n# Split by: within which column or set of columns (eg. c(id, yr))\n#  do we want to split our analysis?\nsplit_by &lt;- c('id', 'species')\n\n# Targets\nc(\n    tar_target(\n        split_data,\n        data[, tar_group := .GRP, by = split_by],\n        iteration = 'group'\n    ),\n    tar_target(\n        split_key,\n        unique(locs_prep[, .SD, .SDcols = c(split_by, 'tar_group')])\n    )\n\n)\nRead more:\n\ntar_group_by(): https://docs.ropensci.org/tarchetypes/reference/tar_group_by.html\ntar_group_count(): https://docs.ropensci.org/tarchetypes/reference/tar_group_count.html\ntar_group(): https://docs.ropensci.org/targets/reference/tar_group.html\n\nThese are example of “dynamic branching”, but also see “static branching” functions:\n\ntar_map: https://docs.ropensci.org/tarchetypes/reference/tar_map.html\ntar_rep: https://docs.ropensci.org/tarchetypes/reference/tar_rep.html\n\n\n\nThe iteration argument for tar_target() is used to change how {targets} splits and combines branches. This is is required when you want to return objects like plots, models or matrices that aren’t obviously combined.\nFor example:\n_targets.R\n#...\nc(\n    # Group the mtcars data.frame by the values in the column \"cyl\"\n    tar_group_by(\n        group_counts,\n        mtcars,\n        cyl\n    ),\n\n    # Averages by group\n    tar_target(\n        plot_cars,\n        ggplot(mtcars) + geom_histogram(mpg),\n        pattern = map(mtcars),\n        iteration = 'list'\n    ),\n\n    # Matrix of correlations between vars\n    tar_target(\n        correlation_metrics,\n        cor(mtcars),\n        pattern = map(mtcars),\n        iteration = 'list'\n    )\n)\nSee more details for argument iteration in ?tar_target: https://docs.ropensci.org/targets/reference/tar_target.html\n\n\n\n\n{targets} can be used to track external files for changes. This includes input data files but also outputs like saved plots or tables. To signal to {targets} that these target represents an external file to track, use the argument ‘format’ set to ‘file’.\n_targets.R\n# ...\n\nc(\n    tar_target(\n        file_counts,\n        path_counts,\n        format = 'file'\n    ),\n# ...\n)",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Extensions"
     ]
   },
@@ -241,7 +241,7 @@
     "text": "Start your next project with {targets} because it is easier to start from a simple project then to try and restructure an old, large project.\nIf you use Git, you will likely want to ignore the _targets/ directory.",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Extensions"
     ]
   },
@@ -253,7 +253,7 @@
     "text": "Look into the arguments provided by tar_option_set(). This is link to the full reference page: https://docs.ropensci.org/targets/reference/tar_option_set.html\n\nformat argument\n\nfor data.table objects you can use {qs} and format qs to retain data.table clas\n\nerror argument to define what {targets} should do when it hits an error\nworkspace_on_error argument to optionally save a workspace file for each target that throws an error\ncue argument\n\nIf you are already done all the previous exercises and have extra time, or on your own after the workshop, try this bonus exercise:\n\nwrite a function that processes the ice data\nlook at the relationship between adult and chick counts, and the ice data and weather data. How might these two be influencing adult and chick counts?",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Extensions"
     ]
   },
@@ -265,7 +265,7 @@
     "text": "This set of exercises are centered around an approach to setting up your project using {targets}.\nA {targets} pipeline is declared in the _targets.R file in the root of your project’s directory. We’ll also set up a central place to put all our of required packages that helps us keep track of them, and will later make it easier to set up {renv}.\n\n\nThe _targets.R is where we declare our {targets} pipeline. It is an R file saved in the root directory of your project. The generalized structure of a _targets.R file is:\n\nLoad packages\nSet options and variables\nEnd in a list of targets\n\nNote: our _targets.R script must end in a list of targets.\nA simple example script could be:\n_targets.R\nlibrary(targets)\n\ndata(mtcars)\n\nc(\n    tar_target(\n        histogram_mpg, \n        hist(mtcars$mpg)\n    )\n)\n\n\nInstruction: make a new R script in the root directory of your project named _targets.R. At the top, load {targets} and at the bottom put an empty list c( ).\n\n\n\n\nTo declare which packages we need across all our functions, we have two main options:\n\nList them with library() calls at the top of our _targets.R script\nList them all in a R/packages.R script and source that script.\n\nWe prefer the second approach because it keeps our _targets.R tidier, and helps us setup {renv} package versioning and {conflicted} later. You might find your list of packages gets long, and this gets them out of our way. You can also use this script when you are exploring your results later - source the packages.R script and you will have all your required packages.\n\n\nInstruction: make a new script called packages.R in the R/ directory. Go through your function test scripts from previous exercises and add all the packages you used to the packages.R file with a library() call for each package on a separate line.\nFor example:\nR/packages.R\nlibrary(targets)\nlibrary(data.table)\nlibrary(ggplot2)\nNow, to make those packages available to the {targets} pipeline, we need to load them in our _targets.R script.\nInstruction: add a command to source the R/packages.R in your _targets.R script.\nFor example:\n_targets.R\n# Packages\nsource(file.path('R', 'packages.R'))\n\n\n\n\nTo make functions available to the {targets} pipeline we also need to also source them in the _targets.R script.\nA shortcut for sourcing all the R files in a specific folder is provided by {targets}: tar_source(). We will use this to source our packages and functions in one step.\nNote: something to be careful about now that we are sourcing the R/ directory - you shouldn’t have any calls to {targets} functions like tar_read(), tar_load() or tar_make() in the script in the R/ directory. This is an impossible circular dependency - you are load or reading a target while you are also in the process of making it. Put any tar_read(), tar_load() or tar_make() calls elsewhere.\n\n\nInstruction: replace the above source('R/packages.R') command with the function tar_source() pointing to the R/ directory with your packages.R script and the functions you developed in the previous exercises.\nNote: you will need to load {targets} to run the tar_source() function.\nFor example:\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n\n\n\nWe’ll come back to setting {targets} options later, but let’s set up a spot in our _targets.R script reserved for options. The relevant {targets} function is tar_option_set(). It can set global options for each target, such as the file format to save them in and when they should be cued to rerun. In addition, you can use tar_option_set() to manage options related to overall pipeline runs such as what to do when a targets hits an error.\nThe full reference page for tar_option_set() is available here: https://docs.ropensci.org/targets/reference/tar_option_set.html\n\n\nInstruction: make a new section in your _targets.R script named Options, and put an empty call to tar_option_set() there.\nFor example:\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n\n\n\nA section at the top of your _targets.R script where you define variables that you might tweak or modify can make it really nice when you are working with {targets}. You can use it to define, for example:\n\npaths to external files\nthemes for {ggplot2} figures\noptions and columns names to pass to functions\ngrouping columns e.g., id or species\n\nHere’s a couple different example projects that use a Variables section in their _targets.R scripts:\n\nrobitalec/targets-spatsoc-networks/_targets.R\nrobitalec/targets-issa/_targets.R\nrobitalec/targets-rgee-extract/_targets.R\n\n\n\nInstruction: make a new section named Variables, and add the file paths for the input files that we have been working with.\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\n\n\n\nNow that our _targets.R script is setup, let’s add our targets. As mentioned above, targets are combined in a list at the end of the _targets.R script. The function to specify an individual target is tar_targets() and it has two main arguments we will focus on for now: name and command.\ntar_target(name, command)\n\n\nThe name of the target is the first argument of tar_target(). It is used in subsequent targets to connect dependencies between commands.\nFor example:\nc(\n    tar_target(target_1, command_1()),\n    tar_target(target_2, command_2(target_1))\n)\nNote: a target’s name cannot match the name of any objects in the global environment, including function names.\nOften, it feels natural to name a target using the name of the function we pass to command (tar_target(plot, plot(mtcars))). This is not an option - a target’s name shouldn’t match anything in the global environment (including function names). Treat the target name as if it was a variable - you wouldn’t want to assign your function to the name “plot” and a variable to the name “plot”. You can name based on a modification of the function name, eg. taking the noun_verb() syntax and making it past tense (name: plotted_... and command: plot_...), or a more specific name that refers to the function and the data (name: plot_forest and command plot(forest)).\n\n\n\nEach target in a pipeline is a step in analysis. See recommendations on what a target should do and how much a target should do in the {targets} manual.\nIn our case, we are going to plug in the functions we developed in the previous exercises into our target’s commands. Commands can also point to a function from a package, or to a multiline statement surrounded in curly braces.\nFor example:\n_targets.R\nc(\n    # A function from another package\n    tar_target(\n        car_model,\n        lme4::glmer(mtcars)\n    ),\n    # A multiline statement with {}\n    tar_target(\n        long_statement,\n        {\n            mpg &lt;- mtcars$mpg\n            cyl &lt;- mtcars$cyl\n            mpg / cyl\n        }\n    )\n)\n\n\n\nInstruction: set up individual targets corresponding to the three functions we developed using the adult and chick counts dataset. Head back to your testing scripts to recall how you used the functions and which arguments you need. Name your targets then pass the functions to the command argument. Fill in your Variables section and pass them as arguments in the functions.\n\nprepare_csv()\nsum_counts()\nplot_xy()\n\n\n\nHint: setup\n\nLoad targets\nSource the R/ directory\nSave the path to the counts data under Variables\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\n# Targets\nc(\n\n)\n\n\n\nHint: prepare_csv()\n\nAdd a target for the prepare_csv() step\nGive it a meaningful name that isn’t the same as another object in your environment\nPass the path_counts variable to the prepare_csv() function\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\n# Targets\nc(\n    tar_target(\n        prep_counts,\n        prepare_csv(path_counts)\n    )\n)\n\n\n\nHint: sum_counts()\n\nAdd a target for the sum_counts() step\nGive it a meaningful name that isn’t the same as another object in your environment\nPass the target for the prepare_csv() function to the sum_counts() function\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\n# Targets\nc(\n    tar_target(\n        prep_counts,\n        prepare_csv(path_counts)\n    ),\n    tar_target(\n        sums,\n        sum_counts(prep_counts)\n    )\n)\n\n\n\nHint: plot_xy()\n\nAdd a target for the plot_xy() step\nGive it a meaningful name that isn’t the same as another object in your environment\nPass the target for the prepare_csv() function to the plot_xy() function\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\nx_col &lt;- 'date_gmt'\ny_col &lt;- 'adults'\n\n\n# Targets\nc(\n    tar_target(\n        prep_counts,\n        prepare_csv(path_counts)\n    ),\n    tar_target(\n        sums,\n        sum_counts(prep_counts)\n    ),\n    tar_target(\n        plotted,\n        plot_xy(prep_counts, x_col, y_col)\n    )\n)\n\n\n\n\nadd two more targets to read the other CSV files\nadd another target to load the palmerpenguins dataset from {palmerpenguins}",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Setup"
     ]
   },
@@ -277,7 +277,7 @@
     "text": "The _targets.R is where we declare our {targets} pipeline. It is an R file saved in the root directory of your project. The generalized structure of a _targets.R file is:\n\nLoad packages\nSet options and variables\nEnd in a list of targets\n\nNote: our _targets.R script must end in a list of targets.\nA simple example script could be:\n_targets.R\nlibrary(targets)\n\ndata(mtcars)\n\nc(\n    tar_target(\n        histogram_mpg, \n        hist(mtcars$mpg)\n    )\n)\n\n\nInstruction: make a new R script in the root directory of your project named _targets.R. At the top, load {targets} and at the bottom put an empty list c( ).",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Setup"
     ]
   },
@@ -289,7 +289,7 @@
     "text": "To declare which packages we need across all our functions, we have two main options:\n\nList them with library() calls at the top of our _targets.R script\nList them all in a R/packages.R script and source that script.\n\nWe prefer the second approach because it keeps our _targets.R tidier, and helps us setup {renv} package versioning and {conflicted} later. You might find your list of packages gets long, and this gets them out of our way. You can also use this script when you are exploring your results later - source the packages.R script and you will have all your required packages.\n\n\nInstruction: make a new script called packages.R in the R/ directory. Go through your function test scripts from previous exercises and add all the packages you used to the packages.R file with a library() call for each package on a separate line.\nFor example:\nR/packages.R\nlibrary(targets)\nlibrary(data.table)\nlibrary(ggplot2)\nNow, to make those packages available to the {targets} pipeline, we need to load them in our _targets.R script.\nInstruction: add a command to source the R/packages.R in your _targets.R script.\nFor example:\n_targets.R\n# Packages\nsource(file.path('R', 'packages.R'))",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Setup"
     ]
   },
@@ -301,7 +301,7 @@
     "text": "To make functions available to the {targets} pipeline we also need to also source them in the _targets.R script.\nA shortcut for sourcing all the R files in a specific folder is provided by {targets}: tar_source(). We will use this to source our packages and functions in one step.\nNote: something to be careful about now that we are sourcing the R/ directory - you shouldn’t have any calls to {targets} functions like tar_read(), tar_load() or tar_make() in the script in the R/ directory. This is an impossible circular dependency - you are load or reading a target while you are also in the process of making it. Put any tar_read(), tar_load() or tar_make() calls elsewhere.\n\n\nInstruction: replace the above source('R/packages.R') command with the function tar_source() pointing to the R/ directory with your packages.R script and the functions you developed in the previous exercises.\nNote: you will need to load {targets} to run the tar_source() function.\nFor example:\n_targets.R\nlibrary(targets)\ntar_source('R')",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Setup"
     ]
   },
@@ -313,7 +313,7 @@
     "text": "We’ll come back to setting {targets} options later, but let’s set up a spot in our _targets.R script reserved for options. The relevant {targets} function is tar_option_set(). It can set global options for each target, such as the file format to save them in and when they should be cued to rerun. In addition, you can use tar_option_set() to manage options related to overall pipeline runs such as what to do when a targets hits an error.\nThe full reference page for tar_option_set() is available here: https://docs.ropensci.org/targets/reference/tar_option_set.html\n\n\nInstruction: make a new section in your _targets.R script named Options, and put an empty call to tar_option_set() there.\nFor example:\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Setup"
     ]
   },
@@ -325,7 +325,7 @@
     "text": "A section at the top of your _targets.R script where you define variables that you might tweak or modify can make it really nice when you are working with {targets}. You can use it to define, for example:\n\npaths to external files\nthemes for {ggplot2} figures\noptions and columns names to pass to functions\ngrouping columns e.g., id or species\n\nHere’s a couple different example projects that use a Variables section in their _targets.R scripts:\n\nrobitalec/targets-spatsoc-networks/_targets.R\nrobitalec/targets-issa/_targets.R\nrobitalec/targets-rgee-extract/_targets.R\n\n\n\nInstruction: make a new section named Variables, and add the file paths for the input files that we have been working with.\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Setup"
     ]
   },
@@ -337,7 +337,7 @@
     "text": "Now that our _targets.R script is setup, let’s add our targets. As mentioned above, targets are combined in a list at the end of the _targets.R script. The function to specify an individual target is tar_targets() and it has two main arguments we will focus on for now: name and command.\ntar_target(name, command)\n\n\nThe name of the target is the first argument of tar_target(). It is used in subsequent targets to connect dependencies between commands.\nFor example:\nc(\n    tar_target(target_1, command_1()),\n    tar_target(target_2, command_2(target_1))\n)\nNote: a target’s name cannot match the name of any objects in the global environment, including function names.\nOften, it feels natural to name a target using the name of the function we pass to command (tar_target(plot, plot(mtcars))). This is not an option - a target’s name shouldn’t match anything in the global environment (including function names). Treat the target name as if it was a variable - you wouldn’t want to assign your function to the name “plot” and a variable to the name “plot”. You can name based on a modification of the function name, eg. taking the noun_verb() syntax and making it past tense (name: plotted_... and command: plot_...), or a more specific name that refers to the function and the data (name: plot_forest and command plot(forest)).\n\n\n\nEach target in a pipeline is a step in analysis. See recommendations on what a target should do and how much a target should do in the {targets} manual.\nIn our case, we are going to plug in the functions we developed in the previous exercises into our target’s commands. Commands can also point to a function from a package, or to a multiline statement surrounded in curly braces.\nFor example:\n_targets.R\nc(\n    # A function from another package\n    tar_target(\n        car_model,\n        lme4::glmer(mtcars)\n    ),\n    # A multiline statement with {}\n    tar_target(\n        long_statement,\n        {\n            mpg &lt;- mtcars$mpg\n            cyl &lt;- mtcars$cyl\n            mpg / cyl\n        }\n    )\n)\n\n\n\nInstruction: set up individual targets corresponding to the three functions we developed using the adult and chick counts dataset. Head back to your testing scripts to recall how you used the functions and which arguments you need. Name your targets then pass the functions to the command argument. Fill in your Variables section and pass them as arguments in the functions.\n\nprepare_csv()\nsum_counts()\nplot_xy()\n\n\n\nHint: setup\n\nLoad targets\nSource the R/ directory\nSave the path to the counts data under Variables\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\n# Targets\nc(\n\n)\n\n\n\nHint: prepare_csv()\n\nAdd a target for the prepare_csv() step\nGive it a meaningful name that isn’t the same as another object in your environment\nPass the path_counts variable to the prepare_csv() function\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\n# Targets\nc(\n    tar_target(\n        prep_counts,\n        prepare_csv(path_counts)\n    )\n)\n\n\n\nHint: sum_counts()\n\nAdd a target for the sum_counts() step\nGive it a meaningful name that isn’t the same as another object in your environment\nPass the target for the prepare_csv() function to the sum_counts() function\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\n# Targets\nc(\n    tar_target(\n        prep_counts,\n        prepare_csv(path_counts)\n    ),\n    tar_target(\n        sums,\n        sum_counts(prep_counts)\n    )\n)\n\n\n\nHint: plot_xy()\n\nAdd a target for the plot_xy() step\nGive it a meaningful name that isn’t the same as another object in your environment\nPass the target for the prepare_csv() function to the plot_xy() function\n_targets.R\nlibrary(targets)\ntar_source('R')\n\n# Options\ntar_option_set()\n\n# Variables\npath_counts &lt;- file.path('raw-data', 'adelie-adult-chick-counts.csv')\n\nx_col &lt;- 'date_gmt'\ny_col &lt;- 'adults'\n\n\n# Targets\nc(\n    tar_target(\n        prep_counts,\n        prepare_csv(path_counts)\n    ),\n    tar_target(\n        sums,\n        sum_counts(prep_counts)\n    ),\n    tar_target(\n        plotted,\n        plot_xy(prep_counts, x_col, y_col)\n    )\n)\n\n\n\n\nadd two more targets to read the other CSV files\nadd another target to load the palmerpenguins dataset from {palmerpenguins}",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Setup"
     ]
   },
@@ -431,7 +431,7 @@
     "text": "The {conflicted} package provides an alternative to R’s default management of conflicts - to just use the most recently loaded package. {conflicted} instead highlights the conflict when it occurs as an error, forcing the user to be explicit about which function they would prefer to use. It also provides a function to “scout” potential conflicts, to make decisions about preference before conflicts are hit.\n\n\nAt its simplest, using {conflicted} is just loading it with library().\nlibrary(conflicted)\nA natural place for us to do this is in our R/packages.R script.\nConflicts are detected when a function is used that is defined in multiple packages. See this example from the {conflicted} documentation:\nlibrary(dplyr)\n\nfilter(mtcars, cyl == 8)\n#&gt; Error:\n#&gt; ! [conflicted] filter found in 2 packages.\n#&gt; Either pick the one you want with `::`:\n#&gt; • dplyr::filter\n#&gt; • stats::filter\n#&gt; Or declare a preference with `conflicts_prefer()`:\n#&gt; • `conflicts_prefer(dplyr::filter)`\n#&gt; • `conflicts_prefer(stats::filter)`\nAs suggested, use the conflicts_prefer() function to explicitly select which package to prefer.\nIf you’d like to look for other conflicts that may come up, use conflict_scout(). Note that you only need to prefer a package if the conflicting function is used, so it isn’t necessary to go through the whole list returned by conflict_scout() to pick each preferred function. Look for ones you know you will use and be explicit for those.\nLastly, if you want to always prefer a certain package’s functions over another package you can use conflict_prefer_all() or conflict_prefer_matching(). See more here: ?conflict_prefer.\n\n\nInstruction: open your R/packages.R script and load the {conflicted} package. In your console, run conflict_scout(). Test one of the displayed functions in the console to see what happens when you try running it, eg. filter().\n\n\n\nInstruction: now run the {targets} pipeline and see if any conflicts come up. If they do, use conflict_prefer(package::function) to specify which package you prefer.",
     "crumbs": [
       "Exercises",
-      "`{conflicted}`"
+      "conflicted"
     ]
   },
   {
@@ -442,7 +442,7 @@
     "text": "At its simplest, using {conflicted} is just loading it with library().\nlibrary(conflicted)\nA natural place for us to do this is in our R/packages.R script.\nConflicts are detected when a function is used that is defined in multiple packages. See this example from the {conflicted} documentation:\nlibrary(dplyr)\n\nfilter(mtcars, cyl == 8)\n#&gt; Error:\n#&gt; ! [conflicted] filter found in 2 packages.\n#&gt; Either pick the one you want with `::`:\n#&gt; • dplyr::filter\n#&gt; • stats::filter\n#&gt; Or declare a preference with `conflicts_prefer()`:\n#&gt; • `conflicts_prefer(dplyr::filter)`\n#&gt; • `conflicts_prefer(stats::filter)`\nAs suggested, use the conflicts_prefer() function to explicitly select which package to prefer.\nIf you’d like to look for other conflicts that may come up, use conflict_scout(). Note that you only need to prefer a package if the conflicting function is used, so it isn’t necessary to go through the whole list returned by conflict_scout() to pick each preferred function. Look for ones you know you will use and be explicit for those.\nLastly, if you want to always prefer a certain package’s functions over another package you can use conflict_prefer_all() or conflict_prefer_matching(). See more here: ?conflict_prefer.\n\n\nInstruction: open your R/packages.R script and load the {conflicted} package. In your console, run conflict_scout(). Test one of the displayed functions in the console to see what happens when you try running it, eg. filter().\n\n\n\nInstruction: now run the {targets} pipeline and see if any conflicts come up. If they do, use conflict_prefer(package::function) to specify which package you prefer.",
     "crumbs": [
       "Exercises",
-      "`{conflicted}`"
+      "conflicted"
     ]
   },
   {
@@ -609,7 +609,7 @@
     "text": "{renv} helps us create more reproducible and shareable projects by allowing us to run code on different machines, across time, by different people. It essentially takes the packages used in your project and records their versions in a file that you can update as you develop the project. When you come back to your project, or share it with someone else, they are using the same versions of packages and R that you were.\nThe three main functions used when working with {renv} are:\n\ninit() for setting up project to use {renv} for the first time\nsnapshot() for recording versions of packages currently installed in the project in the file renv.lock\nrestore() for restoring a project’s package versions to match the versions recorded by {renv} from the file renv.lock\n\nNote: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the renv.lock lists a version of R that differs from your current version of R. For system dependencies that are required but not installed, R will fail.\n\n\nThe first time you set up a project with {renv}, use the function init(). init() writes a file to the root of your project called renv.lock that tracks the versions and dependencies of R packages installed and the version of R itself. This is a simple text file, so feel free to open it up (but don’t edit) in a text editor.\n\n\nInstruction: in the console of your project, initialize {renv} with init().\n\n\n\n\nAs you work on your project and add or update packages, record your packages used and their version with snapshot(). This will edit the renv.lock file with new versions and packages that describe the package’s environment.\nYou can always check the status of your {renv} project with status() to see which packages are installed but not recorded, or which packages are recorded but no longer used.\n\n\nInstruction: install a new package with install.packages() then run status(). Follow {renv}’s recommendations to either save (snapshot()) or discard (restore()) these potential changes to your project’s environment.\n\n\n\n\nsnapshot() is used to save the current state of your project while restore() to recover the state of your project as it was last saved. When you download someone else’s project, you can use restore() to retrieve and install the versions of packages in the project that were recorded.\nBefore sharing your project (and regularly while you work even if not sharing), make sure your project is up to date by running snapshot().\nTo restore from an renv.lock file, simply run restore().\n\n\nGit is really helpful when working with {renv} because we can track the renv.lock file’s history for changes through time. See these examples:\n\nrobitalec/targets-issa: renv.lock and history\nrobitalec/prepare-locs: renv.lock and history\n\nUse renv::update() to update the packages in your lock file.\nYou can also use {renv} to track Python dependencies required by your project too. See this vignette for more details: https://rstudio.github.io/renv/articles/python.html",
     "crumbs": [
       "Exercises",
-      "`{renv}`"
+      "renv"
     ]
   },
   {
@@ -620,7 +620,7 @@
     "text": "The first time you set up a project with {renv}, use the function init(). init() writes a file to the root of your project called renv.lock that tracks the versions and dependencies of R packages installed and the version of R itself. This is a simple text file, so feel free to open it up (but don’t edit) in a text editor.\n\n\nInstruction: in the console of your project, initialize {renv} with init().",
     "crumbs": [
       "Exercises",
-      "`{renv}`"
+      "renv"
     ]
   },
   {
@@ -631,7 +631,7 @@
     "text": "As you work on your project and add or update packages, record your packages used and their version with snapshot(). This will edit the renv.lock file with new versions and packages that describe the package’s environment.\nYou can always check the status of your {renv} project with status() to see which packages are installed but not recorded, or which packages are recorded but no longer used.\n\n\nInstruction: install a new package with install.packages() then run status(). Follow {renv}’s recommendations to either save (snapshot()) or discard (restore()) these potential changes to your project’s environment.",
     "crumbs": [
       "Exercises",
-      "`{renv}`"
+      "renv"
     ]
   },
   {
@@ -642,7 +642,7 @@
     "text": "snapshot() is used to save the current state of your project while restore() to recover the state of your project as it was last saved. When you download someone else’s project, you can use restore() to retrieve and install the versions of packages in the project that were recorded.\nBefore sharing your project (and regularly while you work even if not sharing), make sure your project is up to date by running snapshot().\nTo restore from an renv.lock file, simply run restore().\n\n\nGit is really helpful when working with {renv} because we can track the renv.lock file’s history for changes through time. See these examples:\n\nrobitalec/targets-issa: renv.lock and history\nrobitalec/prepare-locs: renv.lock and history\n\nUse renv::update() to update the packages in your lock file.\nYou can also use {renv} to track Python dependencies required by your project too. See this vignette for more details: https://rstudio.github.io/renv/articles/python.html",
     "crumbs": [
       "Exercises",
-      "`{renv}`"
+      "renv"
     ]
   },
   {
@@ -653,7 +653,7 @@
     "text": "Now that we have our _targets.R script setup with the previous exercises and we have added our first few targets to the pipeline, let’s take a look at using {targets}. It is a bit different than the usual R approach where we make edits, then rerun everything, wait for results, notice issues, rerun from scratch…\nThe following functions allow us to interact with the pipeline’s definition, metadata and results. Because of this, we shouldn’t put them inside the _targets.R script or in our R/ directory. Often a {targets} pipeline will result in a rendered document or manuscript, a number of saved plots or an output data file.\nIn our case, let’s make a new script called explore.R in the root of the project’s directory. Then we can keep track of our commands like tar_meta(), tar_visnetwork() and tar_read(), and easily rerun them when we make changes to the pipeline.\nInstruction: make a empty script called explore.R in the root of the project’s directory. At the top, load the packages and/or the functions with source() or tar_source().\nexplore.R\nlibrary(targets)\ntar_source('R')\n\n\nBefore we run our pipeline, we can check that everything looks good in the dependency graph with tar_visnetwork(). By default, tar_visnetwork() shows objects, functions and targets. You can adjust this behaviour to only show the targets using the argument targets_only set to TRUE.\nAnother argument that is especially useful when you have many targets: name. To show only selected targets, you can use {tidyselect} helpers like starts_with(). The name argument comes up in many other {targets} functions including tar_meta() and tar_read().\nRelated functions to tar_visnetwork() include:\n\ntar_glimpse() is a faster version of tar_visnetwork() that doesn’t check the pipeline’s metadata to see if functions have been are outdated or not\ntar_mermaid() returns a Mermaid.js diagram representing the pipeline\ntar_network() returns a network of edges and nodes representing the pipeline\n\n\n\nInstruction: run tar_visnetwork() from your explore.R script to see the dependency graph defined in your _targets.R script. Try out the targets_only and name arguments too.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_visnetwork()\n\ntar_visnetwork(targets_only = TRUE)\n\ntar_visnetwork(starts_with('plot'))\n\n\n\n\n\nRun the {targets} pipeline with tar_make(). The pipeline is run in a new external R process, which means that tar_make() doesn’t impact your current workspace and, more importantly, is not influenced by your current workspace. This totally isolated environment is how {targets} offers us a truly reproducible approach - only things defined in the _targets.R script (or sourced within it) are considered.\n\n\nInstruction: run tar_make() from your explore.R script.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_make()\n\n\n\n\n\nTo look at results from the {targets} pipeline, use tar_read() and tar_load(). tar_read() reads targets without saving them as an object in your environment and tar_load() loads the object directly to your environment using the name of the target as the object.\n\n\nInstruction: run tar_read() and tar_load() from your explore.R script to read/load the targets defined in your {targets} pipeline.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_read(prep_counts)\n\ntar_load(sums)\n\ntar_read(plotted)\n\n\n\n\n\nThe metadata related to the {targets} pipeline is accessible using the function tar_meta().\n\n\nInstruction: run tar_meta() from your explore.R script to look at the metadata associated with your {targets} pipeline. Also try using the names argument to filter the metadata returned.\nNote: we sometimes find it helpful to use the View() function to open the metadata as a table in RStudio.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_meta()\n\ntar_meta(starts_with('plot'))\n\nView(tar_meta())\n\n\n\n\n\nNow that we have a {targets} pipeline, the approach is a bit different than we might be used to using R interactively. With a {targets} pipeline, everything is defined in the pipeline so our process is now about making edits to our functions and our _targets.R pipeline, then rerunning tar_make(). {targets} tracks all functions and objects (and optionally can also track external files) and will only rerun downstream targets when required. This is the other main way that {targets} makes our lives easier. We no longer need to mentally keep track of versions of scripts, output files, figures, etc - just run tar_make() to run anything outdated (or check with tar_visnetwork()).\n\n\nInstruction: make sure your {targets} pipeline is up to date with tar_visnetwork(). Then, make an edit to the function sum_counts(). Rerun the {targets} pipeline. Next, make an edit to the function plot_xy(). Rerun with tar_make(). Lastly, make an edit to prepare_csv() and rerun. Note which targets were rerun with each change and discuss with your neighbours.\nBonus:\n\nmake a change to prepare_csv() that doesn’t actually change the returned object (eg. by adding an irrelevant intermediate step). Does this force the {targets} pipeline to rerun?\n\n\n\n\n\nThe following functions can be used to force {targets} to rerun targets.\n\ntar_delete() deletes individual target output values\ntar_destroy() deletes the whole _targets/ data store (caution)\n\n\n\n\nMake more targets!\n\nuse the plot_xy() function with the weather timeseries\nuse the plot_xy() function with the palmerpenguins timeseries\nmake a target for something that isn’t one of our custom functions eg. summary(). ({targets} don’t need to be custom functions, any R command can be used)",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -665,7 +665,7 @@
     "text": "Before we run our pipeline, we can check that everything looks good in the dependency graph with tar_visnetwork(). By default, tar_visnetwork() shows objects, functions and targets. You can adjust this behaviour to only show the targets using the argument targets_only set to TRUE.\nAnother argument that is especially useful when you have many targets: name. To show only selected targets, you can use {tidyselect} helpers like starts_with(). The name argument comes up in many other {targets} functions including tar_meta() and tar_read().\nRelated functions to tar_visnetwork() include:\n\ntar_glimpse() is a faster version of tar_visnetwork() that doesn’t check the pipeline’s metadata to see if functions have been are outdated or not\ntar_mermaid() returns a Mermaid.js diagram representing the pipeline\ntar_network() returns a network of edges and nodes representing the pipeline\n\n\n\nInstruction: run tar_visnetwork() from your explore.R script to see the dependency graph defined in your _targets.R script. Try out the targets_only and name arguments too.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_visnetwork()\n\ntar_visnetwork(targets_only = TRUE)\n\ntar_visnetwork(starts_with('plot'))",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -677,7 +677,7 @@
     "text": "Run the {targets} pipeline with tar_make(). The pipeline is run in a new external R process, which means that tar_make() doesn’t impact your current workspace and, more importantly, is not influenced by your current workspace. This totally isolated environment is how {targets} offers us a truly reproducible approach - only things defined in the _targets.R script (or sourced within it) are considered.\n\n\nInstruction: run tar_make() from your explore.R script.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_make()",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -689,7 +689,7 @@
     "text": "To look at results from the {targets} pipeline, use tar_read() and tar_load(). tar_read() reads targets without saving them as an object in your environment and tar_load() loads the object directly to your environment using the name of the target as the object.\n\n\nInstruction: run tar_read() and tar_load() from your explore.R script to read/load the targets defined in your {targets} pipeline.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_read(prep_counts)\n\ntar_load(sums)\n\ntar_read(plotted)",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -701,7 +701,7 @@
     "text": "The metadata related to the {targets} pipeline is accessible using the function tar_meta().\n\n\nInstruction: run tar_meta() from your explore.R script to look at the metadata associated with your {targets} pipeline. Also try using the names argument to filter the metadata returned.\nNote: we sometimes find it helpful to use the View() function to open the metadata as a table in RStudio.\n\n\nHint\n\nexplore.R\nlibrary(targets)\ntar_source('R')\n\ntar_meta()\n\ntar_meta(starts_with('plot'))\n\nView(tar_meta())",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -713,7 +713,7 @@
     "text": "Now that we have a {targets} pipeline, the approach is a bit different than we might be used to using R interactively. With a {targets} pipeline, everything is defined in the pipeline so our process is now about making edits to our functions and our _targets.R pipeline, then rerunning tar_make(). {targets} tracks all functions and objects (and optionally can also track external files) and will only rerun downstream targets when required. This is the other main way that {targets} makes our lives easier. We no longer need to mentally keep track of versions of scripts, output files, figures, etc - just run tar_make() to run anything outdated (or check with tar_visnetwork()).\n\n\nInstruction: make sure your {targets} pipeline is up to date with tar_visnetwork(). Then, make an edit to the function sum_counts(). Rerun the {targets} pipeline. Next, make an edit to the function plot_xy(). Rerun with tar_make(). Lastly, make an edit to prepare_csv() and rerun. Note which targets were rerun with each change and discuss with your neighbours.\nBonus:\n\nmake a change to prepare_csv() that doesn’t actually change the returned object (eg. by adding an irrelevant intermediate step). Does this force the {targets} pipeline to rerun?",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -725,7 +725,7 @@
     "text": "The following functions can be used to force {targets} to rerun targets.\n\ntar_delete() deletes individual target output values\ntar_destroy() deletes the whole _targets/ data store (caution)",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -737,7 +737,7 @@
     "text": "Make more targets!\n\nuse the plot_xy() function with the weather timeseries\nuse the plot_xy() function with the palmerpenguins timeseries\nmake a target for something that isn’t one of our custom functions eg. summary(). ({targets} don’t need to be custom functions, any R command can be used)",
     "crumbs": [
       "Exercises",
-      "`{targets}`",
+      "targets",
       "Usage"
     ]
   },
@@ -902,34 +902,34 @@
   {
     "objectID": "resources/04-renv.html",
     "href": "resources/04-renv.html",
-    "title": "{renv}",
+    "title": "renv",
     "section": "",
     "text": "The {renv} documentation and vignettes have lots of information on {renv}. We’ll point out the most relevant pages and links, because {renv} can be used for a wide variety of uses on different systems (local machine, Docker, etc.).\n\n\n\n\nThis vignette overviews what {renv} is, and how to use it.\nIt walks us through the workflow of {renv}:\n\n\nCall renv::init() to initialize a new project-local environment with a private R library,\nWork in the project as normal, installing and removing new R packages as they are needed in the project,\nCall renv::snapshot() to save the state of the project library to the lockfile (called renv.lock),\nContinue working on your project, installing and updating R packages as needed.\nCall renv::snapshot() again to save the state of your project library if your attempts to update R packages were successful, or call renv::restore() to revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems.\n\n\nIt also outlines important caveats:\n\n{renv} only solves one small part of the reproducible problem: recording the version of R and R packages that are used in a project\n\nIt does not help if a package version becomes no longer available in the future.\nIt also does not help if a system dependency is missing on the computer attempting to recover an {renv} environment. The system dependency is external and needs to be installed for the project to run successfully.\n\n\n\nHow do you share your project that has an {renv} environment with other people? This vignette walks through the details of collaborating with other users when you have an isolated environment.\n\n\n\nFrequently asked questions about {renv}, a great place to start when troubleshooting {renv}.\n\n\n\n\n\n\nA video by {renv} author Kevin Ushey, outlining why {renv} is important and how to use it.\n\nCode repository: https://github.com/kevinushey/2020-rstudio-conf\n\n\n\n\nDemo on how to set up {renv} in existing projects with biology professor/statistician.",
     "crumbs": [
       "Resources",
-      "`{renv}`"
+      "renv"
     ]
   },
   {
     "objectID": "resources/04-renv.html#vignettes",
     "href": "resources/04-renv.html#vignettes",
-    "title": "{renv}",
+    "title": "renv",
     "section": "",
     "text": "This vignette overviews what {renv} is, and how to use it.\nIt walks us through the workflow of {renv}:\n\n\nCall renv::init() to initialize a new project-local environment with a private R library,\nWork in the project as normal, installing and removing new R packages as they are needed in the project,\nCall renv::snapshot() to save the state of the project library to the lockfile (called renv.lock),\nContinue working on your project, installing and updating R packages as needed.\nCall renv::snapshot() again to save the state of your project library if your attempts to update R packages were successful, or call renv::restore() to revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems.\n\n\nIt also outlines important caveats:\n\n{renv} only solves one small part of the reproducible problem: recording the version of R and R packages that are used in a project\n\nIt does not help if a package version becomes no longer available in the future.\nIt also does not help if a system dependency is missing on the computer attempting to recover an {renv} environment. The system dependency is external and needs to be installed for the project to run successfully.\n\n\n\nHow do you share your project that has an {renv} environment with other people? This vignette walks through the details of collaborating with other users when you have an isolated environment.\n\n\n\nFrequently asked questions about {renv}, a great place to start when troubleshooting {renv}.",
     "crumbs": [
       "Resources",
-      "`{renv}`"
+      "renv"
     ]
   },
   {
     "objectID": "resources/04-renv.html#videos",
     "href": "resources/04-renv.html#videos",
-    "title": "{renv}",
+    "title": "renv",
     "section": "",
     "text": "A video by {renv} author Kevin Ushey, outlining why {renv} is important and how to use it.\n\nCode repository: https://github.com/kevinushey/2020-rstudio-conf\n\n\n\n\nDemo on how to set up {renv} in existing projects with biology professor/statistician.",
     "crumbs": [
       "Resources",
-      "`{renv}`"
+      "renv"
     ]
   },
   {

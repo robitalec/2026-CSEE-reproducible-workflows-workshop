@@ -24,7 +24,7 @@ if (!dir.exists(dir_output)) dir.create(dir_output)
 if (!dir.exists(dir_figures)) dir.create(dir_figures)
 
 # Filters
-filter_years <- c(2010:2020)
+filter_years <- c(2005:2015)
 
 
 
@@ -54,32 +54,41 @@ c(
       prepare_csv(counts_raw, weather_raw, penguin_raw)
     ),
 
+    # Average colony size & body morphology
+    tar_target(
+      penguin_avgs,
+      avg_colony_size(full_datasets, filter_years)
+    ),
+
     # Group
     tar_group_by(
       group_counts,
-      full_datasets[['counts']],
-      island, year, month
+      penguin_avgs[['counts']],
+      island
     ),
 
     tar_group_by(
       group_penguins,
-      full_datasets[['penguins']],
-      island, sex, year, month
+      penguin_avgs[['penguins']],
+      island, sex
     ),
 
-    # Average colony size & body morphology
+    # Model by group
     tar_target(
-      penguin_avgs,
-      avg_colony_size(group_counts, group_penguins, filter_year)
+      model_adult_groups,
+      lm(adults ~ date_gmt + (colony), data = group_counts),
+      pattern = map(group_counts),
+      iteration = 'list'
     ),
 
 
-    # Keys for groups
     tar_target(
-        group_keys,
-        unique(group_counts$island),
-        pattern = map(group_counts)
+      model_chicks_groups,
+      lm(chicks ~ date_gmt + (colony), data = group_counts),
+      pattern = map(group_counts),
+      iteration = 'list'
     ),
+
 
     # Plot by group
     tar_target(
@@ -98,19 +107,6 @@ c(
         format = 'file'
     ),
 
-    # Model by group
-    tar_target(
-        model_adult_groups,
-        lm(adults ~ date_gmt + (colony), data = group_counts),
-        pattern = map(group_counts),
-        iteration = 'list'
-    ),
-    tar_target(
-        model_chicks_groups,
-        lm(chicks ~ date_gmt + (colony), data = group_counts),
-        pattern = map(group_counts),
-        iteration = 'list'
-    ),
 
     # Write tables
     tar_target(

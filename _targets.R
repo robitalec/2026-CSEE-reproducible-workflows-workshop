@@ -24,7 +24,7 @@ if (!dir.exists(dir_output)) dir.create(dir_output)
 if (!dir.exists(dir_figures)) dir.create(dir_figures)
 
 # Filters
-filter_year <- 1995
+filter_years <- c(2010:2020)
 
 
 
@@ -54,24 +54,25 @@ c(
       prepare_csv(counts_raw, weather_raw, penguin_raw)
     ),
 
-    # Sum counts
-    tar_target(
-        sums,
-        sum_counts(prep_counts, 'island')
-    ),
-
-    # Filter
-    tar_target(
-        filter_counts,
-        filter(prep_counts, year(date_gmt) > filter_year)
-    ),
-
     # Group
     tar_group_by(
-        group_counts,
-        filter_counts,
-        island
+      group_counts,
+      full_datasets[['counts']],
+      island, year, month
     ),
+
+    tar_group_by(
+      group_penguins,
+      full_datasets[['penguins']],
+      island, sex, year, month
+    ),
+
+    # Average colony size & body morphology
+    tar_target(
+      penguin_avgs,
+      avg_colony_size(group_counts, group_penguins, filter_year)
+    ),
+
 
     # Keys for groups
     tar_target(

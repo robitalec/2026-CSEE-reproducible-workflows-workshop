@@ -64,27 +64,27 @@ c(
     tar_group_by(
       group_counts,
       penguin_avgs[['counts']],
-      island
+      year
     ),
 
     tar_group_by(
       group_penguins,
       penguin_avgs[['penguins']],
-      island, sex
+      year, island
     ),
 
     # Model by group
     tar_target(
-      model_adult_groups,
-      lm(adults ~ date_gmt + (colony), data = group_counts),
+      model_chicks_groups,
+      lm(chicks_avg ~ adults_avg:island, data = group_counts),
       pattern = map(group_counts),
       iteration = 'list'
     ),
 
 
     tar_target(
-      model_chicks_groups,
-      lm(chicks ~ date_gmt + (colony), data = group_counts),
+      model_penguins_groups,
+      lm(body_mass_g_avg ~ flipper_length_mm_avg:sex, data = group_penguins),
       pattern = map(group_counts),
       iteration = 'list'
     ),

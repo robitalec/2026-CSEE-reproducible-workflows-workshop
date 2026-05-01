@@ -32,31 +32,26 @@ filter_year <- 1995
 c(
     # Files
     tar_file_read(
-      file_counts,
+      counts_raw,
       'raw-data/adelie-adult-chick-counts.csv',
       read.csv(!!.x)
     ),
 
     tar_file_read(
-      file_weather,
+      weather_raw,
       'raw-data/weather-timeseries.csv',
       read.csv(!!.x)
     ),
 
     tar_target(
-      penguin_data,
-      penguins_raw # directly from palmerpenguins package
+      penguin_raw,
+      palmerpenguins::penguins_raw
     ),
-
 
     # Prepare
     tar_target(
-        prep_counts,
-        prepare_csv(file_counts)
-    ),
-    tar_target(
-        prep_weather,
-        prepare_csv(file_weather)
+      full_datasets,
+      prepare_csv(counts_raw, weather_raw, penguin_raw)
     ),
 
     # Sum counts

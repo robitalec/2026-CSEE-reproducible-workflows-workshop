@@ -12,10 +12,12 @@ tar_source('R')
 # Variables ---------------------------------------------------------------
 
 # Column names
-x_col <- 'date_gmt'
-y_col <- 'adults'
-color_col <- 'colony'
+x_col_counts <- 'adults_avg'
+y_col_counts <- 'chicks_avg'
 
+x_col_penguins <- 'flipper_length_mm_avg'
+y_col_penguins <- 'body_mass_g_avg'
+color_col_penguins <- 'sex'
 # Directories
 dir_output <- 'output'
 dir_figures <- 'figures'
@@ -64,15 +66,27 @@ c(
     tar_group_by(
       group_counts,
       penguin_avgs[['counts']],
-      year
+      island
     ),
 
     tar_group_by(
       group_penguins,
       penguin_avgs[['penguins']],
-      year, island
+      island
     ),
 
+    # Keys for groups
+    tar_target(
+      counts_keys,
+      unique(group_counts$island),
+      pattern = map(group_counts)
+    ),
+
+    tar_target(
+      penguin_keys,
+      unique(group_penguins$island),
+      pattern = map(group_penguins)
+    ),
     # Model by group
     tar_target(
       model_chicks_groups,

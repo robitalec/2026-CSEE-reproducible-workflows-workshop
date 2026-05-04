@@ -12,10 +12,10 @@ tar_source('R')
 # Variables ---------------------------------------------------------------
 
 # Column names
-x_col_counts <- 'adults_avg'
+x_col_counts <- 'mean_temperature_c_yearly'
 y_col_counts <- 'chicks_avg'
 
-x_col_penguins <- 'flipper_length_mm_avg'
+x_col_penguins <- 'mean_precipitation_mm_yearly'
 y_col_penguins <- 'body_mass_g_avg'
 color_col_penguins <- 'sex'
 
@@ -91,7 +91,7 @@ c(
     # Model by group
     tar_target(
       model_chicks_groups,
-      lm(chicks_avg ~ adults_avg, data = group_counts),
+      lm(chicks_avg ~ mean_temperature_c_yearly, data = group_counts),
       pattern = map(group_counts),
       iteration = 'list'
     ),
@@ -99,7 +99,7 @@ c(
 
     tar_target(
       model_penguins_groups,
-      lm(body_mass_g_avg ~ flipper_length_mm_avg:sex, data = group_penguins),
+      lm(body_mass_g_avg ~ mean_precipitation_mm_yearly:sex, data = group_penguins),
       pattern = map(group_counts),
       iteration = 'list'
     ),

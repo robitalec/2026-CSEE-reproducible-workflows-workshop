@@ -86,7 +86,7 @@ c(
 
     # Model by group
     tar_target(
-      model_chicks,
+      model_counts,
       lm(chicks_avg ~ mean_temperature_c_yearly, data = group_counts),
       pattern = map(group_counts),
       iteration = 'list'

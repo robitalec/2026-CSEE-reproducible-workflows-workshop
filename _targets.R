@@ -86,16 +86,15 @@ c(
 
     # Model by group
     tar_target(
-      model_chicks_groups,
+      model_chicks,
       lm(chicks_avg ~ mean_temperature_c_yearly, data = group_counts),
       pattern = map(group_counts),
       iteration = 'list'
     ),
 
-
     tar_target(
-      model_penguins_groups,
-      lm(body_mass_g_avg ~ mean_precipitation_mm_yearly:sex, data = group_penguins),
+      model_penguins,
+      lm(body_mass_g ~ mean_precipitation_mm:sex, data = group_penguins),
       pattern = map(group_penguins),
       iteration = 'list'
     ),

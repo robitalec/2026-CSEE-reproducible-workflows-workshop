@@ -114,13 +114,12 @@ c(
       iteration = 'list'
     ),
 
-
     # Save plots
     tar_target(
-        save_plots_counts,
-        ggsave(filename = paste0(file.path(dir_figures, counts_keys), '.png'),
-               plot = plot_groups_counts),
-        pattern = map(plot_groups_counts, counts_keys),
+        save_fig_counts,
+        ggsave(filename = paste0(file.path(dir_figures, keys_counts), '.png'),
+               plot = fig_counts),
+        pattern = map(fig_counts, keys_counts),
         format = 'file'
     ),
 

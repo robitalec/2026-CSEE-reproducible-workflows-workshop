@@ -5,11 +5,11 @@ execute:
 
 # Introduction to functions
  
-## Exercises: function introduction
-
-### Function structure 
+## Function Structure
 
 Learning goal: Identify the structure of functions in terms of inputs, arguments, return objects and naming. 
+
+### Exercise: function structure
 
 Instruction: Pick three functions of your choice and note their characteristics. (pairs)
 
@@ -24,7 +24,9 @@ Feel free to look up documentation online, in the R help manual on your computer
 We encourage you to find your own functions, maybe a function you use or have wanted to learn about. If you can't think of any right now, see for example `stats::lm()`, `stats::runif()`, or (trickier) `base::do.call()`.
 
 
-### Thinking in functions 
+## Thinking in Functions 
+
+### Exercise: thinking in functions
 
 Instruction: For the following tasks, write a function's name, arguments and return object. Do this on paper, or in a blank text document - we are not writing code yet. 
 
@@ -44,7 +46,9 @@ Second round (together)
 Learning goal: identify when a function's goal is too complex and could be split into subfunctions that are easier to develop and test. 
 
 
-### Reading functions
+## Reading Functions
+
+### Exercise: reading functions
 
 Instruction: Read the following functions and note what you expect they will 
 output. We have purposely used vague function names in this case - not our 

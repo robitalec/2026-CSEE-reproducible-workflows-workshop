@@ -7,7 +7,7 @@ execute:
 
 The {conflicted} package provides an alternative to R's default management of conflicts - to just use the most recently loaded package. {conflicted} instead highlights the conflict when it occurs as an error, forcing the user to be explicit about which function they would prefer to use. It also provides a function to "scout" potential conflicts, to make decisions about preference before conflicts are hit. 
 
-## Usage
+## Application
 
 At its simplest, using {conflicted} is just loading it with `library()`. 
 

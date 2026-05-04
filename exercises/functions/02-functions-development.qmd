@@ -30,7 +30,7 @@ Check the test output, tweak the function, repeat!
 This process of editing two files might seem like extra work, but we recommend separating the function's definition from the bits of code we use to test it. Think of the test script as your isolated playground to test and develop the function and your function script as the sheltered environment where you carefully tweak the function. You can also use this test script as a place to develop the function using the same inputs and arguments as the function. Keeping these parts separate can help to avoid mysterious errors and general chaos!
 
 
-## Exercises: function development
+### Exercise: function development
 
 
 ### `prepare_csv()`

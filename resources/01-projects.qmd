@@ -8,7 +8,7 @@ order: 1
 
 Good file structure allows you to manage all the components of your (often large) projects, while facilitating easy sharing and reducing the risk of accidentally deleting/altering important files. Keeping your raw data file in its own folder (e.g., `input/` or `raw/` makes it harder to mix up these files with intermediate ones down the line).
 
-Software Carpentry's [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro.html):
+Software Carpentry's [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/index.html):
 
 Best practices for file structure/data management include:
 

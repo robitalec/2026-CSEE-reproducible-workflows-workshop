@@ -10,15 +10,14 @@ tar_source('R')
 
 
 # Variables ---------------------------------------------------------------
-# File paths
-path_counts <- file.path('raw-data', 'adelie-adult-chick-counts.csv')
-path_ice <- file.path('raw-data', 'ice-area.txt')
-path_weather <- file.path('raw-data', 'weather-timeseries.csv')
 
 # Column names
-x_col <- 'date_gmt'
-y_col <- 'adults'
-color_col <- 'colony'
+x_col_counts <- 'mean_temperature_c_yearly'
+y_col_counts <- 'chicks_avg'
+
+x_col_penguins <- 'mean_precipitation_mm_yearly'
+y_col_penguins <- 'body_mass_g_avg'
+color_col_penguins <- 'sex'
 
 # Directories
 dir_output <- 'output'
@@ -28,103 +27,118 @@ if (!dir.exists(dir_output)) dir.create(dir_output)
 if (!dir.exists(dir_figures)) dir.create(dir_figures)
 
 # Filters
-filter_year <- 1995
-
+filter_years <- c(2005:2015)
 
 
 # Targets -----------------------------------------------------------------
 c(
     # Files
-    tar_target(
-        file_counts,
-        path_counts,
-        format = 'file'
-    ),
-    tar_target(
-        file_weather,
-        path_weather,
-        format = 'file'
+    tar_file_read(
+      counts_raw,
+      'raw-data/adelie-adult-chick-counts.csv',
+      read.csv(!!.x)
     ),
 
+    tar_file_read(
+      weather_raw,
+      'raw-data/weather-timeseries.csv',
+      read.csv(!!.x)
+    ),
+
+    tar_target(
+      penguin_raw,
+      palmerpenguins::penguins_raw
+    ),
 
     # Prepare
     tar_target(
-        prep_counts,
-        prepare_csv(file_counts)
-    ),
-    tar_target(
-        prep_weather,
-        prepare_csv(file_weather)
+      full_datasets,
+      prepare_csv(counts_raw, weather_raw, penguin_raw)
     ),
 
-    # Sum counts
+    # Average colony size & body morphology
     tar_target(
-        sums,
-        sum_counts(prep_counts, 'island')
-    ),
-
-    # Filter
-    tar_target(
-        filter_counts,
-        filter(prep_counts, year(date_gmt) > filter_year)
+      penguin_avgs,
+      avg_colony_size(full_datasets, filter_years)
     ),
 
     # Group
     tar_group_by(
-        group_counts,
-        filter_counts,
-        island
+      group_counts,
+      penguin_avgs[['counts']],
+      island
+    ),
+
+    tar_group_by(
+      group_penguins,
+      penguin_avgs[['penguins']],
+      island
     ),
 
     # Keys for groups
     tar_target(
-        group_keys,
-        unique(group_counts$island),
-        pattern = map(group_counts)
+      counts_keys,
+      unique(group_counts$island),
+      pattern = map(group_counts)
     ),
 
-    # Plot by group
     tar_target(
-        plot_groups,
-        plot_xy(group_counts, x_col, y_col, color_col) + ggtitle(group_keys),
-        pattern = map(group_counts, group_keys),
-        iteration = 'list'
-    ),
-
-    # Save plots
-    tar_target(
-        save_plots,
-        ggsave(filename = paste0(file.path(dir_figures, group_keys), '.png'),
-               plot = plot_groups),
-        pattern = map(plot_groups, group_keys),
-        format = 'file'
+      penguin_keys,
+      unique(group_penguins$island),
+      pattern = map(group_penguins)
     ),
 
     # Model by group
     tar_target(
-        model_adult_groups,
-        lm(adults ~ date_gmt + (colony), data = group_counts),
-        pattern = map(group_counts),
-        iteration = 'list'
+      model_chicks_groups,
+      lm(chicks_avg ~ mean_temperature_c_yearly, data = group_counts),
+      pattern = map(group_counts),
+      iteration = 'list'
     ),
+
+
     tar_target(
-        model_chicks_groups,
-        lm(chicks ~ date_gmt + (colony), data = group_counts),
-        pattern = map(group_counts),
-        iteration = 'list'
+      model_penguins_groups,
+      lm(body_mass_g_avg ~ mean_precipitation_mm_yearly:sex, data = group_penguins),
+      pattern = map(group_penguins),
+      iteration = 'list'
+    ),
+
+    # Plot by group
+    tar_target(
+      plot_groups_counts,
+      plot_xy(group_counts, x_col_counts, y_col_counts) + ggtitle(counts_keys),
+      pattern = map(group_counts, counts_keys),
+      iteration = 'list'
+    ),
+
+    tar_target(
+      plot_groups_penguins,
+      plot_xy(group_penguins, x_col_penguins, y_col_penguins, color_col_penguins) + ggtitle(penguin_keys),
+      pattern = map(group_penguins, penguin_keys),
+      iteration = 'list'
+    ),
+
+
+    # Save plots
+    tar_target(
+        save_plots_counts,
+        ggsave(filename = paste0(file.path(dir_figures, counts_keys), '.png'),
+               plot = plot_groups_counts),
+        pattern = map(plot_groups_counts, counts_keys),
+        format = 'file'
     ),
 
     # Write tables
     tar_target(
-        save_tables,
-        fwrite(sums, file.path(dir_output, 'sums.csv')),
-        format = 'file'
-    ), 
-    
-    # Manuscript
+      save_model_tables,
+      modelsummary(model_chicks_groups %>% setNames(counts_keys), output = file.path(dir_output, 'chicks_model-summaries.png'))
+    ),
+
+    # Report
     tar_quarto(
-        render,
-        file.path('paper', 'manuscript.qmd')
+      render,
+      file.path('paper', 'manuscript.qmd')
     )
 
 )

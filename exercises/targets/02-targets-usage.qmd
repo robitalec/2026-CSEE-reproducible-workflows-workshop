@@ -1,4 +1,4 @@
-# Usage
+# Application
 
 Now that we have our `_targets.R` script setup with the previous exercises and we have added our first few targets to the pipeline, let's take a look at using {targets}. It is a bit different than the [usual R approach](https://books.ropensci.org/targets/#motivation) where we make edits, then rerun everything, wait for results, notice issues, rerun from scratch...
 

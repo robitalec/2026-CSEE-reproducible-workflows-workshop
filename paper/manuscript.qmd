@@ -1,10 +1,9 @@
 ---
-title: "Example Manuscript"
+title: "Summary Report"
 author: "Alec L. Robitaille"
-execute:
-  eval: false
 format:
-  html: default
+  html:
+    embed-resources: true
   gfm: default
 ---
 
@@ -13,43 +12,118 @@ format:
 source(file.path('R', 'packages.R'))
 ```
 
+## Data Summary
 
-# Introduction
-
-
-
-# Methods
-
-
-
-# Results
-
+For this project, we are using three datasets. The first dataset includes Adelie adult and chick counts across islands and years.
 
 ```{r}
-#| echo: false
-paste(first(tar_read(group_counts, 1)$island), '-', 'Adults')
-model_parameters(tar_read(model_adult_groups, 1)[[1]]) |>
-    print_md()
-```
+#| echo: true
+#| eval: true
+#| warning: false
+#| label: chicks-summary
 
-```{r}
-#| echo: false
-paste(first(tar_read(group_counts, 1)$island), '-', 'Chicks')
-model_parameters(tar_read(model_chicks_groups, 1)[[1]]) |>
-    print_md()
+tar_load(full_datasets)
+
+datasummary_skim(data = full_datasets$counts %>% select(c(island, adults, chicks)))
 ```
 
 
-```{r}
-#| echo: false
-tar_read(plot_groups)
-```
+----
+
+
+The second dataset describes the monthly weather conditions from Palmer Station, Antarctica
 
 ```{r}
-#| echo: false
-tar_read(sums)
+#| echo: true
+#| eval: true
+#| warning: false
+#| label: weather-summary
+
+tar_load(weather_raw) 
+
+datasummary_skim(data = weather_raw %>% clean_names())
+
 ```
 
 
-# Discussion
+---
 
+
+The final dataset is a widely accessible dataset through the `palmerpenguins` package and includes many variables concerning penguin body condition.
+
+```{r}
+#| echo: true
+#| eval: true
+#| warning: false
+#| label: penguins-summary
+
+datasummary_skim(data = full_datasets$penguins %>% select(-c(month, date, comments, clutch_completion, species, study_name)))
+
+```
+
+## Modelling
+
+We had two groups of models. The first was looking at how temperature relates to chick counts on different islands.
+
+```{r}
+#| echo: true
+#| eval: true
+#| label: counts-models
+
+tar_load(save_model_tables)
+
+save_model_tables
+
+```
+
+------------------------------------------------------------------------
+
+The second was looking at how precipitation affects body mass of Adelie penguins.
+
+```{r}
+#| echo: true
+#| eval: true
+#| label: penguins-models
+
+tar_load(model_penguins_groups)
+tar_load(penguin_keys)
+
+model_penguins_groups %>% setNames(penguin_keys) %>% modelsummary()
+
+```
+
+## Plots
+
+We can visualize these models. Chick counts:
+
+```{r}
+#| echo: true
+#| eval: true
+#| warning: false
+#| label: chicks-plots
+#| layout-ncol: 2
+
+tar_load(plot_groups_counts)
+
+plot_groups_counts
+
+```
+
+Body mass:
+
+```{r}
+#| echo: true
+#| eval: true
+#| warning: false
+#| label: penguins-plots
+#| layout-ncol: 2
+
+tar_load(plot_groups_penguins)
+
+plot_groups_penguins
+
+```
+
+## Next Steps
+
+There is a lot more we can do with a `{targets}` workflow! Check out the Resources page of the workshop for more.

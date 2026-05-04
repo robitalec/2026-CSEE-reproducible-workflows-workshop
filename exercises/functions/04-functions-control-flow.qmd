@@ -9,9 +9,9 @@ The following functions are essential for controlling flow in R:
 - `|`, `&` are vectorized and cannot be directly used in an `if` statement unless you also use `any`, `all`
 
 
-## Exercises: function conditionals
+## Conditional Statements
 
-### Conditional statements
+### Exercise: function conditionals
 
 Instruction: write a series of `if` `else` conditional statements for the following objects then consult the solution to check your work. 
 
@@ -69,7 +69,7 @@ if (type == 'histogram') {
 </details>
 
 
-### Conditional counts
+### Exercise: conditional counts
 
 Next we'll write a new function that processes our prepared CSV files. 
 

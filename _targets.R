@@ -58,16 +58,16 @@ c(
       mean_counts(prepared_counts, filter_years)
     ),
 
-    # Group
+    # Group by island
     tar_group_by(
       group_counts,
-      penguin_avgs[['counts']],
+      mean_counts_weather,
       island
     ),
 
     tar_group_by(
       group_penguins,
-      penguin_avgs[['penguins']],
+      prepared_penguins,
       island
     ),
 

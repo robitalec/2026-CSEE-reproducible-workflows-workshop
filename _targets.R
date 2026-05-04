@@ -108,9 +108,9 @@ c(
     ),
 
     tar_target(
-      plot_groups_penguins,
-      plot_xy(group_penguins, x_col_penguins, y_col_penguins, color_col_penguins) + ggtitle(penguin_keys),
-      pattern = map(group_penguins, penguin_keys),
+      fig_penguins,
+      plot_penguins(group_penguins, keys_penguins),
+      pattern = map(group_penguins, keys_penguins),
       iteration = 'list'
     ),
 

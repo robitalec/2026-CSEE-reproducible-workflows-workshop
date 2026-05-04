@@ -90,7 +90,7 @@ c(
     # Model by group
     tar_target(
       model_chicks_groups,
-      lm(chicks_avg ~ adults_avg:island, data = group_counts),
+      lm(chicks_avg ~ adults_avg, data = group_counts),
       pattern = map(group_counts),
       iteration = 'list'
     ),

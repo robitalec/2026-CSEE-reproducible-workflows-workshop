@@ -126,7 +126,8 @@ c(
     # Write tables
     tar_target(
       save_model_tables,
-      modelsummary(model_chicks_groups %>% setNames(counts_keys), output = file.path(dir_output, 'chicks_model-summaries.png'))
+      modelsummary(setNames(model_counts, keys_counts),
+                   output = file.path(dir_output, 'counts-model-summaries.png'))
     ),
 
     # Report

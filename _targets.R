@@ -40,15 +40,16 @@ c(
       read.csv(!!.x)
     ),
 
+    # Join counts and weather
     tar_target(
-      penguin_raw,
-      palmerpenguins::penguins_raw
+      prepared_counts,
+      merge_counts_weather(counts, weather)
     ),
 
-    # Prepare
+    # Join penguins and weather
     tar_target(
-      full_datasets,
-      prepare_csv(counts_raw, weather_raw, penguin_raw)
+      prepared_penguins,
+      merge_penguins_weather(palmerpenguins::penguins_raw, weather)
     ),
 
     # Average colony size & body morphology

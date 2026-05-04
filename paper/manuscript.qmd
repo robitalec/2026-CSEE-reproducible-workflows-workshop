@@ -22,8 +22,13 @@ For this project, we are using three datasets. The first dataset includes Adelie
 #| warning: false
 #| label: chicks-summary
 
+tar_load(full_datasets)
+
 datasummary_skim(data = full_datasets$counts %>% select(c(island, adults, chicks)))
 ```
+
+
+----
 
 
 The second dataset describes the monthly weather conditions from Palmer Station, Antarctica
@@ -41,6 +46,9 @@ datasummary_skim(data = weather_raw %>% clean_names())
 ```
 
 
+---
+
+
 The final dataset is a widely accessible dataset through the `palmerpenguins` package and includes many variables concerning penguin body condition.
 
 ```{r}
@@ -49,15 +57,13 @@ The final dataset is a widely accessible dataset through the `palmerpenguins` pa
 #| warning: false
 #| label: penguins-summary
 
-tar_load(full_datasets)
-
 datasummary_skim(data = full_datasets$penguins %>% select(-c(month, date, comments, clutch_completion, species, study_name)))
 
 ```
 
 ## Modelling
 
-We had two groups of models. The first was looking at how temperature relates to chick counts on different islands. 
+We had two groups of models. The first was looking at how temperature relates to chick counts on different islands.
 
 ```{r}
 #| echo: true
@@ -70,7 +76,9 @@ save_model_tables
 
 ```
 
-The second was looking at how precipitation affects body mass of Adelie penguins. 
+------------------------------------------------------------------------
+
+The second was looking at how precipitation affects body mass of Adelie penguins.
 
 ```{r}
 #| echo: true
@@ -86,11 +94,12 @@ model_penguins_groups %>% setNames(penguin_keys) %>% modelsummary()
 
 ## Plots
 
-We can visualize these models. 
-Chick counts:
+We can visualize these models. Chick counts:
+
 ```{r}
 #| echo: true
 #| eval: true
+#| warning: false
 #| label: chicks-plots
 #| layout-ncol: 2
 
@@ -100,11 +109,12 @@ plot_groups_counts
 
 ```
 
+Body mass:
 
-Body mass: 
 ```{r}
 #| echo: true
 #| eval: true
+#| warning: false
 #| label: penguins-plots
 #| layout-ncol: 2
 
@@ -113,8 +123,6 @@ tar_load(plot_groups_penguins)
 plot_groups_penguins
 
 ```
-
-
 
 ## Next Steps
 

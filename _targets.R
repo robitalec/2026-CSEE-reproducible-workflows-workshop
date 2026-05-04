@@ -131,9 +131,8 @@ c(
 
     # Write tables
     tar_target(
-        save_tables,
-        fwrite(sums, file.path(dir_output, 'sums.csv')),
-        format = 'file'
+      save_model_tables,
+      modelsummary(model_chicks_groups %>% setNames(counts_keys), output = file.path(dir_output, 'chicks_model-summaries.png'))
     ),
 
     # Manuscript

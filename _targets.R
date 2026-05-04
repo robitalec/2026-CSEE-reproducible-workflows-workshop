@@ -18,6 +18,7 @@ y_col_counts <- 'chicks_avg'
 x_col_penguins <- 'flipper_length_mm_avg'
 y_col_penguins <- 'body_mass_g_avg'
 color_col_penguins <- 'sex'
+
 # Directories
 dir_output <- 'output'
 dir_figures <- 'figures'
@@ -27,7 +28,6 @@ if (!dir.exists(dir_figures)) dir.create(dir_figures)
 
 # Filters
 filter_years <- c(2005:2015)
-
 
 
 # Targets -----------------------------------------------------------------
@@ -87,6 +87,7 @@ c(
       unique(group_penguins$island),
       pattern = map(group_penguins)
     ),
+
     # Model by group
     tar_target(
       model_chicks_groups,
@@ -103,7 +104,6 @@ c(
       iteration = 'list'
     ),
 
-
     # Plot by group
     tar_target(
       plot_groups_counts,
@@ -119,6 +119,7 @@ c(
       iteration = 'list'
     ),
 
+
     # Save plots
     tar_target(
         save_plots_counts,
@@ -128,17 +129,16 @@ c(
         format = 'file'
     ),
 
-
     # Write tables
     tar_target(
       save_model_tables,
       modelsummary(model_chicks_groups %>% setNames(counts_keys), output = file.path(dir_output, 'chicks_model-summaries.png'))
     ),
 
-    # Manuscript
+    # Report
     tar_quarto(
-        render,
-        file.path('paper', 'manuscript.qmd')
+      render,
+      file.path('paper', 'manuscript.qmd')
     )
 
 )

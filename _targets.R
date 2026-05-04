@@ -121,10 +121,10 @@ c(
 
     # Save plots
     tar_target(
-        save_plots,
-        ggsave(filename = paste0(file.path(dir_figures, group_keys), '.png'),
-               plot = plot_groups),
-        pattern = map(plot_groups, group_keys),
+        save_plots_counts,
+        ggsave(filename = paste0(file.path(dir_figures, counts_keys), '.png'),
+               plot = plot_groups_counts),
+        pattern = map(plot_groups_counts, counts_keys),
         format = 'file'
     ),
 

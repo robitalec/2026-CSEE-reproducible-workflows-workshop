@@ -10,18 +10,9 @@ tar_source('R')
 
 
 # Variables ---------------------------------------------------------------
-# Column names
-x_col_counts <- 'mean_temperature_c_yearly'
-y_col_counts <- 'chicks_avg'
-
-x_col_penguins <- 'mean_precipitation_mm_yearly'
-y_col_penguins <- 'body_mass_g_avg'
-color_col_penguins <- 'sex'
-
 # Directories
 dir_output <- 'output'
 dir_figures <- 'figures'
-
 if (!dir.exists(dir_output)) dir.create(dir_output)
 if (!dir.exists(dir_figures)) dir.create(dir_figures)
 

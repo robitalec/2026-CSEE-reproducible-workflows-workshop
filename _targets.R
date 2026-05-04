@@ -101,9 +101,9 @@ c(
 
     # Plot by group
     tar_target(
-      plot_groups_counts,
-      plot_xy(group_counts, x_col_counts, y_col_counts) + ggtitle(counts_keys),
-      pattern = map(group_counts, counts_keys),
+      fig_counts,
+      plot_counts(group_counts, keys_counts),
+      pattern = map(group_counts, keys_counts),
       iteration = 'list'
     ),
 

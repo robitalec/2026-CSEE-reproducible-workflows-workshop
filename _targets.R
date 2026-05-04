@@ -16,22 +16,27 @@ dir_figures <- 'figures'
 if (!dir.exists(dir_output)) dir.create(dir_output)
 if (!dir.exists(dir_figures)) dir.create(dir_figures)
 
+# File paths
+filepath_counts <- file.path('raw-data', 'adelie-adult-chick-counts.csv')
+filepath_weather <- file.path('raw-data', 'weather-timeseries.csv')
+
 # Filters
 filter_years <- seq(2005, 2015)
 
 
+
 # Targets -----------------------------------------------------------------
 c(
-    # Files
+    # Track raw files, and read in
     tar_file_read(
-      counts_raw,
-      'raw-data/adelie-adult-chick-counts.csv',
+      counts,
+      filepath_counts,
       read.csv(!!.x)
     ),
 
     tar_file_read(
-      weather_raw,
-      'raw-data/weather-timeseries.csv',
+      weather,
+      filepath_weather,
       read.csv(!!.x)
     ),
 

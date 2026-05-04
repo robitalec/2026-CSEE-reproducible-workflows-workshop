@@ -1,15 +1,10 @@
 ---
 title: "Summary Report"
-author: "Alec L. Robitaille"
-format:
-  html:
-    embed-resources: true
-  gfm: default
 ---
 
 ```{r}
 #| include: false
-source(file.path('R', 'packages.R'))
+targets::tar_source('R')
 ```
 
 ## Data Summary

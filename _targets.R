@@ -73,13 +73,13 @@ c(
 
     # Keys for groups
     tar_target(
-      counts_keys,
+      keys_counts,
       unique(group_counts$island),
       pattern = map(group_counts)
     ),
 
     tar_target(
-      penguin_keys,
+      keys_penguins,
       unique(group_penguins$island),
       pattern = map(group_penguins)
     ),

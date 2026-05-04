@@ -106,10 +106,17 @@ c(
 
     # Plot by group
     tar_target(
-        plot_groups,
-        plot_xy(group_counts, x_col, y_col, color_col) + ggtitle(group_keys),
-        pattern = map(group_counts, group_keys),
-        iteration = 'list'
+      plot_groups_counts,
+      plot_xy(group_counts, x_col_counts, y_col_counts) + ggtitle(counts_keys),
+      pattern = map(group_counts, counts_keys),
+      iteration = 'list'
+    ),
+
+    tar_target(
+      plot_groups_penguins,
+      plot_xy(group_penguins, x_col_penguins, y_col_penguins, color_col_penguins) + ggtitle(penguin_keys),
+      pattern = map(group_penguins, penguin_keys),
+      iteration = 'list'
     ),
 
     # Save plots

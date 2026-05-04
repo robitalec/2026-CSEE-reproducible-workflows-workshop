@@ -10,7 +10,6 @@ tar_source('R')
 
 
 # Variables ---------------------------------------------------------------
-
 # Column names
 x_col_counts <- 'mean_temperature_c_yearly'
 y_col_counts <- 'chicks_avg'
@@ -27,7 +26,7 @@ if (!dir.exists(dir_output)) dir.create(dir_output)
 if (!dir.exists(dir_figures)) dir.create(dir_figures)
 
 # Filters
-filter_years <- c(2005:2015)
+filter_years <- seq(2005, 2015)
 
 
 # Targets -----------------------------------------------------------------

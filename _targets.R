@@ -100,7 +100,7 @@ c(
     tar_target(
       model_penguins_groups,
       lm(body_mass_g_avg ~ mean_precipitation_mm_yearly:sex, data = group_penguins),
-      pattern = map(group_counts),
+      pattern = map(group_penguins),
       iteration = 'list'
     ),
 

@@ -15,6 +15,7 @@ library(quarto)
 library(usethis)
 library(fs)
 library(parameters)
+library(modelsummary)
 
 conflicts_prefer(dplyr::filter)
 conflicts_prefer(dplyr::first)

@@ -13,3 +13,4 @@
 ^index\.qmd$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.lintr$

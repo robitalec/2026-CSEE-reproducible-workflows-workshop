@@ -52,10 +52,10 @@ c(
       merge_penguins_weather(palmerpenguins::penguins_raw, weather)
     ),
 
-    # Average colony size & body morphology
+    # Mean counts vs. weather
     tar_target(
-      penguin_avgs,
-      avg_colony_size(full_datasets, filter_years)
+      mean_counts_weather,
+      mean_counts(prepared_counts, filter_years)
     ),
 
     # Group

@@ -125,9 +125,8 @@ c(
 
     # Write tables
     tar_target(
-      save_model_tables,
-      modelsummary(setNames(model_counts, keys_counts),
-                   output = file.path(dir_output, 'counts-model-summaries.png'))
+      model_tables,
+      modelsummary(setNames(model_counts, keys_counts))
     ),
 
     # Report

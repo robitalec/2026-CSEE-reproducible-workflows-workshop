@@ -70,9 +70,9 @@ We had two groups of models. The first was looking at how temperature relates to
 #| eval: true
 #| label: counts-models
 
-tar_load(save_model_tables)
+tar_load(model_tables)
 
-save_model_tables
+model_tables
 
 ```
 

@@ -1,7 +1,5 @@
 # === Test plot_xy() ------------------------------------------------------
 
-
-
 # Packages ----------------------------------------------------------------
 # Load required packages
 library(data.table)
@@ -12,7 +10,6 @@ library(janitor)
 # Load functions
 source('R/prepare_csv.R')
 source('R/plot_xy.R')
-
 
 
 # Data --------------------------------------------------------------------
@@ -41,7 +38,6 @@ ggplot(DF) +
 # Tests -------------------------------------------------------------------
 # Test plot histogram
 print(plot_xy(DF, x_col, y_col, color_col))
-
 
 # Each time you run these tests, make sure to source the entire script
 #  to ensure you are using an updated version of your function

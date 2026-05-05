@@ -15,11 +15,9 @@ For this project, we are using three datasets. The first dataset includes Adelie
 #| echo: true
 #| eval: true
 #| warning: false
-#| label: chicks-summary
-
-tar_load(full_datasets)
-
-datasummary_skim(data = full_datasets$counts %>% select(c(island, adults, chicks)))
+#| label: counts-summary
+tar_load(prepared_counts)
+datasummary_skim(data = prepared_counts %>% select(c(island, adults, chicks)))
 ```
 
 
@@ -33,11 +31,8 @@ The second dataset describes the monthly weather conditions from Palmer Station,
 #| eval: true
 #| warning: false
 #| label: weather-summary
-
-tar_load(weather_raw) 
-
-datasummary_skim(data = weather_raw %>% clean_names())
-
+tar_load(weather) 
+datasummary_skim(data = weather %>% clean_names())
 ```
 
 
@@ -51,9 +46,9 @@ The final dataset is a widely accessible dataset through the `palmerpenguins` pa
 #| eval: true
 #| warning: false
 #| label: penguins-summary
-
-datasummary_skim(data = full_datasets$penguins %>% select(-c(month, date, comments, clutch_completion, species, study_name)))
-
+tar_load(prepared_penguins)
+datasummary_skim(data = prepared_penguins |>
+                   select(-c(month, date, comments, clutch_completion, species, study_name)))
 ```
 
 ## Modelling
@@ -64,11 +59,9 @@ We had two groups of models. The first was looking at how temperature relates to
 #| echo: true
 #| eval: true
 #| label: counts-models
-
 tar_load(model_tables)
 
 model_tables
-
 ```
 
 ------------------------------------------------------------------------
@@ -79,11 +72,11 @@ The second was looking at how precipitation affects body mass of Adelie penguins
 #| echo: true
 #| eval: true
 #| label: penguins-models
+tar_load(model_penguins)
+tar_load(keys_penguins)
 
-tar_load(model_penguins_groups)
-tar_load(penguin_keys)
-
-model_penguins_groups %>% setNames(penguin_keys) %>% modelsummary()
+setNames(model_penguins, keys_penguins) |>
+  modelsummary()
 
 ```
 
@@ -95,13 +88,11 @@ We can visualize these models. Chick counts:
 #| echo: true
 #| eval: true
 #| warning: false
-#| label: chicks-plots
+#| label: counts-plots
 #| layout-ncol: 2
+tar_load(fig_counts)
 
-tar_load(plot_groups_counts)
-
-plot_groups_counts
-
+fig_counts
 ```
 
 Body mass:
@@ -112,11 +103,9 @@ Body mass:
 #| warning: false
 #| label: penguins-plots
 #| layout-ncol: 2
+tar_load(fig_penguins)
 
-tar_load(plot_groups_penguins)
-
-plot_groups_penguins
-
+fig_penguins
 ```
 
 ## Next Steps

@@ -1,0 +1,16 @@
+project:
+  type: website
+  # Set the working directory to the location of the Rproj file
+  execute-dir: project
+
+website:
+  title: "Example targets workflow"
+  navbar:
+    contents: auto
+
+format:
+  html: default
+  md: default
+
+
+

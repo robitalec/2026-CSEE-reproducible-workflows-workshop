@@ -9,12 +9,8 @@ tar_source('R')
 # Variables ---------------------------------------------------------------
 # Directories
 dir_output <- 'output'
-dir_figures <- 'figures'
 if (!dir.exists(dir_output)) {
   dir.create(dir_output)
-}
-if (!dir.exists(dir_figures)) {
-  dir.create(dir_figures)
 }
 
 # File paths
@@ -118,7 +114,7 @@ c(
   tar_target(
     save_fig_counts,
     ggsave(
-      filename = paste0(file.path(dir_figures, keys_counts), '.png'),
+      filename = paste0(file.path(dir_output, keys_counts), '.png'),
       plot = fig_counts
     ),
     pattern = map(fig_counts, keys_counts),
@@ -133,7 +129,6 @@ c(
 
   # Report
   tar_quarto(
-    render,
-    file.path('paper', 'manuscript.qmd')
+    render
   )
 )

@@ -9,7 +9,6 @@ project:
     - templates/test_function.R
   render:
     - "*.qmd"
-    - "!paper/manuscript.qmd"
 
 website:
   title: "Reproducible workflows workshop"

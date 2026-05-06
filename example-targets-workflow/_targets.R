@@ -1,4 +1,4 @@
-# === Extended {targets} pipeline -----------------------------------------
+# === Example {targets} pipeline ------------------------------------------
 # Alec L. Robitaille, Isabella C. Richmond
 
 # Source ------------------------------------------------------------------

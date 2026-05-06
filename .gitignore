@@ -12,3 +12,4 @@ renv/*
 /example-targets-workflow/_site
 /example-targets-workflow/output
 /example-targets-workflow/tinytable_assets
+/docs

@@ -9,6 +9,7 @@ project:
     - templates/test_function.R
   render:
     - "*.qmd"
+    - "!example-targets-workflow/*.qmd"
 
 website:
   title: "Reproducible workflows workshop"

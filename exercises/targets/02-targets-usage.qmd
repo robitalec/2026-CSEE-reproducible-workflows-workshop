@@ -58,7 +58,7 @@ tar_visnetwork()
 
 tar_visnetwork(targets_only = TRUE)
 
-tar_visnetwork(starts_with('plot'))
+tar_visnetwork(ends_with('counts'))
 ```
 </details>
 
@@ -148,7 +148,7 @@ tar_source('R')
 
 tar_meta()
 
-tar_meta(starts_with('plot'))
+tar_meta(ends_with('counts'))
 
 View(tar_meta())
 ```
@@ -168,7 +168,7 @@ Now that we have a {targets} pipeline, the approach is a bit different than we m
 Update and rerun your {targets} workflow.
 :::
 
-Instruction: make sure your {targets} pipeline is up to date with `tar_visnetwork()`. Then, make an edit to the function `sum_counts()`. Rerun the {targets} pipeline. Next, make an edit to the function `plot_xy()`. Rerun with `tar_make()`. Lastly, make an edit to `prepare_csv()` and rerun. Note which targets were rerun with each change and discuss with your neighbours. 
+Instruction: make sure your {targets} pipeline is up to date with `tar_visnetwork()`. Then, make an edit to the function `sum_counts()`. Rerun the {targets} pipeline. Next, make an edit to the function `filter_islands()`. Rerun with `tar_make()`. Lastly, make an edit to `prepare_csv()` and rerun. Note which targets were rerun with each change and discuss with your neighbours. 
 
 Bonus:
 

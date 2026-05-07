@@ -1,26 +1,22 @@
 library(targets)
 tar_source('R')
 
-
-# Visnetwork
-tar_visnetwork()
-
+# Look at the workflow
 tar_visnetwork(targets_only = TRUE)
 
-tar_visnetwork(ends_with('counts'))
-
-
-# Make
+# Run the workflow
 tar_make()
 
-
-# Load
+# Read an output
 tar_read(prepared_counts)
 
-tar_load(mean_counts_weather)
+tar_read(fig_counts, branches = 1)
 
-tar_read(fig_counts)
+# Load an output
+tar_load(prepared_penguins)
 
+ggplot(prepared_penguins) +
+  geom_histogram(aes(flipper_length_mm))
 
 # Metadata
 tar_meta()

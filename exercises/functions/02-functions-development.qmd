@@ -1,5 +1,13 @@
 # Developing functions
 
+::: callout-tip
+
+## Learning Goal
+
+Refactor code into functions that do one thing.
+:::
+
+
 ## Setup
 
 The setup:
@@ -32,6 +40,10 @@ This process of editing two files might seem like extra work, but we recommend s
 
 ### Exercise: function development
 
+::: callout-note
+## Objectives
+Create a new function called `prepare_csv()` that reads in raw data and cleans it.
+:::
 
 ### `prepare_csv()`
 

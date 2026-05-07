@@ -1,5 +1,12 @@
 # Setup
 
+::: callout-tip
+## Learning Goals
+-   (For a given project) map out relationships between inputs, outputs and analysis steps.
+-   Identify discrete chunks/steps and write corresponding (or use available) functions.
+:::
+
+
 This set of exercises are centered around an approach to setting up your project using {targets}. 
 
 A {targets} pipeline is declared in the `_targets.R` file in the root of your project's directory. We'll also set up a central place to put all our of required packages that helps us keep track of them, and will later make it easier to set up {renv}. 
@@ -32,6 +39,12 @@ c(
 
 ### Exercise: `_targets.R`
 
+::: callout-note
+## Objective
+Create the base of a usable workflow by making a _targets.R script.
+:::
+
+
 Instruction: make a new R script in the root directory of your project named `_targets.R`. At the top, load {targets} and at the bottom put an empty list `c( )`.
 
 
@@ -46,6 +59,11 @@ We prefer the second approach because it keeps our `_targets.R` tidier, and help
 
 
 ### Exercise: `packages.R`
+
+::: callout-note
+## Objective
+Load packages in a {targets} workflow using a designated packages script in the R/ directory.
+:::
 
 Instruction: make a new script called `packages.R` in the `R/` directory. Go through your function test scripts from previous exercises and add all the packages you used to the `packages.R` file with a `library()` call for each package on a separate line. 
 
@@ -84,6 +102,11 @@ Note: something to be careful about now that we are sourcing the `R/` directory 
 
 ### Exercise: sourcing functions
 
+::: callout-note
+## Objective
+Source all functions in the R/ directory so that the {targets} workflow can run.
+:::
+
 Instruction: replace the above `source('R/packages.R')` command with the function `tar_source()` pointing to the `R/` directory with your `packages.R` script and the functions you developed in the previous exercises. 
 
 Note: you will need to load {targets} to run the `tar_source()` function.
@@ -105,6 +128,11 @@ The full reference page for `tar_option_set()` is available here: <https://docs.
 
 
 ### Exercise: options
+
+::: callout-note
+## Objective
+Create a space in the _targets.R script to set workflow options.
+:::
 
 Instruction: make a new section in your `_targets.R` script named Options, and put an empty call to `tar_option_set()` there. 
 
@@ -139,6 +167,11 @@ Here's a couple different example projects that use a Variables section in their
 
 
 ### Exercise: variables
+
+::: callout-note
+## Objective
+Use variables in your _targets.R script to define file paths.
+:::
 
 Instruction: make a new section named Variables, and add the file paths for the input files that we have been working with. 
 
@@ -210,6 +243,11 @@ c(
 
 
 ### Exercise: add targets
+
+::: callout-note
+## Objective
+Add targets to your {targets} workflow.
+:::
 
 Instruction: set up individual targets corresponding to the three functions we developed using the adult and chick counts dataset. Head back to your testing scripts to recall how you used the functions and which arguments you need. Name your targets then pass the functions to the command argument. Fill in your Variables section and pass them as arguments in the functions.  
 
@@ -358,5 +396,5 @@ c(
 
 #### Bonus
 
-- add two more targets to read the other CSV files
+- add another target to read the other CSV file
 - add another target to load the `palmerpenguins` dataset from {palmerpenguins}

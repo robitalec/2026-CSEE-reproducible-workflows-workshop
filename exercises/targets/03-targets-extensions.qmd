@@ -11,7 +11,7 @@ Later, check out some examples of full {targets} pipelines that we've developed 
 
 ## Demo
 
-With our extended {targets} pipeline, we'll go through the following steps:
+With our example {targets} pipeline, we'll go through the following steps:
 
 1.  Visualize the pipeline's steps and interdependencies.
 

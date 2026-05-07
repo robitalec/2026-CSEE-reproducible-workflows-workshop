@@ -1,5 +1,10 @@
 # {renv}
 
+::: callout-tip
+## Learning Objective
+Use {renv} to preserve current package versions to ensure the environment is reproducible, portable and isolated
+:::
+
 {renv} helps us create more reproducible and shareable projects by allowing us to run code on different machines, across time, by different people. It essentially takes the packages used in your project and records their versions in a file that you can update as you develop the project. When you come back to your project, or share it with someone else, they are using the same versions of packages and R that you were.
 
 The three main functions used when working with {renv} are:

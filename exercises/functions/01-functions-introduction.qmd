@@ -4,14 +4,22 @@ execute:
 ---
 
 # Introduction to functions
+
+::: callout-tip
+## Learning Goals
+Read and understand structure of functions in R in terms of inputs, arguments, return objects, and naming.
+:::
  
 ## Function Structure
 
-Learning goal: Identify the structure of functions in terms of inputs, arguments, return objects and naming. 
-
 ### Exercise: function structure
 
-Instruction: Pick three functions of your choice and note their characteristics. (pairs)
+::: callout-note
+## Objective
+Note the structure of three functions that you are familiar with.
+:::
+
+Pick three functions of your choice and note their characteristics. (pairs)
 
 For example:
 
@@ -27,6 +35,11 @@ We encourage you to find your own functions, maybe a function you use or have wa
 ## Thinking in Functions 
 
 ### Exercise: thinking in functions
+
+::: callout-note
+## Objective
+Think through the structure of a function.
+:::
 
 Instruction: For the following tasks, write a function's name, arguments and return object. Do this on paper, or in a blank text document - we are not writing code yet. 
 
@@ -49,6 +62,11 @@ Learning goal: identify when a function's goal is too complex and could be split
 ## Reading Functions
 
 ### Exercise: reading functions
+
+::: callout-note
+## Objective
+Test your understanding of functions.
+:::
 
 Instruction: Read the following functions and note what you expect they will 
 output. We have purposely used vague function names in this case - not our 

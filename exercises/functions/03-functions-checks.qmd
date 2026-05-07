@@ -83,24 +83,24 @@ is.numeric(DF$numbers)
 </details>
 
 
-## Plotting 
+## Filters 
 
-### Exercise: `plot_xy()`
+### Exercise: `filter_islands()`
 
-First, write a function to plot a data.frame, providing columns names for the data to be plotted on the x and y axes. Use the example data that we prepared with our `prepare_csv` function. 
+First, write a function to filter a data.frame, providing the column name for the data to be filtered and the values to filter on. Use the example data that we prepared with our `prepare_csv` function. 
 
 Follow the steps from our approach to developing functions:
 
 1. Setup the function
-    - Make a function script in the `R/` directory named `plot_xy.R`
+    - Make a function script in the `R/` directory named `filter_islands.R`
     - Write the function's skeleton (name, arguments, curly braces)
 1. Setup the test script
-    - Make a corresponding test script in the `tests/` directory named `test_plot_xy.R`. 
+    - Make a corresponding test script in the `tests/` directory named `test_filter_islands.R`. 
     - Load any required packages (`library(package)`)
     - Source the function (`source('R/function.R)`)
     - Load example data and/or arguments for the function 
 
-Add a new section 'Development' in the test script (`tests/test_plot_xy.R`) to develop the body of your function. Since we have already built a function for preparing CSV files, use it in your test script, and your choice of base R plotting or {ggplot2}. Add the code to your function `plot_xy()` and test!
+Add a new section 'Development' in the test script (`tests/test_filter_islands.R`) to develop the body of your function. Since we have already built a function for preparing CSV files, use it in your test script, and your choice of baseR/data.table or dplyr functions. Add the code to your function `filter_islands()` and test!
 
 ```{r, eval = FALSE}
 path_counts <- file.path('raw-data', 'adelie-adult-chick-counts.csv')
@@ -110,31 +110,27 @@ prep_counts <- prepare_csv(path_counts)
 
 
 <details>
-<summary>Hints: base R</summary>
+<summary>Hints: baseR/data.table</summary>
 <hr>
-This function has one step: taking an input data.frame and generating a plot. 
+This function has one step: taking an input data.frame and filtering across a single column. 
 
-The function's arguments should include the data.frame, as well as the column names for the X and Y axes. 
+The function's arguments should include the data.frame, as well as the column name for the filtering and the filter value.
 
-Pass the data.frame's to the plot function's x and y arguments with the `[[` syntax, eg. `DF[[x_column]]`
+Pass the data.frame's column that you want to filter on to the plot function's filter_col arguments with the `[[` syntax, eg. `DF[[x_column]]`
 <hr>
 </details>
 
 <details>
-<summary>Hints: `ggplot2`</summary>
+<summary>Hints: `dplyr`</summary>
 <hr>
-This function has one step: taking an input data.frame and generating a plot. 
+This function has one step: taking an input data.frame and filtering across a single column. 
 
-The function's arguments should include the data.frame, as well as the column names for the X and Y axes. 
+The function's arguments should include the data.frame, as well as the column name for the filtering and the filter value.
 
-There are two main options:
+Pass the data.frame's to dplyr::filter's data argument then use the `{{ }}` "embrace operator" to wrap the filter_col and filter_value arguments (unquoted* column names). 
 
-- Pass the data.frame's to ggplot's data argument then use the `.data[[col]]` syntax to wrap the x_col and y_col arguments (quoted column names) within `aes`. 
-
-- Pass the data.frame's to ggplot's data argument then use the `{{ }}` "embrace operator" to wrap the x_col and y_col arguments (unquoted* column names) within `aes`. 
-
-See the `?aes` help page and the example with the "embrace operator", and more
-details here: <https://ggplot2.tidyverse.org/articles/ggplot2-in-packages.html#using-aes-and-vars-in-a-package-function>
+See the example with the "embrace operator", and more
+details here: <https://dplyr.tidyverse.org/articles/in-packages.html>
 
 <hr>
 </details>
@@ -144,24 +140,25 @@ details here: <https://ggplot2.tidyverse.org/articles/ggplot2-in-packages.html#u
 
 ### Exercise: writing checks for `plot_xy()`
 
-Instruction: add the following checks to your `plot_xy()` function and
-test them in your test script (`tests/test_plot_xy.R`). 
+Instruction: add the following checks to your `filter_islands()` function and
+test them in your test script (`tests/test_filter_islands.R`). 
 
-- check if the columns provided to the `x_col` and `y_col` arguments exist in the data.frame (quoted column name arguments)
-- check if the plot generated is of class `ggplot` before returning (`ggplot2`) 
+- check if the columns provided to the `filter_col` arguments exist in the data.frame (quoted column name arguments)
+- check that the values provided to the `filter_value` arguments are present in the `filter_col` column
+- check that the output is a data.frame
 
 
 <details>
-<summary>Hints: unquoted column names with `ggplot2`</summary>
+<summary>Hints: unquoted column names with `dplyr::filter`</summary>
 <hr>
 If you opted to use unquoted column names, it might be trickier to check 
 if column names exist in the data.frame. However - this check is already 
-covered by `ggplot()` anyways. 
+covered by `filter()` anyways. 
 
-In case you wanted to add this, on top of the internal `ggplot2` check,
+In case you wanted to add this, on top of the internal `filter` check,
 try something like this: 
 
-`as_name(enquo(x_col)) %in% colnames(DT)`
+`as_name(enquo(filter_col)) %in% colnames(DT)`
 
 These are {rlang} functions, part of the "tidy eval tools" and examples
 of metaprogramming. The Advanced R book has a detailed section on this concept. 
@@ -189,8 +186,3 @@ For example,
 ```r
 stopifnot("x is not a numeric" = is.numeric(x))
 ```
-
-
-#### Add a `color_by` argument to `plot_xy()`
-
-Instruction: using the same approach you used for `x_col` and `y_col`, add a `color_col` argument to `plot_xy()`.

@@ -132,8 +132,8 @@ function(x = 1, y = 2, z = 3) {
 
 ### Bonus
 
-Add checks to your functions `plot_xy()` and `sum_counts()`: 
-
-- use the arguments `x_col` and `y_col` to also update the axis labels in `plot_xy()` (base R)
+- add checks to your function `sum_counts()`
+- build a plot function that plots the output of `sum_counts()` called `plot_xy()`
+- add `x_col` and `y_col` arguments to your plot function to dynamically update plot
+- use `x_col` and `y_col` arguments to also update the axis labels in `plot_xy()` (base R)
 - use a new argument `color_col` to provide a column  in `plot_xy()`
-- build a plot function that plots the output of `sum_counts()`

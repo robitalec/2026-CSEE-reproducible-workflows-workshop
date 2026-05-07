@@ -357,6 +357,6 @@ c(
 </details>
 
 #### Bonus
-
+- if you made a `plot_xy()` function in the previous section's bonus, add it to your pipeline
 - add two more targets to read the other CSV files
 - add another target to load the `palmerpenguins` dataset from {palmerpenguins}

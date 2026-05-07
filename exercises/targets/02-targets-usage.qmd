@@ -35,7 +35,7 @@ Related functions to `tar_visnetwork()` include:
 - `tar_network()` returns a network of edges and nodes representing the pipeline
 
 
-### Exercise: `tar_visnetwork()`
+### Exercise: tar_visnetwork()
 
 ::: callout-note
 ## Objective
@@ -63,12 +63,12 @@ tar_visnetwork(starts_with('plot'))
 </details>
 
 
-## `tar_make()`
+## tar_make()
 
 Run the {targets} pipeline with `tar_make()`. The pipeline is run in a new external R process, which means that `tar_make()` doesn't impact your current workspace and, more importantly, is not influenced by your current workspace. This totally isolated environment is how {targets} offers us a truly reproducible approach - only things defined in the `_targets.R` script (or sourced within it) are considered. 
 
 
-### Exercise: `tar_make()`
+### Exercise: tar_make()
 
 ::: callout-note
 ## Objective
@@ -91,11 +91,11 @@ tar_make()
 </details>
 
 
-## `tar_read()`, `tar_load()`
+## tar_read(), tar_load()
 
 To look at results from the {targets} pipeline, use `tar_read()` and `tar_load()`. `tar_read()` reads targets without saving them as an object in your environment and `tar_load()` loads the object directly to your environment using the name of the target as the object. 
 
-### Exercise: `tar_read()`, `tar_load()`
+### Exercise: tar_read(), tar_load()
 
 ::: callout-note
 ## Objective
@@ -122,11 +122,11 @@ tar_read(plotted)
 </details>
 
 
-## `tar_meta()`
+## tar_meta()
 
 The metadata related to the {targets} pipeline is accessible using the function `tar_meta()`. 
 
-### Exercise: `tar_meta()`
+### Exercise: tar_meta()
 
 ::: callout-note
 ## Objective

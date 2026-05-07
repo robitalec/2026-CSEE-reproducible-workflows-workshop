@@ -95,7 +95,7 @@ is.numeric(DF$numbers)
 
 ## Filters 
 
-### Exercise: `filter_islands()`
+### Exercise: filter_islands()
 
 First, write a function to filter a data.frame, providing the column name for the data to be filtered and the values to filter on. Use the example data that we prepared with our `prepare_csv` function. 
 
@@ -131,7 +131,7 @@ Pass the data.frame's column that you want to filter on to the plot function's f
 </details>
 
 <details>
-<summary>Hints: `dplyr`</summary>
+<summary>Hints: dplyr</summary>
 <hr>
 This function has one step: taking an input data.frame and filtering across a single column. 
 
@@ -148,7 +148,7 @@ details here: <https://dplyr.tidyverse.org/articles/in-packages.html>
 
 ## Writing Checks 
   
-### Exercise: writing checks for `filter_islands()`
+### Exercise: writing checks for filter_islands()
 ::: callout-note
 ## Objective
 Write and test a complete function.
@@ -183,7 +183,7 @@ of metaprogramming. The Advanced R book has a detailed section on this concept.
 
 ### Bonus
 
-#### Writing checks for `prepare_csv()`
+#### Writing checks for prepare_csv()
 
 Instruction: add the following checks to your `prepare_csv()` function and
 test them in your test script (`tests/test_prepare_csv.R`). 
@@ -191,7 +191,7 @@ test them in your test script (`tests/test_prepare_csv.R`).
 - check if the path points to a file that exists
 - before returning the object, check that it is a data.frame
 
-#### More informative errors with `stopifnot()`
+#### More informative errors with stopifnot()
 
 Instruction: Write more informative errors for your `stopifnot()` checks using the following syntax: `stopifnot("error message" = logical_statement)`. Think about your user (either someone else or future you) - what would help them understand and resolve this error?
 

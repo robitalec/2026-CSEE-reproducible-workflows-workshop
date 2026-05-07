@@ -138,7 +138,7 @@ details here: <https://dplyr.tidyverse.org/articles/in-packages.html>
 
 ## Writing Checks 
 
-### Exercise: writing checks for `plot_xy()`
+### Exercise: writing checks for `filter_islands()`
 
 Instruction: add the following checks to your `filter_islands()` function and
 test them in your test script (`tests/test_filter_islands.R`). 

@@ -252,8 +252,8 @@ Add targets to your {targets} workflow.
 Instruction: set up individual targets corresponding to the three functions we developed using the adult and chick counts dataset. Head back to your testing scripts to recall how you used the functions and which arguments you need. Name your targets then pass the functions to the command argument. Fill in your Variables section and pass them as arguments in the functions.  
 
 - `prepare_csv()`
+- `filter_islands()`
 - `sum_counts()`
-- `plot_xy()`
 
  
 <details>
@@ -395,6 +395,7 @@ c(
 </details>
 
 #### Bonus
-
+- if you made a `plot_xy()` function in the previous section's bonus, add it to your pipeline
 - add another target to read the other CSV file
 - add another target to load the `palmerpenguins` dataset from {palmerpenguins}
+- inspect the example workflow (`example-targets-workflow/_targets.R`) and add a new function

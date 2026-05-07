@@ -86,14 +86,18 @@ Follow the steps from our approach to developing functions:
     - Source the function (`source('R/function.R)`)
     - Load example data and/or arguments for the function 
 
-Since we have already built a function for preparing CSV files, use it in your test script:
+Since we have already built a function for preparing CSV files and filtering the prepared dataset, use them in your test script:
 
 ```{r, eval = FALSE}
 path_counts <- file.path('raw-data', 'adelie-adult-chick-counts.csv')
+filter_col <- 'island'
+filter_value <- c('TOR', 'COR')
+
 prep_counts <- prepare_csv(path_counts)
+filter_counts <- filter_islands(prep_counts, filter_col, filter_value)
 ```
 
-Add a new section 'Development' in the test script (`tests/test_sum_counts.R`) to develop the body of your function. Use the prepared CSV data as shown above, add the code to your function `sum_counts()` and test!
+Add a new section 'Development' in the test script (`tests/test_sum_counts.R`) to develop the body of your function. Use the prepared and filtered CSV data as shown above, add the code to your function `sum_counts()` and test!
 
 
 <details>
@@ -111,7 +115,7 @@ Add a new section 'Development' in the test script (`tests/test_sum_counts.R`) t
 Next steps:
 
 - decide if it is better for you (or a potential user) to set the columns that we calculate the sum by inside the function (fixed) or as an argument (flexible) - try both options
-- add a filter argument `filter_gt_year` (default set to NULL) and when it is not NULL, filter the data only greater than the value provided
+- add a filter argument `filter_gt_adults` (default set to NULL) and when it is not NULL, filter the data only greater than the value provided
 
 Test these as you go in your test script `tests/test_sum_counts.R`.
 

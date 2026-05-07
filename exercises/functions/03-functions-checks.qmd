@@ -1,5 +1,11 @@
 # Checks
 
+::: callout-tip
+## Learning Goal
+Add tests and checks to ensure functions work and error when expected.
+:::
+
+
 Checks in functions are used to ensure inputs and arguments are as expected,
 to handle errors and to provide informative error messages to users. In this
 workshop we are going to focus on writing checks with the function `stopifnot` because it is simple and succinct. It was recently improved in R 4.0.0 when the R development team added the option to provide a more informative error which will help us clearly communicate with our users (and ourselves). 
@@ -31,6 +37,10 @@ To build logical statements, you may find following list of functions useful:
 
 ## Exercise: function checks
 
+::: callout-note
+## Objective 
+- Practice writing logical statements.
+:::
 Instruction: write a series of logical statements for the following objects then consult the solution to check your work. Focus only on the logical statement for now, we'll use `stopifnot` in the following exercises. 
 
 Number
@@ -143,6 +153,10 @@ details here: <https://ggplot2.tidyverse.org/articles/ggplot2-in-packages.html#u
 ## Writing Checks 
 
 ### Exercise: writing checks for `plot_xy()`
+::: callout-note
+## Objective
+Write and test a complete function.
+:::
 
 Instruction: add the following checks to your `plot_xy()` function and
 test them in your test script (`tests/test_plot_xy.R`). 

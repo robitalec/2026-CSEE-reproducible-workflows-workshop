@@ -1,4 +1,4 @@
-# Application
+# Application of targets
 
 :::callout-tip
 ## Learning Goals

@@ -1,4 +1,4 @@
-# Setup
+# Setting up targets
 
 ::: callout-tip
 ## Learning Goals

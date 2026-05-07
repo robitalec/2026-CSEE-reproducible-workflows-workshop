@@ -1,5 +1,11 @@
 # Controlling flow
 
+::: callout-tip
+## Learning Goal
+Recognize the value of functions as chunks of code that are reusable and easier to debug.
+:::
+
+
 Conditionals in functions are used to modify how a function runs, determine what output to return or to return warnings and errors depending on logical statements. We'll look at `if` and `else`, as well as functions for combining multiple logical statements. `if` and `else` can be used instead of `stopifnot`, usually in cases where logical statements are more complex or a more elaborate error message is required. 
 
 The following functions are essential for controlling flow in R:
@@ -12,6 +18,11 @@ The following functions are essential for controlling flow in R:
 ## Conditional Statements
 
 ### Exercise: function conditionals
+
+::: callout-note
+## Objective
+Write several if else statements.
+:::
 
 Instruction: write a series of `if` `else` conditional statements for the following objects then consult the solution to check your work. 
 
@@ -71,6 +82,11 @@ if (type == 'histogram') {
 
 ### Exercise: conditional counts
 
+::: callout-note
+## Objective
+
+Process data in a function.
+:::
 Next we'll write a new function that processes our prepared CSV files. 
 
 Let's say we wanted to summarize the number of adults and chicks counted by island. First, write a function to sum the 'adults' and 'chicks' columns in the data.frame. Use the example data that we prepared with our `prepare_csv` function. 

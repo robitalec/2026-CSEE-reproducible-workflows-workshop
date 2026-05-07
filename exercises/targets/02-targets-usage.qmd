@@ -1,5 +1,11 @@
 # Application
 
+:::callout-tip
+## Learning Goals
+-   Execute a workflow in {targets} that reads in data, performs a function, and saves an output.
+-   Recognize the value of workflows for reducing mental load and improving efficiency.
+:::
+
 Now that we have our `_targets.R` script setup with the previous exercises and we have added our first few targets to the pipeline, let's take a look at using {targets}. It is a bit different than the [usual R approach](https://books.ropensci.org/targets/#motivation) where we make edits, then rerun everything, wait for results, notice issues, rerun from scratch...
 
 The following functions allow us to interact with the pipeline's definition, metadata and results. Because of this, we shouldn't put them inside the `_targets.R` script or in our `R/` directory. Often a {targets} pipeline will result in a rendered document or manuscript, a number of saved plots or an output data file. 
@@ -31,6 +37,11 @@ Related functions to `tar_visnetwork()` include:
 
 ### Exercise: `tar_visnetwork()`
 
+::: callout-note
+## Objective
+Visualize your {targets} workflow.
+:::
+
 Instruction: run `tar_visnetwork()` from your `explore.R` script to see the dependency graph defined in your `_targets.R` script. Try out the `targets_only` and `name` arguments too. 
 
 
@@ -59,6 +70,11 @@ Run the {targets} pipeline with `tar_make()`. The pipeline is run in a new exter
 
 ### Exercise: `tar_make()`
 
+::: callout-note
+## Objective
+Run your {targets} workflow.
+:::
+
 Instruction: run `tar_make()` from your `explore.R` script.
 
 <details>
@@ -80,6 +96,11 @@ tar_make()
 To look at results from the {targets} pipeline, use `tar_read()` and `tar_load()`. `tar_read()` reads targets without saving them as an object in your environment and `tar_load()` loads the object directly to your environment using the name of the target as the object. 
 
 ### Exercise: `tar_read()`, `tar_load()`
+
+::: callout-note
+## Objective
+Load completed targets from your workflow.
+:::
 
 Instruction: run `tar_read()` and `tar_load()` from your `explore.R` script to read/load the targets defined in your {targets} pipeline.
 
@@ -106,6 +127,11 @@ tar_read(plotted)
 The metadata related to the {targets} pipeline is accessible using the function `tar_meta()`. 
 
 ### Exercise: `tar_meta()`
+
+::: callout-note
+## Objective
+Explore the metadata from your workflow.
+:::
 
 Instruction: run `tar_meta()` from your `explore.R` script to look at the metadata associated with your {targets} pipeline. Also try using the `names` argument to filter the metadata returned. 
 
@@ -136,6 +162,11 @@ Now that we have a {targets} pipeline, the approach is a bit different than we m
 
 
 ### Exercise: practice the {targets} approach
+
+::: callout-note
+## Objective
+Update and rerun your {targets} workflow.
+:::
 
 Instruction: make sure your {targets} pipeline is up to date with `tar_visnetwork()`. Then, make an edit to the function `sum_counts()`. Rerun the {targets} pipeline. Next, make an edit to the function `plot_xy()`. Rerun with `tar_make()`. Lastly, make an edit to `prepare_csv()` and rerun. Note which targets were rerun with each change and discuss with your neighbours. 
 

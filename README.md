@@ -8,15 +8,19 @@ editor:
 
 ## Developing a reproducible workflow in R using functions, {targets} and {renv}
 
-Originally developed for a
-[workshop](https://github.com/robitalec/2023-CSEE-reproducible-workflows-workshop)
-at CSEE 2023 by:
+#### Alec L. Robitaille (Memorial Unviersity of Newfoundland and Labrador)
+#### Isabella C. Richmond (Concordia University) 
 
--   Alec L. Robitaille (Memorial University of Newfoundland and
-    Labrador)
--   Isabella C. Richmond (Concordia University)
+::: {.callout-tip}
+## Learning Goal
+
+We designed this workshop so that by the ends participants will be able to approach analyses in a more holistic way (whole project vs script by script), share data across projects and software versions with minimal stress, and use workflows that reduce analysis errors and mental load
+::: 
+
 
 ## Schedule
+Originally developed for a
+[workshop](https://github.com/robitalec/2023-CSEE-reproducible-workflows-workshop) at CSEE 2023
 
 Projects
 
@@ -50,48 +54,6 @@ Functions
 -   Saving package versions
 -   Checking conflicts
 
-## Learning goals
-
-Overall
-
--   Approach analyses in a more holistic way (whole project vs script by
-    script)
--   Share data across projects and software versions with minimal
-    stress 
--   Use workflows that reduce analysis errors and mental load
-
-Section 1: Projects
-
--   Construct a RStudio project that is thoroughly documented using file
-    structure and data management best practices
--   Use RStudio projects to effectively share their own work, and use
-    other people's
-
-Section 2: Functions
-
--   Read and understand structure of functions in R
--   Refactor code into functions that do one thing
--   Add tests and checks to ensure functions work and error when
-    expected
--   Recognize the value of functions as chunks of code that are reusable
-    and easier to debug
-
-Section 3: {targets}
-
--   (For a given project) map out relationships between inputs, outputs
-    and analysis steps
--   Identify discrete chunks/steps and write corresponding (or use
-    available) functions 
--   Execute a workflow in {targets} that reads in data, performs a
-    function, and saves an output
--   Recognize the value of workflows for reducing mental load and
-    improving efficiency
-
-Section 4: {renv} + {conflicted}
-
--   Use {renv} to preserve current package versions to ensure the
-    environment is reproducible, portable and isolated
--   Use {conflicted} to detect conflicting function names
 
 ## Setup
 

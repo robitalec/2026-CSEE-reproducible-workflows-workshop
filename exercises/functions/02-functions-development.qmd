@@ -45,7 +45,7 @@ This process of editing two files might seem like extra work, but we recommend s
 Create a new function called `prepare_csv()` that reads in raw data and cleans it.
 :::
 
-### `prepare_csv()`
+### prepare_csv()
 
 Instruction: setup your function script and test script for your new function `prepare_csv()`. 
 

@@ -1,4 +1,4 @@
-# Setup
+# Setting up targets
 
 ::: callout-tip
 ## Learning Goals
@@ -11,7 +11,7 @@ This set of exercises are centered around an approach to setting up your project
 
 A {targets} pipeline is declared in the `_targets.R` file in the root of your project's directory. We'll also set up a central place to put all our of required packages that helps us keep track of them, and will later make it easier to set up {renv}. 
 
-## `_targets.R`
+## _targets.R
 
 The `_targets.R` is where we declare our {targets} pipeline. It is an R file saved in the root directory of your project. The generalized structure of a `_targets.R` file is:
 
@@ -37,7 +37,7 @@ c(
 )
 ```
 
-### Exercise: `_targets.R`
+### Exercise: _targets.R
 
 ::: callout-note
 ## Objective
@@ -58,7 +58,7 @@ To declare which packages we need across all our functions, we have two main opt
 We prefer the second approach because it keeps our `_targets.R` tidier, and helps us setup {renv} package versioning and {conflicted} later. You might find your list of packages gets long, and this gets them out of our way. You can also use this script when you are exploring your results later - source the `packages.R` script and you will have all your required packages. 
 
 
-### Exercise: `packages.R`
+### Exercise: packages.R
 
 ::: callout-note
 ## Objective

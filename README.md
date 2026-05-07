@@ -17,6 +17,7 @@ editor:
 We designed this workshop so that by the ends participants will be able to approach analyses in a more holistic way (whole project vs script by script), share data across projects and software versions with minimal stress, and use workflows that reduce analysis errors and mental load
 ::: 
 
+A small vocabulary note: we use "workflow" and "pipeline" interchangeably throughout this workshop.
 
 ## Schedule
 Originally developed for a

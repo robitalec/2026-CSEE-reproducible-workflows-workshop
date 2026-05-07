@@ -18,5 +18,9 @@ tar_load(prepared_penguins)
 ggplot(prepared_penguins) +
   geom_histogram(aes(flipper_length_mm))
 
-# Look at the metadata
+# Metadata
 tar_meta()
+
+tar_meta(ends_with('counts'))
+
+View(tar_meta())

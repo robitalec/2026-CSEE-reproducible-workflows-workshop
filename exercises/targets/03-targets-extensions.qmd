@@ -1,4 +1,4 @@
-# Extensions
+# Targets extensions
 
 Let's look at a {targets} pipeline that more closely resembles what a full project would be including figures, model, output, tables and a manuscript object. We'll start with a demo, so we can show off some of the power and extended features of {targets}, then we can work through it piece by piece to explain the details.
 

@@ -46,3 +46,12 @@ A video by {renv} author Kevin Ushey, outlining why {renv} is important and how 
 ### [{renv} demo](https://www.youtube.com/watch?v=yc7ZB4F_dc0)
 
 Demo on how to set up {renv} in existing projects with biology professor/statistician.
+
+
+## pak
+
+pak has [documentation](https://pak.r-lib.org/reference/index.html) and a [FAQ](https://pak.r-lib.org/reference/faq.html) page that has very helpful information if you want to use it for package installation.
+
+To configure pak with {renv}, you can read the documentation from the [pak](https://pak.r-lib.org/reference/faq.html#how-can-i-use-pak-with-renv-) or [{renv}](https://rstudio.github.io/renv/reference/config.html?q=pak#renv-config-pak-enabled) packages. 
+
+To use pak as a package manager, you can create a lockfile that records the installed packages using `pak::lockfile_create()` and install packages later using `pak::lockfile_install()`.

@@ -1,0 +1,39 @@
+---
+title: "Example Workflow"
+author: Alec L. Robitaille, Isabella C. Richmond
+format: revealjs
+---
+
+## Why workflows?
+
+-   Reduced mental load
+    -   no need to keep track of what has been changed
+    -   can easily branch off of earlier work
+-   Iterative
+-   Reliable
+-   Easy to share
+
+## Why {targets}?
+
+-   Most relevant package for R users
+
+-   Extremely powerful, part of a universe ('targetopia')
+
+-   Well documented, actively developed
+
+## What does it look like?
+
+```{r}
+#| eval: true
+#| echo: false
+#| warning: false
+#| message: false
+
+setwd('example-targets-workflow')
+
+library(targets)
+
+tar_visnetwork(targets_only = T)
+
+
+```

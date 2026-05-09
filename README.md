@@ -1,23 +1,14 @@
----
-editor: 
-  markdown: 
-    wrap: 72
----
+# Developing a reproducible workflow in R using functions, {targets} and {renv}
 
-# Reproducible workflows workshop
+- Alec L. Robitaille (Memorial Unviersity of Newfoundland and Labrador)
 
-## Developing a reproducible workflow in R using functions, {targets} and {renv}
-
-#### Alec L. Robitaille (Memorial Unviersity of Newfoundland and Labrador)
-#### Isabella C. Richmond (Concordia University) 
+- Isabella C. Richmond (Concordia University) 
 
 ::: {.callout-tip}
 ## Learning Goal
 
-We designed this workshop so that by the ends participants will be able to approach analyses in a more holistic way (whole project vs script by script), share data across projects and software versions with minimal stress, and use workflows that reduce analysis errors and mental load
+This workshop is designed to introduce function-oriented as an alternative to script-based analyses. These functions are combined with input data in a {targets} workflow to reduce analysis errors and mental load. {renv} and {conflicted} are introduced to help manage package versions and conflicts. 
 ::: 
-
-A small vocabulary note: we use "workflow" and "pipeline" interchangeably throughout this workshop.
 
 ## Schedule
 Originally developed for a
@@ -60,19 +51,15 @@ Functions
 
 This workshop is aimed at improving our ability to use and create
 *reproducible workflows.* All the materials should be accessible from
-the side bar (slides, exercises, resources for further reading, and the
-link to the GitHub repository can be accessed by clicking on the GitHub
-icon).
+the side bar (slides, exercises, resources for further reading, and the 
+accompanying GitHub repository. 
 
 We don't have any strict dependencies on specific versions of R or R
-packages, but it would be good to have at least R version 4.0 and a
-recent version of RStudio. 
+packages, but it would be good to have updated versions of the packages below
+and at least R version > 4.0. 
 
-We are using Quarto to build the workshop's website and exercises, so it
-could be helpful for you to install it too. If you don't have time to,
-you can always complete exercises in an R script - so no pressure. 
-
-Install first the Quarto CLI from the
+We are using Quarto to build the workshop's website and for some exercises, so it
+would be helpful for you to install it too. Install first the Quarto CLI from the
 [here](https://quarto.org/docs/get-started/) then the package with the
 command at the bottom.
 
@@ -80,49 +67,47 @@ Please install the following packages (after updating R):
 
 ``` r
 pkgs <- c(
-  'targets',
-  'igraph',
-  'data.table',
-  'dplyr',
-  'ggplot2',
-  'testthat',
-  'janitor',
-  'renv',
-  'rlang',
-  'conflicted',
-  'palmerpenguins',
-  'visNetwork',
-  'quarto',
+  'targets',
+  'igraph',
+  'data.table',
+  'dplyr',
+  'ggplot2',
+  'testthat',
+  'janitor',
+  'renv',
+  'rlang',
+  'conflicted',
+  'palmerpenguins',
+  'visNetwork',
+  'quarto',
   'xml2',
   'downlit',
   'usethis'
 )
-
-install.packages(pkgs)
+install.packages('pak')
+pak::pkg_install(pkgs)
 ```
 
-\*\*\*\*\*\*BROKEN\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* To download the
-workshop materials for a participant, use this command:
+To download the workshop materials, use this command:
 
-``` r
+```r
 library(usethis)
 
 # (Set your own destination directory)
 use_course(
-    'https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/participant.zip', 
-    destdir = '~/Documents')
+  'https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/main.zip', 
+  destdir = '~/Documents'
+)
 ```
 
 Or by downloading and unziping the ZIP file at this link:
-<https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/participant.zip>.
-
-------------------------------------------------------------------------
+<https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/main.zip>.
 
 Then open up the RStudio project.
 
 ## Data
 
-Example data for this workshop is borrowed from the Palmer Long-Term
+Example data for this workshop are borrowed from the Palmer Long-Term
 Ecological Research (LTER). Here is the study description from the
 [Palmer LTER site](https://pallter.marine.rutgers.edu/):
 
@@ -195,12 +180,12 @@ metadata](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter
 
 The third dataset contains Adelie penguin adult and chick counts
 
--   studyName\
--   Date GMT\
--   Time GMT\
--   Island\
--   Colony\
--   Adults\
+-   studyName
+-   Date GMT
+-   Time GMT
+-   Island
+-   Colony
+-   Adults
 -   Chicks
 
 [Data package
@@ -208,6 +193,12 @@ metadata](https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter
 
 [Data download link
 (CSV)](https://github.com/PAL-LTER/pal-seabirds/blob/main/formatted/Adelie_Chick_Production/Adelie_Chick_Production_1992_2020.csv)
+
+
+## Vocabulary
+
+A small vocabulary note: we use "workflow" and "pipeline" interchangeably throughout this workshop.
+
 
 ## LICENSE
 

@@ -1,10 +1,8 @@
+# Developing a reproducible workflow in R using functions, {targets} and {renv}
 
-# Reproducible workflows workshop
+- Alec L. Robitaille (Memorial Unviersity of Newfoundland and Labrador)
 
-## Developing a reproducible workflow in R using functions, {targets} and {renv}
-
-#### Alec L. Robitaille (Memorial Unviersity of Newfoundland and Labrador)
-#### Isabella C. Richmond (Concordia University) 
+- Isabella C. Richmond (Concordia University) 
 
 ::: {.callout-tip}
 ## Learning Goal

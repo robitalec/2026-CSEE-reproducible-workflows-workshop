@@ -1,5 +1,5 @@
 ---
-title: "Example Workflow"
+title: "Example workflow"
 author: Alec L. Robitaille, Isabella C. Richmond
 format: revealjs
 ---
@@ -24,16 +24,11 @@ format: revealjs
 ## What does it look like?
 
 ```{r}
-#| eval: true
-#| echo: false
-#| warning: false
-#| message: false
-
+#| include: false
 setwd('example-targets-workflow')
+vis <- targets::tar_visnetwork(targets_only = TRUE)
+```
 
-library(targets)
-
-tar_visnetwork(targets_only = T)
-
-
+```{r}
+vis
 ```

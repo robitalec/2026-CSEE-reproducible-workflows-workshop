@@ -1,40 +1,38 @@
-suppressPackageStartupMessages({
-  # Targets
-  library(targets)
-  library(tarchetypes)
+# Targets
+library(targets)
+library(tarchetypes)
 
-  # Packages
-  library(pak)
-  library(renv)
-  options('renv.config.pak.enabled' = TRUE)
+# Packages
+library(pak)
+library(renv)
+options('renv.config.pak.enabled' = TRUE)
 
-  # General
-  library(data.table)
-  library(dplyr)
-  library(janitor)
-  library(rlang)
-  library(usethis)
-  library(fs)
+# General
+library(data.table)
+library(dplyr)
+library(janitor)
+library(rlang)
+library(usethis)
+library(fs)
 
-  # Plots
-  library(ggplot2)
-  library(visNetwork)
+# Plots
+library(ggplot2)
+library(visNetwork)
 
-  # Models
-  library(modelsummary)
+# Models
+library(modelsummary)
 
-  # Testing
-  library(testthat)
+# Testing
+library(testthat)
 
-  # Data
-  library(palmerpenguins)
+# Data
+library(palmerpenguins)
 
-  # Quarto
-  library(quarto)
+# Quarto
+library(quarto)
 
-  # Conflicts
-  library(conflicted)
-  conflicts_prefer(dplyr::filter)
-  conflicts_prefer(dplyr::first)
-  conflicts_prefer(palmerpenguins::penguins_raw)
-})
+# Conflicts
+library(conflicted)
+conflicts_prefer(dplyr::filter)
+conflicts_prefer(dplyr::first)
+conflicts_prefer(palmerpenguins::penguins_raw)

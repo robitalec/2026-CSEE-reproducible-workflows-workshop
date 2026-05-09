@@ -1,14 +1,18 @@
-# Targets extensions
+# Extending targets
 
 Let's look at a {targets} pipeline that more closely resembles what a full project would be including figures, model, output, tables and a manuscript object. We'll start with a demo, so we can show off some of the power and extended features of {targets}, then we can work through it piece by piece to explain the details.
 
 Later, check out some examples of full {targets} pipelines that we've developed to get a sense for the various applications and approaches that can be used.
 
--   data cleaning and preparation pipeline: <https://github.com/robitalec/prepare-locs/blob/main/_targets.R> 
--   movement ecology method: <https://github.com/robitalec/targets-issa/blob/main/_targets.R> 
--   remote sensing / spatial application: <https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R>
--   Bayesian models with {brms} - <https://github.com/robitalec/statistical-rethinking-colearning-2023/blob/main/_targets.R>
-
+-   [data cleaning and preparation pipeline](https://github.com/robitalec/prepare-locs/blob/main/_targets.R)
+  - In this pipeline, we use the targets function [`tar_cue`](https://github.com/robitalec/prepare-locs/blob/main/_targets.R#L31-L35) to define how often the target should become stale and re-run, and [`file.exists`](https://github.com/robitalec/prepare-locs/blob/main/R/check_meta.R#L15) to check which of a large list of input files exist on the users computer for processing
+-   [movement ecology method (iSSA)](https://github.com/robitalec/targets-issa/blob/main/_targets.R)
+  - We use [`iteration = 'group'`](https://github.com/robitalec/targets-issa/blob/main/_targets.R#L103) with a column named "tar_group" to run the analysis by defined chunks in the data e.g. individuals and years
+-   [Bayesian models with {brms}](https://github.com/robitalec/statistical-rethinking-colearning-2024)
+  - We use a [custom target factory](https://github.com/robitalec/statistical-rethinking-colearning-2024/blob/main/_targets.R#L67-L76) to prepare the pieces (e.g. priors, summaries, model fitting, model checks) that make up a complete Bayesian modeling approach
+-   [Remote sensing and spatial application with {rgee}](https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R)
+  - We use a [multiline statement](https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R#L134-L139) to filter images before sampling
+  
 ## Demo
 
 With our example {targets} pipeline, we'll go through the following steps:

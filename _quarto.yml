@@ -11,6 +11,10 @@ project:
     - "*.qmd"
     - "!example-targets-workflow/*.qmd"
 
+# Temporary setting: only re-render a page when its source changes
+execute:
+  freeze: auto
+
 website:
   title: "Reproducible workflows workshop"
 

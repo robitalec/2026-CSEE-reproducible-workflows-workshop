@@ -1,8 +1,3 @@
----
-editor: 
-  markdown: 
-    wrap: 72
----
 
 # Reproducible workflows workshop
 

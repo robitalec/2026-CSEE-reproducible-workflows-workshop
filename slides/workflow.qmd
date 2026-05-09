@@ -30,5 +30,6 @@ vis <- targets::tar_visnetwork(targets_only = TRUE)
 ```
 
 ```{r}
+#| echo: false
 vis
 ```

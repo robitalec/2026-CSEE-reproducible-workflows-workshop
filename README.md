@@ -1,18 +1,12 @@
 # Developing a reproducible workflow in R using functions, {targets} and {renv}
 
-- Alec L. Robitaille (Memorial Unviersity of Newfoundland and Labrador)
+This workshop is designed to introduce function-oriented programming as an alternative to script-based workflows. Functions are combined with input data in a {targets} pipeline to reduce analysis errors and mental load. {renv} and {conflicted} are introduced to help manage package versions and conflicts. 
 
-- Isabella C. Richmond (Concordia University) 
-
-::: {.callout-tip}
-## Learning Goal
-
-This workshop is designed to introduce function-oriented as an alternative to script-based analyses. These functions are combined with input data in a {targets} workflow to reduce analysis errors and mental load. {renv} and {conflicted} are introduced to help manage package versions and conflicts. 
-::: 
+Developed by Alec L. Robitaille (Memorial University of 
+Newfoundland and Labrador) and Isabella C. Richmond (Concordia University) and first delivered as a
+[workshop](https://github.com/robitalec/2023-CSEE-reproducible-workflows-workshop) for the 2023 conference of Canadian Society for Ecology and Evolution. 
 
 ## Schedule
-Originally developed for a
-[workshop](https://github.com/robitalec/2023-CSEE-reproducible-workflows-workshop) at CSEE 2023
 
 Projects
 

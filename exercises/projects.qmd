@@ -1,7 +1,3 @@
----
-execute: 
-  error: true
----
 
 # RStudio Project Setup
 

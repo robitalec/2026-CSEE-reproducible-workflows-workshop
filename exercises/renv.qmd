@@ -2,18 +2,18 @@
 
 ::: callout-tip
 ## Learning Objective
-Use {renv} to preserve current package versions to ensure the environment is reproducible, portable and isolated
+Use {renv} to record current package versions to ensure the environment is reproducible, portable and isolated
 :::
 
-{renv} helps us create more reproducible and shareable projects by allowing us to run code on different machines, across time, by different people. It essentially takes the packages used in your project and records their versions in a file that you can update as you develop the project. When you come back to your project, or share it with someone else, they are using the same versions of packages and R that you were.
+{renv} helps us create more reproducible and shareable projects by allowing us to run the same versions of R packages on different machines, across time, and by different people. It takes the packages used in your project and records their versions in a file that you can update as you develop the project. When you come back to your project, or share it with someone else, it ensures they are using the same versions of packages and R that you were.
 
-The three main functions used when working with {renv} are:
+The main functions used when working with {renv} are:
 
 - `init()` for setting up project to use {renv} for the first time
 
-- `snapshot()` for recording versions of packages currently installed in the project in the file `renv.lock`
+- `snapshot()` for recording versions of packages currently installed in the project in the lockfile
 
-- `restore()` for restoring a project's package versions to match the versions recorded by {renv} from the file `renv.lock`
+- `restore()` for restoring a project's package versions to match the versions recorded by {renv} from the lockfile
 
 Note: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the `renv.lock` lists a version of R that differs from your current version of R. For system dependencies that are required but not installed, R will fail.
 

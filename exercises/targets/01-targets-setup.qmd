@@ -242,6 +242,8 @@ Here's a couple different example projects that use a Variables section in their
 - [robitalec/targets-issa/_targets.R](https://github.com/robitalec/targets-issa/blob/main/_targets.R#L16-L58)
 - [robitalec/targets-rgee-extract/_targets.R](https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R#L11-L33)
 
+Alternatively, you can also put all of these in a file called `variables.R`, and if you put it in the R directory with your functions, it will be sourced with your targets. You can then easily share plot themes across functions and put all your decisions about function arguments in one place.
+
 ### Exercise: variables
 
 ::: callout-note

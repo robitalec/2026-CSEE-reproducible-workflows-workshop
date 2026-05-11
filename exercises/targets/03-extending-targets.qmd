@@ -1,11 +1,109 @@
 # Extending targets
 
+## Files
 
-## Details
+{targets} can be used to track external files for changes. This includes input data files but also outputs like saved plots or tables. To signal to {targets} that these target represents an external file to track, use the argument 'format' set to 'file'.
 
-Obviously, this is an overwhelming amount of new {targets} functions and extensions combined with other packages and Quarto to render an example manuscript and output figures and tables. We'll walk through each of the pieces and how they relate to each other, and we hope this is a useful resource for when you bring {targets} to your next project.
+`_targets.R`
 
-### Iterating
+``` r
+# ...
+
+c(
+  tar_target(
+    path_file,
+    'path/to/some-file.csv',
+    format = 'file'
+  ),
+  tar_target(
+    read_file,
+    read.csv(path_file)
+  )
+)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| results: "asis"
+library(targets)
+tar_dir({
+tar_script({
+  library(targets)
+  tempfile('path/to/some-file.csv')
+  tar_option_set()
+  c(
+    tar_target(
+        path_file,
+        'path/to/some-file.csv',
+        format = 'file'
+  ),
+  tar_target(
+    read_file,
+    read.csv(path_file)
+  ))
+})
+cat(
+  '```{mermaid}', 
+  targets::tar_mermaid(reporter = 'silent', label = 'description'), 
+  '```', 
+  sep = '\n'
+)
+})
+```
+
+Alternatively, we can use the [`tar_file_read()`])(https://docs.ropensci.org/tarchetypes/reference/tar_file_read.html) function from the 
+[{tarchetypes}](https://docs.ropensci.org/tarchetypes) package which is our first example of a 
+["target factory"](https://books.ropensci.org/targets/packages.html#target-factories). Target factories are functions that produce multiple targets, with a minimal input. They can be helpful for simplifying our pipelines, generating complex sets of pipelines from standard outputs. 
+
+The `tar_file_read` function simplifies tracking the path to the input file, and reading the input file with a custom read function.
+
+`_targets.R`
+
+``` r
+# ...
+
+c(
+  tar_file_read(
+  data, 
+  'path/to/some-file.csv',
+  read_csv(file = !!.x)
+)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| results: "asis"
+library(targets)
+tar_dir({
+tar_script({
+  library(targets)
+  library(tarchetypes)
+  tempfile('path/to/some-file.csv')
+  tar_option_set()
+    c(
+  tar_file_read(
+  data, 
+  'path/to/some-file.csv',
+  read_csv(file = !!.x)
+))
+})
+cat(
+  '```{mermaid}', 
+  targets::tar_mermaid(reporter = 'silent', label = 'description'), 
+  '```', 
+  sep = '\n'
+)
+})
+```
+
+
+## Targetopia
+
+Let's look at other examples of target factories in the ["targetopia"](https://wlandau.github.io/targetopia/) group of packages:
+
+## Iterating
 
 Like we mentioned in the functions resources, there are plenty of options in R for iterating including:
 
@@ -90,7 +188,7 @@ These are example of "dynamic branching", but also see "static branching" functi
 -   `tar_map`: <https://docs.ropensci.org/tarchetypes/reference/tar_map.html>
 -   `tar_rep`: <https://docs.ropensci.org/tarchetypes/reference/tar_rep.html>
 
-#### `iteration = 'list'`
+### `iteration = 'list'`
 
 The `iteration` argument for `tar_target()` is used to change how {targets} splits and combines branches. This is is required when you want to return objects like plots, models or matrices that aren't obviously combined.
 
@@ -128,24 +226,6 @@ c(
 
 See more details for argument `iteration` in `?tar_target`: <https://docs.ropensci.org/targets/reference/tar_target.html>
 
-### Files
-
-{targets} can be used to track external files for changes. This includes input data files but also outputs like saved plots or tables. To signal to {targets} that these target represents an external file to track, use the argument 'format' set to 'file'.
-
-`_targets.R`
-
-``` r
-# ...
-
-c(
-    tar_target(
-        file_counts,
-        path_counts,
-        format = 'file'
-    ),
-# ...
-)
-```
 
 ## Bonus
 

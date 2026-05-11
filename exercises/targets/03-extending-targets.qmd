@@ -149,6 +149,8 @@ c(
 
 ## Bonus
 
+### tar_option_set
+
 Look into the arguments provided by `tar_option_set()`. This is link to the full reference page: <https://docs.ropensci.org/targets/reference/tar_option_set.html>
 
 -   `format` argument

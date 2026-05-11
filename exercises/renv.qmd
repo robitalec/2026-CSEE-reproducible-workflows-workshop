@@ -15,7 +15,7 @@ The main functions used when working with {renv} are:
 
 - `restore()` for restoring a project's package versions to match the versions recorded by {renv} from the lockfile
 
-Note: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the `renv.lock` lists a version of R that differs from your current version of R. For system dependencies that are required but not installed, R will fail.
+- `status()` for checking the status of a project, ensuring that the packages installed correspond to the lockfile in the project
 
 ## Setup
 

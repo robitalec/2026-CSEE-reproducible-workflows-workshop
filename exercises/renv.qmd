@@ -17,6 +17,8 @@ The main functions used when working with {renv} are:
 
 - `status()` for checking the status of a project, ensuring that the packages installed correspond to the lockfile in the project
 
+Note: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the `renv.lock` lists a version of R that differs from your current version of R. You can however use the function `sysreqs()` to return an estimate of the system requirements for your machine, that you can install before the R packages.  
+
 ## Setup
 
 The first time you set up a project with {renv}, use the function `init()`. 

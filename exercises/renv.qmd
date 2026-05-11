@@ -17,7 +17,7 @@ The main functions used when working with {renv} are:
 
 - `status()` for checking the status of a project, ensuring that the packages installed correspond to the lockfile in the project
 
-Note: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the `renv.lock` lists a version of R that differs from your current version of R. You can however use the function `sysreqs()` to return an estimate of the system requirements for your machine, that you can install before the R packages.  
+Note: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the `renv.lock` lists a version of R that differs from your current version of R. You can however use the function `sysreqs()` to return an estimate of the system requirements for your machine, that you can install before the R packages. If you run a supported version of Linux, check out the [{pak} vignette on system requirements](https://pak.r-lib.org/reference/sysreqs.html). 
 
 ## Setup
 

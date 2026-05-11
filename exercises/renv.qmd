@@ -2,30 +2,30 @@
 
 ::: callout-tip
 ## Learning Objective
-Use {renv} to preserve current package versions to ensure the environment is reproducible, portable and isolated
+Use {renv} to record current package versions to ensure the environment is reproducible, portable and isolated
 :::
 
-{renv} helps us create more reproducible and shareable projects by allowing us to run code on different machines, across time, by different people. It essentially takes the packages used in your project and records their versions in a file that you can update as you develop the project. When you come back to your project, or share it with someone else, they are using the same versions of packages and R that you were.
+{renv} helps us create more reproducible and shareable projects by allowing us to run the same versions of R packages on different machines, across time, and by different people. It takes the packages used in your project and records their versions in a file that you can update as you develop the project. When you come back to your project, or share it with someone else, it ensures they are using the same versions of packages and R that you were.
 
-The three main functions used when working with {renv} are:
+The main functions used when working with {renv} are:
 
 - `init()` for setting up project to use {renv} for the first time
 
-- `snapshot()` for recording versions of packages currently installed in the project in the file `renv.lock`
+- `snapshot()` for recording versions of packages currently installed in the project in the lockfile
 
-- `restore()` for restoring a project's package versions to match the versions recorded by {renv} from the file `renv.lock`
+- `restore()` for restoring a project's package versions to match the versions recorded by {renv} from the lockfile
 
-Note: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the `renv.lock` lists a version of R that differs from your current version of R. For system dependencies that are required but not installed, R will fail.
+- `status()` for checking the status of a project, ensuring that the packages installed correspond to the lockfile in the project
+
+Note: {renv} will not install a different version of R, or any other system dependencies that are required. However, {renv} will warn if the `renv.lock` lists a version of R that differs from your current version of R. You can however use the function `sysreqs()` to return an estimate of the system requirements for your machine, that you can install before the R packages. If you run a supported version of Linux, check out the [{pak} vignette on system requirements](https://pak.r-lib.org/reference/sysreqs.html). 
 
 ## Setup
 
 The first time you set up a project with {renv}, use the function `init()`. 
-`init()` writes a file to the root of your project called `renv.lock` that tracks the versions and dependencies of R packages installed and the version of R itself. This is a simple text file, so feel free to open it up (but don't edit) in a text editor. 
+`init()` writes a file to the root of your project called `renv.lock` that tracks the versions and dependencies of R packages installed and the version of R itself. This is a simple text file, so feel free to open it up (but don't edit) in a text editor. It also edits the project specific `.Rprofile` to ensure that {renv} is loaded when the project is opened. 
 
 ::: callout-warning
-
-`renv::use()` does not initiate an {renv} file. It is used only in very specific circumstances (read more [here](https://rstudio.github.io/renv/reference/embed.html)). To start using {renv} in a project, use the function `renv::init()`
-
+`renv::use()` does not initiate an {renv} file. It is used only in very specific circumstances (read more [here](https://rstudio.github.io/renv/reference/embed.html)). To start using {renv} in a project, use the function `renv::init()`. 
 :::
 
 ### Exercise: setting up {renv}
@@ -57,14 +57,13 @@ At times, {renv} can be difficult to use. Especially with an ongoing project, {r
 
 One option to address {renv} issues is deactivating (`deactivate()`) while actively working on a project, then activating (`activate()`) when you are ready to share and have your dependencies recorded. 
 
-
 ## Alternatives
 
 [pak](https://pak.r-lib.org/) is a very powerful package installer has many of the same capabilities as {renv}. 
 
 You can create a lockfile that records the installed packages using `pak::lockfile_create()` and install packages later using `pak::lockfile_install()`.
 
-pak can be configured with {renv} to have fast package installation and clear management ([documentation](https://rstudio.github.io/renv/reference/config.html?q=pak#renv-config-pak-enabled))
+pak can be configured with {renv} to have fast package installation and clear management ([documentation](https://rstudio.github.io/renv/reference/config.html?q=pak#renv-config-pak-enabled)). 
 
 
 ### Bonus

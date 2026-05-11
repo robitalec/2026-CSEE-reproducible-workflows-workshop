@@ -1,5 +1,4 @@
-
-# RStudio Project Setup
+# R Project Setup
 
 ::: callout-tip
 ## Learning Goals

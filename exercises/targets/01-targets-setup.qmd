@@ -321,6 +321,11 @@ For example:
 
 ```r
 c(
+    # A custom function we write
+    tar_target(
+        car_process,
+        prepare_cars(mtcars)
+    ),
     # A function from another package
     tar_target(
         car_model,

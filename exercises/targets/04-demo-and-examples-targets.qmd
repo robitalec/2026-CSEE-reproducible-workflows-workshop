@@ -1,0 +1,50 @@
+# Demo and examples of targets pipelines
+
+Let's look at our demo {targets} pipeline and, afterwards, some examples to 
+see what
+a *real-world* pipeline looks like including figures, model, output, tables 
+and a manuscript object. 
+
+## Demo
+
+With our example {targets} pipeline (open
+`/projects/example-targets-workflow/example-targets-workflow.Rproj`), 
+and go through the following steps:
+
+1.  Visualize the pipeline's steps and interdependencies.
+
+``` r
+tar_visnetwork()
+```
+
+2.  Run the workflow
+
+``` r
+tar_make()
+```
+
+3.  Explore the results
+
+4.  Look at the rendered manuscript document
+
+Open the rendered document in the `paper/` directory.
+
+6.  Now to make some changes
+
+    a.  Edit the raw-data file, for example by adding new rows to mimic more data being collected. Note: please do not edit raw data, this is just to illustrate how {targets} tracks external files for changes. Rerun `tar_make()`.
+    b.  Delete an output figure. Rerun `tar_make()`.
+    c.  Add a filter step before the group counts target. Rerun `tar_make()`.
+
+## Examples of real-world pipelines
+
+Check out some examples of full {targets} pipelines that we've developed to get a sense for the various applications and approaches that can be used.
+
+-   [data cleaning and preparation pipeline](https://github.com/robitalec/prepare-locs/blob/main/_targets.R)
+  - In this pipeline, we use the targets function [`tar_cue`](https://github.com/robitalec/prepare-locs/blob/main/_targets.R#L31-L35) to define how often the target should become stale and re-run, and [`file.exists`](https://github.com/robitalec/prepare-locs/blob/main/R/check_meta.R#L15) to check which of a large list of input files exist on the users computer for processing
+-   [movement ecology method (iSSA)](https://github.com/robitalec/targets-issa/blob/main/_targets.R)
+  - We use [`iteration = 'group'`](https://github.com/robitalec/targets-issa/blob/main/_targets.R#L103) with a column named "tar_group" to run the analysis by defined chunks in the data e.g. individuals and years
+-   [Bayesian models with {brms}](https://github.com/robitalec/statistical-rethinking-colearning-2024)
+  - We use a [custom target factory](https://github.com/robitalec/statistical-rethinking-colearning-2024/blob/main/_targets.R#L67-L76) to prepare the pieces (e.g. priors, summaries, model fitting, model checks) that make up a complete Bayesian modeling approach
+-   [Remote sensing and spatial application with {rgee}](https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R)
+  - We use a [multiline statement](https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R#L134-L139) to filter images before sampling
+  

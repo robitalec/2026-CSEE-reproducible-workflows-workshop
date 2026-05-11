@@ -1,65 +1,110 @@
-# Targets extensions
+# Extending targets
 
-Let's look at a {targets} pipeline that more closely resembles what a full project would be including figures, model, output, tables and a manuscript object. We'll start with a demo, so we can show off some of the power and extended features of {targets}, then we can work through it piece by piece to explain the details.
+## Files
 
-Later, check out some examples of full {targets} pipelines that we've developed to get a sense for the various applications and approaches that can be used.
+{targets} can be used to track external files for changes. This includes input data files but also outputs like saved plots or tables. To signal to {targets} that these target represents an external file to track, use the argument 'format' set to 'file'.
 
--   data cleaning and preparation pipeline: <https://github.com/robitalec/prepare-locs/blob/main/_targets.R> 
--   movement ecology method: <https://github.com/robitalec/targets-issa/blob/main/_targets.R> 
--   remote sensing / spatial application: <https://github.com/robitalec/targets-rgee-extract/blob/main/_targets.R>
--   Bayesian models with {brms} - <https://github.com/robitalec/statistical-rethinking-colearning-2023/blob/main/_targets.R>
-
-## Demo
-
-With our example {targets} pipeline, we'll go through the following steps:
-
-1.  Visualize the pipeline's steps and interdependencies.
+`_targets.R`
 
 ``` r
-tar_visnetwork()
+# ...
+
+c(
+  tar_target(
+    path_file,
+    'path/to/some-file.csv',
+    format = 'file'
+  ),
+  tar_target(
+    read_file,
+    read.csv(path_file)
+  )
+)
 ```
 
-2.  Run the workflow
+```{r}
+#| echo: false
+#| message: false
+#| results: "asis"
+library(targets)
+tar_dir({
+tar_script({
+  library(targets)
+  tempfile('path/to/some-file.csv')
+  tar_option_set()
+  c(
+    tar_target(
+        path_file,
+        'path/to/some-file.csv',
+        format = 'file'
+  ),
+  tar_target(
+    read_file,
+    read.csv(path_file)
+  ))
+})
+cat(
+  '```{mermaid}', 
+  targets::tar_mermaid(reporter = 'silent', label = 'description'), 
+  '```', 
+  sep = '\n'
+)
+})
+```
+
+Alternatively, we can use the [`tar_file_read()`])(https://docs.ropensci.org/tarchetypes/reference/tar_file_read.html) function from the 
+[{tarchetypes}](https://docs.ropensci.org/tarchetypes) package which is our first example of a 
+["target factory"](https://books.ropensci.org/targets/packages.html#target-factories). Target factories are functions that produce multiple targets, with a minimal input. They can be helpful for simplifying our pipelines, generating complex sets of pipelines from standard outputs. 
+
+The `tar_file_read` function simplifies tracking the path to the input file, and reading the input file with a custom read function.
+Note how the output network of targets looks the same!
+
+`_targets.R`
 
 ``` r
-tar_make()
+# ...
+
+c(
+  tar_file_read(
+  file, 
+  'path/to/some-file.csv',
+  read_csv(file = !!.x)
+)
 ```
 
-3.  Explore the results
-
-```r
-library(fs)
-dir_tree('figures')
-figures
-├── CHR.png
-├── COR.png
-├── HUM.png
-├── LIT.png
-└── TOR.png
+```{r}
+#| echo: false
+#| message: false
+#| results: "asis"
+library(targets)
+tar_dir({
+tar_script({
+  library(targets)
+  library(tarchetypes)
+  tempfile('path/to/some-file.csv')
+  tar_option_set()
+    c(
+  tar_file_read(
+  file, 
+  'path/to/some-file.csv',
+  read_csv(file = !!.x)
+))
+})
+cat(
+  '```{mermaid}', 
+  targets::tar_mermaid(reporter = 'silent', label = 'description'), 
+  '```', 
+  sep = '\n'
+)
+})
 ```
 
 
-```r
-dir_tree('output')
-output
-├── sums.csv
-```
+## Targetopia
 
-4.  Look at the rendered manuscript document
+Let's look at other examples of target factories in the ["targetopia"](https://wlandau.github.io/targetopia/) group of packages:
 
-Open the rendered document in the `paper/` directory.
-
-6.  Now to make some changes
-
-    a.  Edit the raw-data file, for example by adding new rows to mimic more data being collected. Note: please do not edit raw data, this is just to illustrate how {targets} tracks external files for changes. Rerun `tar_make()`.
-    b.  Delete an output figure. Rerun `tar_make()`.
-    c.  Add a filter step before the group counts target. Rerun `tar_make()`.
-
-## Details
-
-Obviously, this is an overwhelming amount of new {targets} functions and extensions combined with other packages and Quarto to render an example manuscript and output figures and tables. We'll walk through each of the pieces and how they relate to each other, and we hope this is a useful resource for when you bring {targets} to your next project.
-
-### Iterating
+## Iterating
 
 Like we mentioned in the functions resources, there are plenty of options in R for iterating including:
 
@@ -144,7 +189,7 @@ These are example of "dynamic branching", but also see "static branching" functi
 -   `tar_map`: <https://docs.ropensci.org/tarchetypes/reference/tar_map.html>
 -   `tar_rep`: <https://docs.ropensci.org/tarchetypes/reference/tar_rep.html>
 
-#### `iteration = 'list'`
+### `iteration = 'list'`
 
 The `iteration` argument for `tar_target()` is used to change how {targets} splits and combines branches. This is is required when you want to return objects like plots, models or matrices that aren't obviously combined.
 
@@ -182,32 +227,10 @@ c(
 
 See more details for argument `iteration` in `?tar_target`: <https://docs.ropensci.org/targets/reference/tar_target.html>
 
-### Files
-
-{targets} can be used to track external files for changes. This includes input data files but also outputs like saved plots or tables. To signal to {targets} that these target represents an external file to track, use the argument 'format' set to 'file'.
-
-`_targets.R`
-
-``` r
-# ...
-
-c(
-    tar_target(
-        file_counts,
-        path_counts,
-        format = 'file'
-    ),
-# ...
-)
-```
-
-## Recommendations
-
-Start your **next** project with {targets} because it is easier to start from a simple project then to try and restructure an old, large project.
-
-If you use Git, you will likely want to ignore the `_targets/` directory.
 
 ## Bonus
+
+### tar_option_set
 
 Look into the arguments provided by `tar_option_set()`. This is link to the full reference page: <https://docs.ropensci.org/targets/reference/tar_option_set.html>
 

@@ -22,7 +22,7 @@ Note: {renv} will not install a different version of R, or any other system depe
 ## Setup
 
 The first time you set up a project with {renv}, use the function `init()`. 
-`init()` writes a file to the root of your project called `renv.lock` that tracks the versions and dependencies of R packages installed and the version of R itself. This is a simple text file, so feel free to open it up (but don't edit) in a text editor. 
+`init()` writes a file to the root of your project called `renv.lock` that tracks the versions and dependencies of R packages installed and the version of R itself. This is a simple text file, so feel free to open it up (but don't edit) in a text editor. It also edits the project specific `.Rprofile` to ensure that {renv} is loaded when the project is opened. 
 
 ::: callout-warning
 

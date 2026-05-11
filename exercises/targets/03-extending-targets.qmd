@@ -57,6 +57,7 @@ Alternatively, we can use the [`tar_file_read()`])(https://docs.ropensci.org/tar
 ["target factory"](https://books.ropensci.org/targets/packages.html#target-factories). Target factories are functions that produce multiple targets, with a minimal input. They can be helpful for simplifying our pipelines, generating complex sets of pipelines from standard outputs. 
 
 The `tar_file_read` function simplifies tracking the path to the input file, and reading the input file with a custom read function.
+Note how the output network of targets looks the same!
 
 `_targets.R`
 
@@ -65,7 +66,7 @@ The `tar_file_read` function simplifies tracking the path to the input file, and
 
 c(
   tar_file_read(
-  data, 
+  file, 
   'path/to/some-file.csv',
   read_csv(file = !!.x)
 )
@@ -84,7 +85,7 @@ tar_script({
   tar_option_set()
     c(
   tar_file_read(
-  data, 
+  file, 
   'path/to/some-file.csv',
   read_csv(file = !!.x)
 ))

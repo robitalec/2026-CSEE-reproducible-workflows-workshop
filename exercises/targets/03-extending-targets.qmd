@@ -147,12 +147,6 @@ c(
 )
 ```
 
-## Recommendations
-
-Start your **next** project with {targets} because it is easier to start from a simple project then to try and restructure an old, large project.
-
-If you use Git, you will likely want to ignore the `_targets/` directory.
-
 ## Bonus
 
 Look into the arguments provided by `tar_option_set()`. This is link to the full reference page: <https://docs.ropensci.org/targets/reference/tar_option_set.html>

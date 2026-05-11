@@ -522,3 +522,10 @@ c(
 - inspect the example pipeline (`example-targets-workflow/_targets.R`) and add a
   new function
 
+## Recommendations
+
+Start your **next** project with {targets} because it is easier to start from a 
+simple project than to try and restructure an old, large project into a 
+{targets} pipeline.
+
+If you use Git, you will likely want to ignore the `_targets/` directory.

@@ -15,7 +15,7 @@
 -   Use an RStudio Project to avoid setting working directories manually
 :::
 
-We are going to practice setting up an R Project to get oriented with the process. Please follow along with these steps and remember, if you are lost use your red sticky note or raise your hand and someone will come help you.
+We are going to practice setting up an R Project to get oriented with the process. Please follow along with these steps and remember, if you are lost use your red sticky note or raise your hand and someone will come help you. If you use Positron / VS Code, see the [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager) extension. 
 
 1.  Open RStudio and navigate to the upper right hand corner
 2.  Click on the drop-down menu and select the first option: "New Project..."

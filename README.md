@@ -58,14 +58,17 @@ Please install the following packages (after updating R):
 ``` r
 pkgs <- c(
   'targets',
+  ‘tarchetypes’,
   'igraph',
   'data.table',
   'dplyr',
   'ggplot2',
   'testthat',
   'janitor',
+  ‘modelsummary’,
   'renv',
   'rlang',
+  ‘fs’,
   'conflicted',
   'palmerpenguins',
   'visNetwork',
@@ -75,7 +78,7 @@ pkgs <- c(
   'usethis'
 )
 install.packages('pak')
-pak::pkg_install(pkgs)
+pak::pkg_install(pkgs, upgrade = TRUE)
 ```
 
 To download the workshop materials, use this command:

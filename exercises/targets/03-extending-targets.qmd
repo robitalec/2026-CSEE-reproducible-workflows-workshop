@@ -235,7 +235,7 @@ See more details for argument `iteration` in `?tar_target`: <https://docs.ropens
 Look into the arguments provided by `tar_option_set()`. This is link to the full reference page: <https://docs.ropensci.org/targets/reference/tar_option_set.html>
 
 -   `format` argument
-    -   for `data.table` objects you can use {qs} and format qs to retain data.table clas
+    -   for `data.table` objects you can format "qs" with package {qs2} to retain data.table class
 -   `error` argument to define what {targets} should do when it hits an error
 -   `workspace_on_error` argument to optionally save a workspace file for each target that throws an error
 -   `cue` argument

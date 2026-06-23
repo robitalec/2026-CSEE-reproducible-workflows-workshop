@@ -1,5 +1,7 @@
 # Developing a reproducible workflow in R using functions, {targets} and {renv}
 
+Workshop at CSEE 2026: developing a reproducible workflow in R using functions, {targets} and {renv}
+
 This workshop is designed to introduce function-oriented programming as an alternative to script-based workflows. Functions are combined with input data in a {targets} pipeline to reduce analysis errors and mental load. {renv} and {conflicted} are introduced to help manage package versions and conflicts. 
 
 Developed by Alec L. Robitaille (Memorial University of 
@@ -8,37 +10,33 @@ Newfoundland and Labrador) and Isabella C. Richmond (Concordia University) and f
 
 ## Schedule
 
-Projects
-
--   Directories
--   READMEs
--   RStudio Projects
-
-*Short break*
+Introductions
 
 Functions
 
--   Introduction
--   Recommended approach
--   Checks
--   Options
+- Introduction
 
-*Lunch break*
+- Recommended approach
 
-{targets}
+- Checks
 
--   Introduction
--   Writing workflows
--   Visualizing
--   Running workflows
--   Extensions
+- Options
 
-*Short break*
+Short break
 
-{renv} + {conflicted}
+Targets
 
--   Saving package versions
--   Checking conflicts
+- Introduction
+
+- Writing workflows
+
+- Visualizing
+
+- Running workflows
+
+Renv
+
+- Saving package versions
 
 
 ## Setup
@@ -62,14 +60,17 @@ Please install the following packages (after updating R):
 ``` r
 pkgs <- c(
   'targets',
+  ‘tarchetypes’,
   'igraph',
   'data.table',
   'dplyr',
   'ggplot2',
   'testthat',
   'janitor',
+  ‘modelsummary’,
   'renv',
   'rlang',
+  ‘fs’,
   'conflicted',
   'palmerpenguins',
   'visNetwork',
@@ -79,7 +80,7 @@ pkgs <- c(
   'usethis'
 )
 install.packages('pak')
-pak::pkg_install(pkgs)
+pak::pkg_install(pkgs, upgrade = TRUE)
 ```
 
 To download the workshop materials, use this command:
@@ -89,13 +90,13 @@ library(usethis)
 
 # (Set your own destination directory)
 use_course(
-  'https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/main.zip', 
+  'https://github.com/robitalec/2026-CSEE-reproducible-workflows-workshop/archive/refs/heads/main.zip', 
   destdir = '~/Documents'
 )
 ```
 
 Or by downloading and unziping the ZIP file at this link:
-<https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/main.zip>.
+<https://github.com/robitalec/2026-CSEE-reproducible-workflows-workshop/archive/refs/heads/main.zip>.
 
 Then open up the RStudio project.
 
@@ -198,4 +199,4 @@ A small vocabulary note: we use "workflow" and "pipeline" interchangeably throug
 
 This project is released under the GNU General Public License v3.0. Read
 it
-[here](https://github.com/robitalec/reproducible-workflows-workshop/blob/main/LICENSE).
+[here](https://github.com/robitalec/2026-CSEE-reproducible-workflows-workshop/blob/main/LICENSE).

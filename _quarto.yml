@@ -11,17 +11,13 @@ project:
     - "*.qmd"
     - "!example-targets-workflow/*.qmd"
 
-# Temporary setting: only re-render a page when its source changes
-execute:
-  freeze: auto
-
 website:
-  title: "Reproducible workflows workshop"
+  title: "2026 CSEE Reproducible workflows workshop"
 
   sidebar:
     tools:
       - icon: github
-        href: https://github.com/robitalec/reproducible-workflows-workshop
+        href: https://github.com/robitalec/2026-CSEE-reproducible-workflows-workshop
     contents:
       - text: "Home"
         file: index.qmd

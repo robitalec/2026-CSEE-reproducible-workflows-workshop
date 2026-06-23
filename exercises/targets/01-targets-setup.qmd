@@ -15,8 +15,6 @@ project's directory. We'll also set up a central place to put all our of
 required packages that helps us keep track of them, and will later make it
 easier to set up {renv}.
 
-<!-- TODO: make two columns -->
-
 Before targets and functions
 
 ```

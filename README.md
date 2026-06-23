@@ -88,13 +88,13 @@ library(usethis)
 
 # (Set your own destination directory)
 use_course(
-  'https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/main.zip', 
+  'https://github.com/robitalec/2026-CSEE-reproducible-workflows-workshop/archive/refs/heads/main.zip', 
   destdir = '~/Documents'
 )
 ```
 
 Or by downloading and unziping the ZIP file at this link:
-<https://github.com/robitalec/reproducible-workflows-workshop/archive/refs/heads/main.zip>.
+<https://github.com/robitalec/2026-CSEE-reproducible-workflows-workshop/archive/refs/heads/main.zip>.
 
 Then open up the RStudio project.
 
@@ -197,4 +197,4 @@ A small vocabulary note: we use "workflow" and "pipeline" interchangeably throug
 
 This project is released under the GNU General Public License v3.0. Read
 it
-[here](https://github.com/robitalec/reproducible-workflows-workshop/blob/main/LICENSE).
+[here](https://github.com/robitalec/2026-CSEE-reproducible-workflows-workshop/blob/main/LICENSE).

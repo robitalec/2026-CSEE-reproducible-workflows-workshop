@@ -1,5 +1,7 @@
 # Developing a reproducible workflow in R using functions, {targets} and {renv}
 
+Workshop at CSEE 2026: developing a reproducible workflow in R using functions, {targets} and {renv}
+
 This workshop is designed to introduce function-oriented programming as an alternative to script-based workflows. Functions are combined with input data in a {targets} pipeline to reduce analysis errors and mental load. {renv} and {conflicted} are introduced to help manage package versions and conflicts. 
 
 Developed by Alec L. Robitaille (Memorial University of 

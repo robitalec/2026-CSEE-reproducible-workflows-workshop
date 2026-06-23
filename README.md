@@ -8,37 +8,33 @@ Newfoundland and Labrador) and Isabella C. Richmond (Concordia University) and f
 
 ## Schedule
 
-Projects
-
--   Directories
--   READMEs
--   RStudio Projects
-
-*Short break*
+Introductions
 
 Functions
 
--   Introduction
--   Recommended approach
--   Checks
--   Options
+- Introduction
 
-*Lunch break*
+- Recommended approach
 
-{targets}
+- Checks
 
--   Introduction
--   Writing workflows
--   Visualizing
--   Running workflows
--   Extensions
+- Options
 
-*Short break*
+Short break
 
-{renv} + {conflicted}
+Targets
 
--   Saving package versions
--   Checking conflicts
+- Introduction
+
+- Writing workflows
+
+- Visualizing
+
+- Running workflows
+
+Renv
+
+- Saving package versions
 
 
 ## Setup

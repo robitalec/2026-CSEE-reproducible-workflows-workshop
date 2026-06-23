@@ -16,7 +16,7 @@ execute:
   freeze: auto
 
 website:
-  title: "Reproducible workflows workshop"
+  title: "2026 CSEE Reproducible workflows workshop"
 
   sidebar:
     tools:
